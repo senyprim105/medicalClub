@@ -1,0 +1,109 @@
+.examples {
+  &__wrapper {
+    @include container;
+    position: relative;
+    padding-bottom: 60px;
+    &::before{
+      content:"";
+      position: absolute;
+      width: 239px;
+      height: 205px;
+      bottom: -45px;
+      left:50%;
+      transform: translateX(-50%);
+      background: url(../../img/bg-examples-bottom.svg) no-repeat ;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #293951;
+    margin-bottom: 35px;
+  }
+  &__content {
+    padding: 0 80px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 60px;
+  }
+  &__slider{
+    width: 100%;
+    margin:0 auto;
+    overflow: hidden;
+  }
+  &__slider-list {
+  }
+  &__slider-item {
+    width: 510px;
+    padding: 10px;
+    border-radius: 3px;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #fae2e7;
+    box-shadow: inset 0px 4px 20px rgba(92, 121, 162, 0.3);
+    img {
+      margin: 0 auto;
+      display: block;
+      border-radius: 3px;
+    }
+  }
+
+  &__slider-controls {
+  }
+  &__slider-prev,&__slider-next{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &__slider-prev {
+    left: 0px;
+    background-image: url(../../img/icon-round-arrow-left.svg) ;
+  }
+  &__slider-next {
+    right: 0;
+    background-image: url(../../img/icon-round-arrow-right.svg) ;
+  }
+  &__slider-pagination {
+  }
+  &__button{
+    max-width: 310px;
+    min-height: 60px;
+    margin: 0 auto;
+    position: relative;
+    &::before{
+      content:"";
+      position: absolute;
+      width: 120px;
+      height: 134px;
+      left:-72px;
+      top:50%;
+      transform: translateY(-50%);
+      background: url(../../img/bg-examples-button-left.png) no-repeat center;
+      z-index: -1;
+    }
+    &::after{
+      content:"";
+      position: absolute;
+      width: 162px;
+      height: 163px;
+      right:-94px;
+      top:-40px;
+      background: url(../../img/bg-examples-button-right.png) no-repeat center;
+      z-index: -1;
+    }
+  }
+}

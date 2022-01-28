@@ -1,0 +1,124 @@
+.banner {
+  position: relative;
+  padding: 20px 0 76px;
+  margin-bottom: 75px;
+  min-height: 595px;
+  background-color: #faf8f8;
+  background: url(../../img/bg-banner-left.png)
+  ,url(../../img/bg-banner-left-2.png)
+  ,url(../../img/bg-banner-right.png)
+  , url(../../img/bg-banner-center.png)
+  ,linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
+  background-repeat: no-repeat;
+  background-position: left -67px
+  , left 23px
+  , right bottom
+  , center bottom
+  ,center center;
+
+  &::before {
+    content: "";
+    width: 132px;
+    height: 116px;
+    bottom: -60px;
+    left: 50%;
+    position: absolute;
+    background-image: url(../../img/bg-banner-bottom.png);
+  }
+  &__breadcrumbs {
+    color: #8aa1c3;
+    font-size: 13px;
+    line-height: 14px;
+    margin-bottom: 68px;
+  }
+  &__content {
+    max-width: 620px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 46px;
+    margin-bottom: 6px;
+  }
+  &__equipment {
+    color: #f78e9b;
+    position: relative;
+    padding-right: 35px;
+    background: url(../../img/icon-german-flag.png) no-repeat top right;
+  }
+  &__sub-title {
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #425674;
+    margin-bottom: 28px;
+  }
+  &__price {
+    position: relative;
+    font-weight: 500;
+    line-height: 25px;
+    color: #425674;
+    padding-left: 20px;
+    margin-bottom: 45px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 4px;
+      background: #f78e9b;
+      border-radius: 6px;
+    }
+  }
+  &__price-title {
+    font-size: 14px;
+  }
+  &__price-text {
+    font-size: 15px;
+    &--money {
+      font-size: 20px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #425674;
+    margin-bottom: 9px;
+  }
+  &__button {
+    max-width: 250px;
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 47px;
+  }
+
+  &__block-list {
+    display: flex;
+  }
+  &__block-list-item {
+    padding: 5px 5px 5px 72px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #293951;
+    &+&{
+        margin-left: 20px;
+    }
+    background-repeat: no-repeat;
+    background-position: left top;
+    span {
+        position: relative;
+        font-weight: bold;
+        display: block;
+    }
+    &--time{
+        background-image: url(../../img/icon-clock.svg);
+    }
+    &--course{
+        background-image: url(../../img/icon-calc.svg);
+    }
+    &--weekend{
+        background-image: url(../../img/icon-calendar.svg);
+    }
+  }
+}

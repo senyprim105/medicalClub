@@ -1,0 +1,22 @@
+
+.breadcrubs {
+    display: flex;
+    &__item {
+        &+&{
+            margin-left: 25px;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width:8px;
+                height: 8px;
+                left:-15px;
+                top:50%;
+                transform: translateY(-50%);
+                background: url(../../img/icon-breadcrumbs-arrow.svg) no-repeat center/cover;
+            }
+        }
+    }
+    &__link {
+    }
+}

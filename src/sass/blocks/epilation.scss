@@ -1,0 +1,65 @@
+.epilation {
+    margin-bottom: 75px;
+  &__wrapper{
+    @include container;
+  }
+  &__title {
+    font-weight: 600;
+    max-width: 800px;
+    font-size: 30px;
+    line-height: 38px;
+    margin: 0 auto 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #293951;
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 26px;
+    
+    text-align: center;
+    color: #586E8E;
+    margin-bottom: 45px;
+    
+  }
+  &__title-about {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+   
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    max-width: 800px;
+    margin: 0 auto 8px;
+  }
+  &__flash {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 26px;
+    
+    margin-bottom: 22px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    padding-bottom: 45px;
+    background: url(../../img/icon-arow-bottom.svg) no-repeat bottom center;    
+  }
+ 
+  &__images {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: #586E8E;
+      font-size: 15px;
+      line-height: 22px;
+      text-align: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    
+  }
+}

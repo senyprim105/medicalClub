@@ -1,0 +1,85 @@
+.for-whom {
+    padding-top: 40px;
+    padding-bottom:80px;
+    line-height: 26px;
+    text-align: center;
+    background: url(../../img/bg-for-whom.png) no-repeat bottom -52px center;
+  &__wrapper {
+      @include container;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color: #293951;
+  }
+  &__text {
+    font-size: 15px;
+    
+    color: #586E8E;
+  }
+  &__block {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+  }
+  &__indication {
+      padding-top: 35px;
+      max-width: 400px;
+      width: 100%;
+      .for-whom__indication-label{
+        text-align: right;
+        color: #F78E9B;
+      }
+      &--contra{
+        .for-whom__indication-label{
+            text-align: left;
+            color: #84A3E6; 
+        }
+        .for-whom__indication-item{
+            padding-left: 40px;
+            text-align: left;
+            &::before{
+                left: 0px;
+                background: url(../../img/icon-indication-blue.svg) no-repeat center;
+            }
+        }
+      }
+
+  }
+  &__indication-label{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    
+    margin-bottom: 35px;
+  }
+  &__indication-list{
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-height: min-content;
+
+  }
+  &__indication-item{
+    font-weight: 500;
+    font-size: 15px;
+    text-align: right;
+    color: #586E8E;
+    padding-right: 40px;
+    position: relative;
+    &+&{
+        margin-top: 26px;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top:0px;
+        right: 0px;
+        background: url(../../img/icon-indication-red.svg) no-repeat center;
+    }
+  }
+}

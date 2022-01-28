@@ -1,0 +1,93 @@
+.benefits {
+  text-align: center;
+  color: #293951;
+  position: relative;
+  padding-bottom: 50px;
+  &::before{
+      content: "";
+      position: absolute;
+      width: 132px;
+      height: 116px;
+      bottom:-50px;
+      left:50%;
+      background-image: url(../../img/bg-banner-bottom.png);
+      background-repeat: no-repeat;
+      transform: translateX(-50%);
+      z-index: 1;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.06em;
+    max-width: 850px;
+    margin: 0 auto 32px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 270px;
+    width: 100%;
+    padding: 212px 5px 5px;
+    position: relative;
+    background-image: url(../../img/bg-examples-bottom.png);
+    background-repeat: no-repeat;
+    background-position: top 12px left 60px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url(../../img/bg-benefits-item-2.svg);
+      background-repeat: no-repeat;
+      background-position:  center;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &--fast::after{
+        background-image: url(../../img/bg-advantage-item-1.svg);
+    }
+    &--painfall::after{
+        background-image: url(../../img/bg-advantage-item-2.svg);
+    }
+    &--every-day::after{
+        background-image: url(../../img/bg-advantage-item-3.svg);
+    }
+    &--not-hair::after{
+        background-image: url(../../img/bg-advantage-item-4.svg);
+    }
+  }
+  &__item-title {
+    font-size: 15px;
+    line-height: 20px;
+
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    span {
+      display: block;
+    }
+  }
+
+  &__item-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #586e8e;
+  }
+}

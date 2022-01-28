@@ -1,0 +1,22 @@
+.questions {
+  &__wrapper {
+      @include container;
+  }
+  &__answers {
+
+  }
+  &__answers-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
+    /* identical to box height, or 180% */
+    
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #293951;
+  }
+ 
+  &__form {
+  }
+}
