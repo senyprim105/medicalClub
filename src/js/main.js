@@ -34,7 +34,7 @@
       renderSelection: rendererSelected,
       defaultSelected: false,
       placeholder: 'Выберете клинику<span class="red">*</span>',
-      customClass="feedback__filials",
+      customClass:"feedback__filials",
     });
 
     function renderer(data) {
