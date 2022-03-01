@@ -34,10 +34,14 @@ const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack
 
 
 const scriptsLib = ["./node_modules/swiper/swiper-bundle.min.js",
-"./node_modules/inputmask/dist/inputmask.min.js"];
+"./node_modules/inputmask/dist/inputmask.min.js",
+"./node_modules/choices.js/public/assets/scripts/choices.min.js",
+"./node_modules/mobius1-selectr/dist/selectr.min.js"];
 const stilesLib = [
   "./node_modules/normalize.css/normalize.css",
-  "./node_modules/swiper/swiper-bundle.min.css"
+  "./node_modules/swiper/swiper-bundle.min.css",
+  "./node_modules/choices.js/public/assets/styles/choices.min.css",
+  "./node_modules/mobius1-selectr/dist/selectr.min.css"
 ];
 
 const path = {

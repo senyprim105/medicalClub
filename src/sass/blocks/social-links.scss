@@ -1,0 +1,35 @@
+.social__links {
+  display: flex;
+}
+.social__link {
+  & + & {
+    margin-left: 12px;
+  }
+  width: 42px;
+  height: 42px;
+  border-radius: 3px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  &--vk {
+    background-color: #d972b5;
+    background-image: url(../../img/icon-vk.svg);       
+    
+  }
+  &--inst {
+    background-image: url(../../img/icon-inst.svg),
+    linear-gradient(54.46deg, #e86aad -8.93%, #5cbafe 79.17%);
+  }
+  &--fb {
+    background-color: #60b8fc;
+    background-image: url(../../img/icon-fb.svg),
+  }
+}

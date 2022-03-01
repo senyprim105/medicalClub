@@ -4,17 +4,51 @@
   justify-content: center;
   align-items: center;
   min-width: 250px;
+  min-height: 60px;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
   padding: 5px;
-  background-image: 
-  url(../../img/icon-bg-button.svg),
-      url(../../img/icon-bg-button.svg),
-      linear-gradient(90deg, #e86aad 0%, #b089cc 100%);
+  background-image: url(../../img/icon-bg-button.svg),
+    url(../../img/icon-bg-button.svg),
+    linear-gradient(90deg, #e86aad 0%, #b089cc 100%);
   background-repeat: no-repeat;
-  background-position: top left, 30px top,left center ;
+  background-position: center left, 30px center, left center;
 
   box-shadow: 0px 10px 20px rgba(120, 132, 202, 0.49);
   border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-image: url(../../img/icon-bg-button.svg),
+      url(../../img/icon-bg-button.svg),
+      linear-gradient(40deg, #b089cc 0%,  #e86aad 100%);
+      background-repeat: no-repeat;
+      background-position: center left, 30px center, left center;
+
+    border: none;
+  }
+  &--middle {
+    min-height: 50px;
+  }
+  &--small {
+    min-width: 200px;
+    min-height: 46px;
+    background: linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(90deg, #e86aad 0%, #b089cc 100%) border-box;
+    border: 2px solid transparent;
+    span {
+      background: linear-gradient(90deg, #e86aad 0%, #b089cc 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+    }
+    &:hover{
+      span{
+        background: none;
+        background-clip: inherit;
+        -webkit-text-fill-color: inherit;
+      }
+    }
+  }
 }

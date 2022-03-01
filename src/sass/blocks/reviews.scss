@@ -1,0 +1,88 @@
+.reviews {
+  overflow: hidden;
+  
+  &__wrapper {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 34px;
+    /* or 113% */
+    
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #293951;
+    margin-bottom: 23px;
+  }
+  &__slider {
+    width: 100%;
+    position: relative;
+  }
+
+  &__slider-wrapper {
+    width: 100%;
+  }
+  //Ставим блок в 1200px  с двумя слайдами (active right
+  //с маржинами по 30px и с прилегающими блоками по 20px
+  //Местоположение кнопок подобрал
+  &__slider-item {
+    max-width: 540px;
+    min-width: 540px;
+    opacity: 0.6;
+    &+&{
+      margin-left: 20px;
+    }
+    
+
+    &--end{
+      &::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 50%;
+        background: #fff;
+        box-shadow: inset 0px 4px 16px rgba(88, 110, 142, 0.14);
+      }
+    }
+    &--right {
+      opacity: 1;
+      margin-right: 30px !important;
+      margin-left: 30px !important;
+      &::before {
+        right: 0px;
+        transform: translate(50%, -50%);
+      }
+    }
+    &--active {
+      margin-left: 30px !important;
+      opacity: 1;
+      &::before {
+        left: 0px;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &--left{
+      margin-right: 20px;
+    }
+  }
+  &__slider-button{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    &--prev{
+      left:20px;
+    }
+    &--next{
+      right:-20px;
+    }
+  }
+}

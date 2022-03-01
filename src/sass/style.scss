@@ -2,10 +2,23 @@
 @import "mixin.scss";
 @import "fonts.scss";
 @import "global.scss";
+
+
+@import "blocks/check.scss";
 @import "blocks/button.scss";
+@import "blocks/selectr.scss";
+@import "blocks/round-button.scss";
+@import "blocks/checkbox.scss";
 @import "blocks/contact.scss";
 @import "blocks/filial.scss";
 @import "blocks/accordion.scss";
+@import "blocks/review.scss";
+@import "blocks/sale-item.scss";
+@import "blocks/worker.scss";
+@import "blocks/feedback.scss";
+@import "blocks/social-links.scss";
+
+
 @import "blocks/header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/banner.scss";
@@ -19,4 +32,10 @@
 @import "blocks/effect.scss";
 @import "blocks/examples.scss";
 @import "blocks/choice.scss";
+@import "blocks/questions.scss";
+@import "blocks/reviews.scss";
+@import "blocks/sale.scss";
+@import "blocks/staff.scss";
+@import "blocks/form.scss";
+@import "blocks/footer.scss";
 

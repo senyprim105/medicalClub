@@ -59,25 +59,20 @@
 
   &__slider-controls {
   }
-  &__slider-prev,&__slider-next{
+  &__slider-button{
     position: absolute;
+    z-index: 10;
     top:50%;
     transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  &__slider-prev {
-    left: 0px;
-    background-image: url(../../img/icon-round-arrow-left.svg) ;
-  }
-  &__slider-next {
-    right: 0;
-    background-image: url(../../img/icon-round-arrow-right.svg) ;
+    &--prev{
+      left: 0px;
+    }
+    &--next{
+      right: 0;
+    }
   }
   &__slider-pagination {
+    display: none;
   }
   &__button{
     max-width: 310px;

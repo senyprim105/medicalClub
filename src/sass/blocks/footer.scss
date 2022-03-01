@@ -1,0 +1,58 @@
+.footer {
+  &__top {
+    background: linear-gradient(0deg, #eeecec, #eeecec);
+    min-height: 150px;
+    padding: 50px 0;
+  }
+  &__top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    @include container;
+    margin: auto;
+  }
+  &__logo {
+    width: 175px;
+    height: 45px;
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+  }
+  &__main-contact {
+    margin-right: 33px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #586e8e;
+  }
+  &__social-links {
+  }
+
+  &__trademark {
+    background: #4b4b56;
+    min-height: 80px;
+    padding: 15px 0;
+  }
+  &__trademark-wrapper {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__trademark-text {
+    max-width: 430px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 22px;
+    color: #ffffff;
+  }
+  &__trademark-sign {
+  }
+  &__tradmark-image {
+    width: 157px;
+    height: 30px;
+  }
+}

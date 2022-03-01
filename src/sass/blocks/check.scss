@@ -1,0 +1,53 @@
+.check{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  background-color: #fbf1f1;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 73%;
+    height: 73%;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0px 2px 10px rgba(78, 127, 222, 0.2);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 13px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../../img/icon-check-gradient.svg) no-repeat center/cover;
+  }
+  &--red{
+    &::before{
+        background: linear-gradient(90deg, #E86AAD 0%, #B089CC 100%);
+        box-shadow: 0px 2px 0px #AB539C;
+      }
+      &::after{
+        background: url(../../img/icon-check-white.png) no-repeat center/cover;
+      } 
+  }
+  &--small{
+      width: 26px;
+      height: 26px;
+      &::before{
+          content: none;
+          background-color: currentColor;
+      }
+      &::after{
+          width: 13px;
+          height: 10px;
+          background: url(../../img/icon-check-white.png) no-repeat center/cover;
+      }
+  }
+}

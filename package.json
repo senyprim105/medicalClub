@@ -49,9 +49,11 @@
         "not ie <= 11"
     ],
     "dependencies": {
+        "choices.js": "10.1.0",
         "html-validate": "^6.2.0",
         "inputmask": "^5.0.7",
         "leaflet": "1.7.1",
+        "mobius1-selectr": "2.4.13",
         "normalize.css": "8.0.1",
         "slick-slider": "^1.8.2",
         "swiper": "^7.4.1"

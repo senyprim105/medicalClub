@@ -1,0 +1,109 @@
+.sale {
+  background-image: url(../../img/bg-sale-center.png),
+    url(../../img/bg-zones-left.png), url(../../img/bg-zones-right.png),
+    linear-gradient(277.33deg, #f0fcfc 2.56%, rgba(255, 255, 255, 0) 67.14%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: right 200px bottom, left top -100px, right -200px bottom,
+    center;
+  background-size: contain, auto, auto;
+  background-color: #f8fafd;
+  position: relative;
+
+  &__wrapper {
+    max-width: 1360px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: auto;
+      background: url(../../img/bg-sale-center.png) no-repeat left
+        bottom/contain;
+    }
+  }
+  &__title {
+    padding-top: 40px;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: left;
+    text-transform: uppercase;
+    background: linear-gradient(
+      90deg,
+      rgba(232, 106, 173, 0.2) 0%,
+      rgba(92, 186, 254, 0.2) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__slider-title {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #293951;
+    margin-right: 20px;
+    margin-bottom: 40px;
+  }
+  &__slider-all-links {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 34px;
+
+    text-decoration-line: underline;
+    text-transform: uppercase;
+
+    color: #e56bae;
+  }
+  &__slider-block {
+    padding-right:70px;
+    width: 970px; //270*3 + 15*2 на shaddow +30*2 на spacing +70px на панель управления справа
+    position: relative;
+    
+    &::before {
+
+    }
+  }
+  &__slider {
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 70px;
+  }
+  &__slider-item {
+    
+    & + & {
+      margin-left: 30px;
+    }
+  }
+
+  &__slider-button {
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    &--prev {
+      top: 140px;
+    }
+    &--next {
+      top:215px;
+    }
+  }
+  &__subtitle {
+  }
+  &__conditions {
+  }
+  &__condition {
+  }
+  &__price {
+  }
+  &__currency {
+  }
+  &__button {
+  }
+}

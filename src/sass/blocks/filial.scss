@@ -4,6 +4,7 @@
     line-height: 20px;
     padding-left: 40px;
     position: relative;
+    text-align: left;
     &::before{
         content: "";
         position: absolute;
@@ -16,9 +17,20 @@
     
     &__name {
         font-weight: 700;
+        display: block;
 
     }
     &__address {
 
+    }
+    &--active,
+    &:hover
+    {
+        &::before{
+            background: url(../../img/icon-metro-active.svg) no-repeat center/cover; 
+        }
+    }
+    &--selected .filial__name{
+        display: inline-block;
     }
 }
