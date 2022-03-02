@@ -82,22 +82,23 @@
     }
   }
   function sliderExamples() {
-    console.log("create slider");
-    // Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
     var examples = new Swiper(".examples__slider", {
       effect: "coverflow",
-      initialSlide: 2,
-      slidesPerView: 1.93,
+      initialSlide: 1,
+      slidesPerView: "auto",
       loop: true,
-      grabCursor: true,
       centeredSlides: true,
-      centeredSlidesBounds: true,
+      slidesOffsetBefore:0,
+      slidesOffsetAfter:0,
+      slideActiveClass: "examples__slider-item--active",
+      slideNextClass: "examples__slider-item--next",
+      slidePrevClass: "examples__slider-item--prev",
       coverflowEffect: {
         rotate: 0,
-        stretch: 110,
+        stretch: 155,
         depth: 300,
         modifier: 1,
-        slideShadows: true,
+        // slideShadows: true,
       },
       navigation: {
         nextEl: ".examples__slider-button--next",
