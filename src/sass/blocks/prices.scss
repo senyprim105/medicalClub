@@ -63,10 +63,20 @@
   &__select {
     max-width: 390px;
     width: 100%;
-    padding: 11px 45px;
-    border: 1px solid rgba(92, 121, 162, 0.3);
-    box-sizing: border-box;
-    border-radius: 6px;
+    &--selected{
+      padding-left:20px;
+      position: relative;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 14px;
+        top:50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: url(../../img/icon-pick.svg) no-repeat center/contain;
+      }
+    }
   }
 
   &__footer {
