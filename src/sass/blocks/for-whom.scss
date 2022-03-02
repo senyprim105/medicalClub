@@ -15,8 +15,8 @@
   }
   &__text {
     font-size: 15px;
-    
     color: #586E8E;
+    margin-bottom: 40px;
   }
   &__block {
       display: flex;
@@ -24,7 +24,6 @@
       flex-direction: row;
   }
   &__indication {
-      padding-top: 50px;
       max-width: 400px;
       width: 100%;
       .for-whom__indication-label{
@@ -55,6 +54,7 @@
     margin-bottom: 35px;
   }
   &__indication-list{
+    margin-top: 25px;
       
       display: flex;
       flex-direction: column;
