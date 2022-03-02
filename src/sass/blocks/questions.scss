@@ -11,6 +11,7 @@
   }
   &__answers-wrapper {
     max-width: 734px;
+    margin-bottom: 108px;
   }
   &__answers-title {
     font-weight: 600;
@@ -306,21 +307,10 @@
     margin-bottom: 16px;
   }
   &__form-input {
-    padding: 16px 22px;
-    background: #fafafc;
-    width: 100%;
-
-    box-shadow: inset 0px 2px 6px rgba(92, 121, 162, 0.3);
-    border-radius: 3px;
-    font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    outline: none;
-    border: none;
-
     color: #6a86af;
     margin-bottom: 20px;
-
     &--phone {
       width: auto;
       max-width: 330px;

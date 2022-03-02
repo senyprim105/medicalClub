@@ -131,7 +131,8 @@
                 <p class="banner__price-title red">Стоимость сеанса:</p>
                 <span class="banner__price-text"
                   >от
-                  <span class="banner__price-text--money">1 200 
+                  <span class="banner__price-text--money"
+                    >1 200
                     <span class="rouble banner__price-text--rouble">е</span>
                   </span>
                 </span>
@@ -407,10 +408,18 @@
                 Вам филиал:
               </p>
               <select class="prices__select">
-                <option class="prices__select-option" value="1">Медцентр на Малой Юшуньской</option>
-                <option class="prices__select-option" value="2">Медцентр на Малой Красной площади</option>
-                <option class="prices__select-option" value="3">Медцентр на Малой Юшуньской</option>
-                <option class="prices__select-option" value="4">Медцентр на Малой Юшуньской</option>
+                <option class="prices__select-option" value="1">
+                  Медцентр на Малой Юшуньской
+                </option>
+                <option class="prices__select-option" value="2">
+                  Медцентр на Малой Красной площади
+                </option>
+                <option class="prices__select-option" value="3">
+                  Медцентр на Малой Юшуньской
+                </option>
+                <option class="prices__select-option" value="4">
+                  Медцентр на Малой Юшуньской
+                </option>
               </select>
             </div>
             <ul class="prices__list">
@@ -437,7 +446,7 @@
                   1 200 <span class="rouble">е</span>
                 </div>
                 <div class="prices__data prices__data--men">
-                  1 800 <span  class="rouble">е</span>
+                  1 800 <span class="rouble">е</span>
                 </div>
               </li>
               <li class="prices__item">
@@ -885,15 +894,26 @@
                   </h3>
                   <input
                     type="text"
-                    class="questions__form-input"
+                    class="questions__form-input colorfull-input__element"
                     placeholder="Ваш вопрос"
                     name="question"
                   />
-                  <input
-                    type="phone"
-                    class="questions__form-input questions__form-input--phone"
-                    name="phone"
-                  />
+                  <div class="colorfull-input questions__input-block">
+                    <input
+                      type="phone"
+                      id="questions__form-input--phone"
+                      class="questions__form-input questions__form-input--phone colorfull-input__element"
+                      name="phone"
+                      required
+                    />
+                    <span
+                      class="colorfull-input__placeholder questions__form-input-placeholder"
+                    >
+                      +7(___) ---_--_--<span class="colorfull-input__placeholder-red"
+                        >*</span
+                      >
+                    </span>
+                  </div>
                   <button class="questions__form-submit button" type="submit">
                     Задать вопрос
                   </button>
@@ -1065,7 +1085,8 @@
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
-                            2 999 <span class="rouble sale-item__currency">:</span>
+                            2 999
+                            <span class="rouble sale-item__currency">:</span>
                           </div>
                           <button
                             class="sale-item__button button button--small"
@@ -1094,7 +1115,8 @@
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
-                            2 990 <span class="rouble  sale-item__currency">:</span>
+                            2 990
+                            <span class="rouble sale-item__currency">:</span>
                           </div>
                           <button
                             class="sale-item__button button button--small"
@@ -1123,7 +1145,8 @@
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
-                            2 990 <span class="rouble  sale-item__currency">:</span>
+                            2 990
+                            <span class="rouble sale-item__currency">:</span>
                           </div>
                           <button
                             class="sale-item__button button button--small"
@@ -1152,7 +1175,8 @@
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
-                            2 990 <span class="rouble  sale-item__currency">:</span>
+                            2 990
+                            <span class="rouble sale-item__currency">:</span>
                           </div>
                           <button
                             class="sale-item__button button button--small"
@@ -1181,7 +1205,8 @@
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
-                            2 990 <span class="rouble sale-item__currency">:</span>
+                            2 990
+                            <span class="rouble sale-item__currency">:</span>
                           </div>
                           <button
                             class="sale-item__button button button--small"
@@ -1474,31 +1499,31 @@
                     первый сеанс эпиляции
                   </p>
                   <fieldset class="feedback__fields">
-                    <div class="feedback__colorfull-input">
+                    <div class="colorfull-input feedback__colorfull-input">
                       <input
                         type="text"
                         name="name"
-                        class="feedback__input"
+                        class="colorfull-input__element feedback__input"
                         id="feedback__name"
                         required
                       />
-                      <span class="feedback__placeholder"
-                        >Ваше имя<span class="feedback__placeholder-red"
+                      <span class="colorfull-input__placeholder feedback__placeholder"
+                        >Ваше имя<span class="colorfull-input__placeholder-red"
                           >*</span
                         ></span
                       >
                     </div>
-                    <div class="feedback__colorfull-input">
+                    <div class="colorfull-input feedback__colorfull-input">
                       <input
                         type="tel"
                         name="phone"
-                        class="feedback__input"
+                        class="colorfull-input__element feedback__input"
                         id="feedback__phone"
                         required
                       />
-                      <span class="feedback__placeholder"
+                      <span class="colorfull-input__placeholder feedback__placeholder"
                         >+7 (---) ---_--_--<span
-                          class="feedback__placeholder-red"
+                          class="colorfull-input__placeholder-red"
                           >*</span
                         ></span
                       >
@@ -1506,7 +1531,7 @@
                     <input
                       type="text"
                       name="email"
-                      class="feedback__input feedback__email"
+                      class="colorfull-input__element feedback__input feedback__email"
                       id="feedback__email"
                       placeholder="Email"
                     />
@@ -1577,14 +1602,18 @@
         <div class="footer__top">
           <div class="footer__top-wrapper">
             <div class="footer__logo">
-              <img src="./img/logo.png" alt="">
+              <img src="./img/logo.png" alt="" />
             </div>
             <div class="footer__contact">
               <div class="contact footer__main-contact">
-                <a href="mailto:info@medicalclub.ru" class="contact__text footer__contact-text"
-                    >info@medicalclub.ru</a
-                  >
-                <a href="tel:84951268925" class="footer__contact-phone contact__phone"
+                <a
+                  href="mailto:info@medicalclub.ru"
+                  class="contact__text footer__contact-text"
+                  >info@medicalclub.ru</a
+                >
+                <a
+                  href="tel:84951268925"
+                  class="footer__contact-phone contact__phone"
                   >8 495 126-89-25</a
                 >
               </div>

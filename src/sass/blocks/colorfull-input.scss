@@ -1,0 +1,40 @@
+$padding-left: 22px;
+$padding-right: $padding-left;
+$padding-top: 14px;
+$padding-bottom: $padding-top;
+$color-placeholder: #ccc;
+$color-placeholder-2: #f93238;
+
+.colorfull-input {
+  position: relative;
+
+  &__element {
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+
+    background: #fafafc;
+    border: 1px solid rgba(92, 121, 162, 0.15);
+    box-shadow: inset 0px 2px 6px rgba(92, 121, 162, 0.3);
+    border-radius: 3px;
+    width: 100%;
+    padding: $padding-top $padding-left;
+  }
+  &__element:valid + &__placeholder,
+  &__element:focus + &__placeholder,
+  &__element:hover + &__placeholder {
+    display: none;
+  }
+  &__placeholder {
+    position: absolute;
+    pointer-events: none;
+    top: $padding-top;
+    bottom: $padding-bottom;
+    left: $padding-left;
+    color: $color-placeholder;
+  }
+  &__placeholder-red {
+    color: $color-placeholder-2;
+  }
+}
