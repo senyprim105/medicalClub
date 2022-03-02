@@ -28,3 +28,11 @@
     font-style: normal;
     font-display: wrap;
 }
+@font-face {font-family: "Rouble";
+    src:url(../fonts/Rouble.woff2) format("woff2"), /* chrome、firefox */
+    url(../fonts/Rouble.woff) format("woff"), /* chrome、firefox */
+    url(../fonts/Rouble.ttf) format("truetype"); /* chrome、firefox */
+    font-weight: 400;
+    font-style: normal;
+    font-display: wrap;
+  }
