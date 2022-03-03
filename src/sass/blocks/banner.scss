@@ -1,20 +1,17 @@
 .banner {
+  color: #425674;
   position: relative;
   padding: 20px 0 76px;
   margin-bottom: 75px;
   min-height: 595px;
   background-color: #faf8f8;
-  background: url(../../img/bg-banner-left.png)
-  ,url(../../img/bg-banner-left-2.png)
-  ,url(../../img/bg-banner-right.png)
-  , url(../../img/bg-banner-center.png)
-  ,linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
+  background: url(../../img/bg-banner-left.png),
+    url(../../img/bg-banner-left-2.png), url(../../img/bg-banner-right.png),
+    url(../../img/bg-banner-center.png),
+    linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
   background-repeat: no-repeat;
-  background-position: left -67px
-  , left 23px
-  , right bottom
-  , center bottom
-  ,center center;
+  background-position: left -67px, left 23px, right bottom, center bottom,
+    center center;
 
   &::before {
     content: "";
@@ -23,41 +20,111 @@
     bottom: -60px;
     left: 50%;
     position: absolute;
+    background-repeat: no-repeat;
     background-image: url(../../img/bg-banner-bottom.png);
+  }
+
+  @media (max-width: 1600px) {
+    background: url(../../img/bg-banner-left-2.png),
+      url(../../img/bg-banner-right.png), url(../../img/bg-banner-center.png),
+      linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
+    background-repeat: no-repeat;
+    background-position: left 23px, right bottom, center bottom, center center;
+    background-size: auto, auto, auto, auto;
+  }
+  @media (max-width: 1200px) {
+    background: url(../../img/bg-banner-left-2.png),
+      url(../../img/bg-banner-center.png),
+      linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
+    background-repeat: no-repeat;
+    background-position: left 23px, center bottom, center center;
+  }
+  @media (max-width: 768px) {
+    padding: 77px 15px 40px 15px;
+    background: url(../../img/bg-banner-left-mobile.png),
+      url(../../img/bg-banner-center.png),
+      linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
+    background-repeat: no-repeat;
+    background-position: left top, right 0px bottom 0px, center center;
+    background-size: auto, 270px 190px;
+    &::before {
+      width: 72px;
+      height: 53px;
+      bottom: 0px;
+      right: -20px;
+      left: auto;
+      background-image: url(../../img/bg-banner-right-mobile.png);
+    }
   }
   &__breadcrumbs {
     color: #8aa1c3;
     font-size: 13px;
     line-height: 14px;
     margin-bottom: 68px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   &__content {
     max-width: 620px;
   }
   &__title {
+    color: #293951;
     font-weight: 500;
     font-size: 38px;
     line-height: 46px;
     margin-bottom: 6px;
+    @media (max-width: 575px) {
+      font-size: 26px;
+      line-height: 34px;
+      margin-bottom: 19px;
+    }
   }
   &__equipment {
     color: #f78e9b;
     position: relative;
-    padding-right: 35px;
-    background: url(../../img/icon-german-flag.png) no-repeat top right;
+  }
+  &__equipment-flag {
+    display: inline-block;
+    height: 38px;
+    width: 31px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 10px;
+      width: 31px;
+      height: 23px;
+      background: url(../../img/icon-german-flag.png) no-repeat center/contain;
+    }
+    @media (max-width: 575px) {
+      width: 23px;
+      height: 26px;
+      &::before {
+        top: 0;
+        right: 10px;
+        width: 23px;
+        height: 15px;
+        background: url(../../img/icon-german-flag.png) no-repeat center/contain;
+      }
+    }
   }
   &__sub-title {
     font-size: 18px;
     line-height: 26px;
 
-    color: #425674;
     margin-bottom: 28px;
+    @media (max-width: 575px) {
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
   }
   &__price {
     position: relative;
     font-weight: 500;
     line-height: 25px;
-    color: #425674;
     padding-left: 20px;
     margin-bottom: 45px;
     &::before {
@@ -70,58 +137,101 @@
       background: #f78e9b;
       border-radius: 6px;
     }
+    @media (max-width: 575px) {
+      margin-bottom: 30px;
+    }
   }
   &__price-title {
     font-size: 14px;
+    @media (max-width: 575px) {
+      font-size: 13px;
+      line-height: 25px;
+    }
   }
   &__price-text {
     font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
     &--money {
       font-size: 20px;
     }
-    &--rouble{
-      line-height: 25px;
+    &--rouble {
+      font-weight: 400;
+      font-size: 20px;
+    }
+    @media (max-width: 575px) {
+      font-size: 13px;
+      margin-bottom: 32px;
+      &--money {
+        font-size: 18px;
+      }
+      &--rouble {
+        font-size: 18px;
+        font-weight: 400;
+      }
     }
   }
   &__text {
     font-size: 16px;
     line-height: 24px;
-    color: #425674;
     margin-bottom: 9px;
+    @media (max-width: 575px) {
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
   &__button {
     max-width: 250px;
+    min-width: 1px;
     width: 100%;
     min-height: 60px;
     margin-bottom: 47px;
+    @media (max-width: 575px) {
+      max-width: 200px;
+      min-height: 46px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      line-height: 24px;
+    }
   }
 
   &__block-list {
     display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
   &__block-list-item {
     padding: 5px 5px 5px 72px;
     font-size: 15px;
     line-height: 18px;
     color: #293951;
-    &+&{
-        margin-left: 20px;
+    & + & {
+      margin-left: 20px;
+      @media (max-width: 768px) {
+        margin-top: 20px;
+        margin-left: 0;
+      }
     }
     background-repeat: no-repeat;
     background-position: left top;
     span {
-        position: relative;
-        font-weight: bold;
-        display: block;
+      position: relative;
+      font-weight: bold;
+      display: block;
     }
-    &--time{
-        background-image: url(../../img/icon-clock.svg);
+    &--time {
+      background-image: url(../../img/icon-clock.svg);
     }
-    &--course{
-        background-image: url(../../img/icon-calc.svg);
+    &--course {
+      background-image: url(../../img/icon-calc.svg);
     }
-    &--weekend{
-        background-image: url(../../img/icon-calendar.svg);
+    &--weekend {
+      background-image: url(../../img/icon-calendar.svg);
+    }
+    @media (max-width: 575px) {
+      padding-left: 50px;
+      font-size: 13px;
     }
   }
 }
