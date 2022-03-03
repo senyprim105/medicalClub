@@ -40,7 +40,7 @@
     background-position: left 23px, center bottom, center center;
   }
   @media (max-width: 768px) {
-    padding: 77px 15px 40px 15px;
+    padding: 0;
     background: url(../../img/bg-banner-left-mobile.png),
       url(../../img/bg-banner-center.png),
       linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
@@ -54,6 +54,12 @@
       right: -20px;
       left: auto;
       background-image: url(../../img/bg-banner-right-mobile.png);
+    }
+  }
+  &__wrapper{
+    @include container;
+    @media (max-width: 768px) {
+      padding: 77px 15px 40px 15px;
     }
   }
   &__breadcrumbs {
