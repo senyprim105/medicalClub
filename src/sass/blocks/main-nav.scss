@@ -1,19 +1,54 @@
 .main-nav {
   height: 100%;
   $this: &;
+  //Если нет js или меню отрыта показать его: 
+  &--open,&--no-js{
+    #{$this}__contact-block {
+        background-color: #f8fafd;
+        padding: 34px 15px 60px 15px;
+        display: flex;
+        order: 2;
+        flex-direction: column;
+        align-items: center;
+        max-width: 320px;
+        width: 100%;
+        #{$this}__contact-phone {
+          margin-bottom: 20px;
+        }
+        #{$this}__contact-button {
+          max-width: 226px;
+        }
+    }
+    #{$this}__menu {
+        display: block;
+        order: 1;
+    }
+    #{$this}__menu-block{
+        position: absolute;
+        bottom:0px;
+        left: 0;
+        transform: translateY(100%);
+        max-width: 320px;       
+        width: 100%;
+    }
+  }
 
   &__inner {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     @media (max-width: 1200px) {
-      display: flex;
       flex-direction: column;
+      flex-wrap: nowrap;
     }
   }
   //#region toggle
   &__toggle {
     position: absolute;
     display: none;
-    order: 2;
 
     background-color: transparent;
     overflow: hidden;
@@ -79,30 +114,18 @@
   }
   //#endregion
   //#region верхний блок хидера (логотип адреса)
-  &__contacts {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    @media (max-width: 1200px) {
-      display: contents;
-      margin-bottom: 0;
-      width: 100%;
-    }
-  }
-
-  &__contacts-first-block {
+  &__top-block {
     display: contents;
     @media (max-width: 1200px) {
       display: flex;
-      order: 1;
+      width: 100%;
       flex-grow: 1;
       padding-right: 40px;
       padding: 15px 47px 15px 15px;
       box-shadow: 0px 2px 10px rgba(78, 127, 222, 0.2);
     }
   }
+  //#region logo
   &__logo-inner {
     @media (max-width: 1200px) {
       margin-right: 60px;
@@ -113,8 +136,11 @@
       height: 35px;
     }
   }
+  //#endregion
+  //#region filial
   &__filials-block {
-    display: contents;
+    display: flex;
+
     @media (max-width: 1200px) {
       display: flex;
       flex-direction: row;
@@ -125,7 +151,8 @@
     }
   }
   &__filials-list {
-    display: contents;
+    display: flex;
+    flex-wrap: wrap;
     @media (max-width: 768px) {
       display: none;
     }
@@ -157,46 +184,45 @@
   }
   &__filial {
     & + & {
-      margin-left: 60px;
+      margin-left: 50px;
     }
   }
   //#endregion
   //#region Нижний блок хидера (телефон кнопка)
-  &__contacts-block {
+  &__menu-block {
+    display: contents;
+    @media (max-width: 1200px) {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  //#region contact-block
+  &__contact-block {
     display: flex;
     flex-direction: row;
+    align-items: center;
     @media (max-width: 1200px) {
-      order: 4;
       background-color: #f8fafd;
       padding: 15px;
       display: flex;
       flex-direction: row;
       align-items: center;
       flex-grow: 1;
-      &--open {
-        background-color: #f8fafd;
-        padding: 34px 15px 60px 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 320px;
-        width: 100%;
-        #{$this}__contacts-phone {
-          margin-bottom: 20px;
-        }
-        #{$this}__contacts-button {
-          max-width: 250px;
-        }
-      }
+     
     }
     @media (max-width: 575px) {
       justify-content: space-between;
     }
   }
-  &__contacts-phone {
+  &__contact {
+    margin-right: 25px;
+
+  }
+  &__contact-phone {
     margin-right: 26px;
   }
-  &__contacts-button {
+  &__contact-button {
     max-width: 230px;
     min-height: 46px;
     width: 100%;
@@ -211,6 +237,7 @@
     }
   }
   //#endregion
+  //#region menu
 
   &__menu {
     width: 100%;
@@ -222,17 +249,11 @@
 
     @media (max-width: 1200px) {
       display: none;
-      order: 3;
       max-width: 320px;
       background: #f8fafd;
       margin-top: 0;
-      &--no-js,
-      &--open {
-        display: block;
-      }
     }
   }
-
   &__item {
     font-size: 14px;
     line-height: 24px;
@@ -265,4 +286,5 @@
       align-items: center;
     }
   }
+  //#endregion
 }
