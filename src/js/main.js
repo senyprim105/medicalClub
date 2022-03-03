@@ -102,7 +102,6 @@
         stretch: 155,
         depth: 300,
         modifier: 1,
-        // slideShadows: true,
       },
       navigation: {
         nextEl: ".examples__slider-button--next",
@@ -120,11 +119,10 @@
       effect: "coverflow",
       initialSlide: 1,
       slidesPerView: "auto",
-      loop: true,
       centeredSlides: true,
       slidesOffsetBefore:0,
       slidesOffsetAfter:0,
-      wrapperClass:"questions__license-wrapper",
+      // wrapperClass:"questions__license-wrapper", Убрал свой клас так как не знаю как уменьшить слайдеры
       slideClass: "questions__license-item",
       slideActiveClass: "questions__license-item--active",
       slideNextClass: "questions__license-item--next",
@@ -132,9 +130,9 @@
       coverflowEffect: {
         rotate: 0,
         stretch: 140,
-        depth: 170,
+        depth: 200,
         modifier: 1,
-        slideShadows: true,
+        // slideShadows: true,
       },
       navigation: {
         nextEl: ".questions__license-button--prev",
@@ -151,12 +149,13 @@
   function sliderReviews() {
     //Висит на соплях - настроить брейкпоинты
     var reviews = new Swiper(".reviews__slider", {
-      loop: true,
-      slidesPerView: "auto",
+      slidesOffsetBefore:0,
+      slidesPerView: 2,
+      // slidesPerGroup:2,
+      wrapperClass:"reviews__slider-wrapper",
       slideClass: "reviews__slider-item",
-      slideActiveClass:
-        "reviews__slider-item--end reviews__slider-item--active",
-      slideNextClass: "reviews__slider-item--end reviews__slider-item--right",
+      slideActiveClass:"reviews__slider-item--active",
+      slideNextClass: "reviews__slider-item--right",
       slidePrevClass: "reviews__slider-item--left",
 
       navigation: {
