@@ -4,4 +4,14 @@
     background-color: #fff;
     color:#4B4B56;
     padding: 29px 0 17px ;
+    &__wrapper{
+        @include container;
+        @media (max-width:1200px) {
+            padding: 0;
+        }
+    }
+    @media (max-width:1200px) {
+        padding: 0;
+        box-shadow: none;   
+    }
 }

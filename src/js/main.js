@@ -20,13 +20,27 @@
   }
   function menu() {
     NO_JS_CLASS = "main-nav--no-js";
-    MENU_OPEN_CLASS = "main-nav--open";
+    NO_JS_MENU_CLASS = "main-nav__menu--no-js";
+    NO_JS_CONTACTS_BLOCK_CLASS = "main-nav__contacts-block--no-js";
+
+    NAV_OPEN_CLASS = "main-nav--open";
+    MENU_OPEN_CLASS = "main-nav__menu--open";
+    CONTACTS_BLOCK_OPEN_CLASS="main-nav__contacts-block--open";
     const mainNav = document.querySelector(".main-nav");
+    const menu = document.querySelector(".main-nav__menu");
     const button = document.querySelector(".main-nav__toggle");
+    const contactsBlock = document.querySelector(".main-nav__contacts-block");
+    //Убараем метки no--js 
+    menu.classList.remove(NO_JS_MENU_CLASS);
     mainNav.classList.remove(NO_JS_CLASS);
+    contactsBlock.classList.remove(NO_JS_CONTACTS_BLOCK_CLASS);
+    //Устанавливаем убираем классы открытия меню
+
     if (button) {
       button.addEventListener("click", () => {
-        mainNav.classList.toggle(MENU_OPEN_CLASS);
+        mainNav.classList.toggle(NAV_OPEN_CLASS);
+        menu.classList.toggle(MENU_OPEN_CLASS);
+        contactsBlock.classList.toggle(CONTACTS_BLOCK_OPEN_CLASS);
       });
     }
   }
@@ -276,7 +290,7 @@
 
   document.addEventListener("DOMContentLoaded", (event) => {
     console.log("load");
-    // menu();
+    menu();
     sliderExamples();
     sliderLicenses();
     sliderReviews();

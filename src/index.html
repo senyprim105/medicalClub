@@ -29,47 +29,58 @@
     </div>
     <div class="container-fluid">
       <div class="header">
-        <div class="container">
+        <div class="header__wrapper">
           <nav class="main-nav main-nav--no-js">
             <div class="main-nav__inner">
               <button class="main-nav__toggle">
                 <span></span>
               </button>
               <div class="main-nav__contacts">
-                <div class="main-nav__logo-inner">
-                  <a href="#" class="main-nav__logo">
-                    <picture class="main-nav__logo-image">
-                      <img
-                        src="./img/logo.webp"
-                        width="175"
-                        height="45"
-                        alt="Логотип: Кэт энерджи"
-                      />
-                    </picture>
-                  </a>
+                <div class="main-nav__contacts-first-block">
+                  <div class="main-nav__logo-inner">
+                    <a href="#" class="main-nav__logo">
+                      <picture class="main-nav__logo-image">
+                        <img
+                          src="./img/logo.webp"
+                          width="175"
+                          height="45"
+                          alt="Логотип: Кэт энерджи"
+                        />
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="main-nav__filials-block">
+                    <h4 class="main-nav__filials-title">
+                      <a href="" class="main-nav__filials-link">Адреса</a>
+                    </h4>
+                    <ul class="main-nav__filials-list">
+                      <li class="filial main-nav__filial">
+                        <div class="filial__name">Жулебино</div>
+                        <div class="filial__address">Жулебинский бульвар 25</div>
+                      </li>
+                      <li class="filial main-nav__filial">
+                        <div class="filial__name">Жулебино</div>
+                        <div class="filial__address">Жулебинский бульвар 25</div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <a href="#" class="main-nav__filials">Адреса</a>
-                <div class="filial main-nav__contacts-filial">
-                  <div class="filial__name">Жулебино</div>
-                  <div class="filial__address">Жулебинский бульвар 25</div>
-                </div>
-                <div class="filial main-nav__contacts-filial">
-                  <div class="filial__name">Жулебино</div>
-                  <div class="filial__address">Жулебинский бульвар 25</div>
-                </div>
-                <div class="contact main-nav__contacts-phone">
-                  <p class="contact__text">
-                    Есть вопросы?<a href="tel:84951268925" class="red"
-                      >Звоните!</a
+
+                <div class="main-nav__contacts-block main-nav__contacts-block--no-js">
+                  <div class="contact main-nav__contacts-phone">
+                    <p class="contact__text">
+                      Есть вопросы?<a href="tel:84951268925" class="red"
+                        >Звоните!</a
+                      >
+                    </p>
+                    <a href="tel:84951268925" class="contact__phone"
+                      >8 495 126-89-25</a
                     >
-                  </p>
-                  <a href="tel:84951268925" class="contact__phone"
-                    >8 495 126-89-25</a
+                  </div>
+                  <a href="" class="button main-nav__contacts-button">
+                    <span> Записаться на эпиляцию</span></a
                   >
                 </div>
-                <a href="" class="button main-nav__contacts-button">
-                  <span> Записаться на эпиляцию</span></a
-                >
               </div>
               <ul class="main-nav__menu main-nav__menu--no-js">
                 <li class="main-nav__item">
@@ -92,9 +103,8 @@
                 <li class="main-nav__item">
                   <a href="" class="main-nav__link">ОТЗЫВЫ</a>
                 </li>
-                <li class="main-nav__item main-nav__item--red">
-                  <a href="" class="main-nav__link main-nav__link--gradient"
-                    >На сайт клиники</a
+                <li class="main-nav__item main-nav__item--active">
+                  <a href="" class="main-nav__link">На сайт клиники</a
                   >
                 </li>
               </ul>
@@ -102,7 +112,7 @@
           </nav>
         </div>
       </div>
-      <main class="page__index">
+      <!-- <main class="page__index">
         <section class="banner">
           <div class="container">
             <ul class="banner__breadcrumbs breadcrubs">
@@ -1642,7 +1652,7 @@
             </div>
           </div>
         </div>
-      </footer>
+      </footer> -->
     </div>
     <script src="js/lib.js"></script>
     <script src="js/main.js"></script>
