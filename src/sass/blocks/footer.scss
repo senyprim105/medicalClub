@@ -1,46 +1,80 @@
 .footer {
   &__top {
     background: linear-gradient(0deg, #eeecec, #eeecec);
-    min-height: 150px;
-    padding: 50px 0;
+    @media (max-width: 768px) {
+    }
   }
   &__top-wrapper {
+    min-height: 150px;
+    padding: 50px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100%;
     @include container;
     margin: auto;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      min-height: 230px;
+      padding: 35px 0;
+    }
   }
   &__logo {
     width: 175px;
     height: 45px;
+    @media (max-width: 768px) {
+      width: 128px;
+      height: 33px;
+    }
   }
   &__contact {
     display: flex;
     align-items: center;
+    @media (max-width:575px) {
+      display: contents;
+    }
   }
   &__main-contact {
     margin-right: 33px;
-    font-weight: 500;
     font-size: 14px;
     line-height: 24px;
     color: #586e8e;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+    @media (max-width:575px) {
+      text-align: center;
+      margin-right: 0;
+    }
+
+  }
+  &__contact-phone {
+    color: #293951;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      align-items: center;
+    }
   }
   &__social-links {
+   
   }
 
   &__trademark {
     background: #4b4b56;
-    min-height: 80px;
-    padding: 15px 0;
+    
   }
   &__trademark-wrapper {
+    min-height: 80px;
+    padding: 15px 0;
     @include container;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width:768px) {
+      display: block;
+      padding-bottom: 25px;
+      flex-direction: column;      
+    }
   }
   &__trademark-text {
     max-width: 430px;
@@ -48,11 +82,23 @@
     font-size: 13px;
     line-height: 22px;
     color: #ffffff;
+    @media (max-width:768px) {
+      max-width: none;
+      margin-bottom: 25px;
+      text-align: center;
+    }
   }
   &__trademark-sign {
-  }
-  &__tradmark-image {
+
     width: 157px;
     height: 30px;
+    @media (max-width:768px) {
+      margin: 0 auto;
+      width: 125px;
+      height: 24px;   
+    }
+  }
+  &__tradmark-image {
+   
   }
 }
