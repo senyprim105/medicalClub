@@ -1,6 +1,6 @@
 .epilation {
-    margin-bottom: 75px;
-  &__wrapper{
+  margin-bottom: 75px;
+  &__wrapper {
     @include container;
   }
   &__title {
@@ -12,47 +12,78 @@
     text-align: center;
     text-transform: uppercase;
     color: #293951;
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
   &__text {
     font-size: 15px;
     line-height: 26px;
-    
     text-align: center;
-    color: #586E8E;
+    color: #586e8e;
     margin-bottom: 45px;
-    
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 22px;
+    }
   }
   &__title-about {
     font-weight: bold;
     font-size: 20px;
     line-height: 26px;
-   
+    color: #293951;
+
     text-align: center;
     letter-spacing: 0.06em;
-    
+
     max-width: 800px;
     margin: 0 auto 8px;
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
   }
   &__flash {
     font-weight: bold;
     font-size: 15px;
     line-height: 26px;
-    
+
     margin-bottom: 22px;
     text-align: center;
     letter-spacing: 0.06em;
     padding-bottom: 45px;
-    background: url(../../img/icon-arow-bottom.svg) no-repeat bottom center;    
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 24px 12px;
+    background-image: url(../../img/icon-arow-bottom.svg);
+    @media (max-width: 768px) {
+      font-size: 12px;
+      padding-bottom: 30px;
+      background-size: 18px 9px;
+    }
   }
- 
+  &__images-container{
+    overflow: hidden;
+  }
+
   &__images {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      color: #586E8E;
-      font-size: 15px;
-      line-height: 22px;
-      text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #586e8e;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    @media (max-width: 1200px) {
+      justify-content: center;
+      margin: -15px;
+    }
+    @media (max-width:768px) {
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
   &__item {
     display: flex;
@@ -60,6 +91,18 @@
     align-items: center;
     max-width: 370px;
     width: 100%;
-    
+    min-width: 250px;
+    @media (max-width: 1200px) {
+       margin: 15px;
+    }
+    @media (max-width:768px) {
+      max-width: 290px;
+      img{
+        max-width: 220px;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
+    }
   }
 }
