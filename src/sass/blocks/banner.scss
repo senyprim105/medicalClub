@@ -48,18 +48,20 @@
     background-position: left top, right 0px bottom 0px, center center;
     background-size: auto, 270px 190px;
     &::before {
-      width: 72px;
-      height: 53px;
+      width: 50px;
+      height: 60px;
       bottom: 0px;
-      right: -20px;
+      right: 0px;
       left: auto;
       background-image: url(../../img/bg-banner-right-mobile.png);
+      background-position: bottom right
     }
   }
   &__wrapper{
     @include container;
     @media (max-width: 768px) {
       padding: 77px 15px 40px 15px;
+      overflow: hidden;
     }
   }
   &__breadcrumbs {
