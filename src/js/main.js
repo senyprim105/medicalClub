@@ -78,6 +78,8 @@
       return template.join("");
     }
   }
+
+
   function selectInPriceSection(){
     new Selectr(document.querySelector(".prices__select"), {
       searchable: false,
@@ -99,6 +101,32 @@
       return template.join("");
     }
   }
+
+  function sliderBenefits() {
+    var slider = new Swiper(".benefits__slider", {
+      slidesPerView: "auto",
+      
+      wrapperClass:"benefits__list",
+      slideClass: "benefits__item",
+      slideActiveClass:"benefits__item--active",
+      slideNextClass: "benefits__item--right",
+      slidePrevClass: "benefits__item--left",
+      spaceBetween:30,
+      autoHeight:true,
+      navigation: {
+        nextEl: ".benefits__button--next",
+        prevEl: ".benefits__button--prev",
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 20,
+        }
+      }
+    });
+  }
+
+
+
   function sliderExamples() {
     var examples = new Swiper(".examples__slider", {
       effect: "coverflow",
@@ -291,6 +319,7 @@
   document.addEventListener("DOMContentLoaded", (event) => {
     console.log("load");
     menu();
+    sliderBenefits();
     sliderExamples();
     sliderLicenses();
     sliderReviews();
