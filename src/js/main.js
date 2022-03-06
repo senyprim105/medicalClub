@@ -129,17 +129,11 @@
 
     //Метод 2
     //Создаем копию элемента и вставляем ее после оригинала
-    //Ищем дублируемый узел 
-    const element = document.querySelector(".zones__slider");
-    //И узел который будет заменятся
-    const wrapper = element.querySelector(".zones__slider-wrapper");
-    const list = wrapper.querySelector(".zones__images");
-    
-    const clone = element.querySelector(".zones__slider").cloneNode(true);
+    const clone = document.createElement("div");
     clone.className="zones__slider-clone";
-    clone.querySelector(".zones__images-wrapper").remove();
-    clone.prepend(list.cloneNode(true));
-    element.after(clone);
+    clone.append(document.querySelector(".zones__images").cloneNode(true));
+    clone.append(document.querySelector(".zones__slider-controls").cloneNode(true));
+    document.querySelector(`.zones__slider`).after(clone);
     
     var slider = new Swiper(".zones__slider-clone", {
       slidesPerView: "auto",
@@ -149,8 +143,8 @@
 
       spaceBetween: 13,
       navigation: {
-        nextEl: ".zones__button--next",
-        prevEl: ".zones__button--prev",
+        nextEl: ".zones__slider-next",
+        prevEl: ".zones__slider-prev",
       },
       pagination: {
         el: ".zones__slider-pagination",
