@@ -1,19 +1,26 @@
+//Пришлось внести медиа запрос в логику так как не знаю как 
+//сделать по другому - переносить логику в секцию тоже не хочеться
 .accordion {
-
   &__input {
     position: absolute;
     opacity: 0;
     z-index: -1;
   }
   &__content {
-    max-height: 0;
-    transition: all .35s;
+    max-height: 100 !important;
+    transition: all 0.35s;
     overflow: hidden;
   }
   &__title {
-      cursor: pointer;
+    cursor: pointer;
   }
-  &__input:checked ~ &__content{
-      max-height: 100vh;
+
+  @media (max-width: 768px) {
+    &__content {
+      max-height: 0 !important;
+    }
+    &__input:checked ~ &__content {
+      max-height: 100vh !important;
+    }
   }
 }
