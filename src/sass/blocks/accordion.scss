@@ -6,6 +6,7 @@
     opacity: 0;
     z-index: -1;
   }
+ 
   &__content {
     max-height: 100 !important;
     transition: all 0.35s;
@@ -21,6 +22,27 @@
     }
     &__input:checked ~ &__content {
       max-height: 100vh !important;
+    }
+    &__input:checked ~ &__label {
+      &::before{
+        transition: all 0.3s;
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+    &__label{
+      position: relative;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 11px;
+        right:3px;
+        top:50%;
+        transform: translateY(-50%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../../img/icon-triangle-bottom.svg);
+      }
     }
   }
 }
