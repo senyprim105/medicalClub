@@ -356,7 +356,7 @@
     // sliderStaff();
     // inputMask();
     // select();
-    // selectInPriceSection();
+    selectInPriceSection();
     // ymaps.ready(initMap);
   });
 })();
