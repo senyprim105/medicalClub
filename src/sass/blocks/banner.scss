@@ -48,11 +48,12 @@
     background-position: left top, right 0px bottom 0px, center center;
     background-size: auto, 270px 190px;
     &::before {
-      width: 50px;
-      height: 60px;
+      width: 43px;
+      height: 56px;
       bottom: 0px;
       right: 0px;
       left: auto;
+      background-size: contain;
       background-image: url(../../img/bg-banner-right-mobile.png);
       background-position: bottom right
     }
