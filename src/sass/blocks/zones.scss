@@ -30,6 +30,7 @@
     )
     no-repeat center;
   @media (max-width: 1200px) {
+    padding-bottom: 0px;
     &::after {
       content: none;
     }
@@ -42,7 +43,7 @@
     @include container;
     padding-top: 65px;
     padding-bottom: 65px;
-    @media (max-width: 768) {
+    @media (max-width: 768px) {
       padding-bottom: 25px;
     }
   }
@@ -72,7 +73,6 @@
     @media (max-width: 768px) {
       width: calc(100% + 5px);
       display: block;
-      padding-bottom: 90px;
       margin-left: 10px;
       overflow: hidden;
     }
