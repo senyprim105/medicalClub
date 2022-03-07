@@ -34,6 +34,10 @@
           transform: rotate(180deg);
       }  
     }
+    @media (max-width:768px) {
+      padding: 11px 25px 11px 12px;
+      
+    }
   }
   //Контейнер элементов выбора
   .selectr-options-container {

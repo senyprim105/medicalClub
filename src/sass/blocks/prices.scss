@@ -149,34 +149,10 @@
   &__list {
     margin-bottom: 10px;
   }
-  &__tab--men,
-  &__tab--women {
-    display: none;
-  }
-  #prices__radio--women,
-  #prices__radio--men {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  .prices__data--header {
-    display: flex;
-    position: relative;
-    padding-top: 21px;
-    padding-bottom: 21px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    border-bottom: none;
-
-    color: #586e8e;
-  }
-
-  .prices__data--name-header {
-    padding-left: 35px;
+  &__data--name-header {
     max-width: 100%;
   }
-  .prices__tab {
+  &__tab {
     position: relative;
     &::after {
       content: "";
@@ -190,30 +166,50 @@
       background-image: linear-gradient(to right, #e86aad, #5cbafe);
     }
   }
-
+  //Строка таблицы
   &__item {
     display: flex;
     flex-direction: row;
-    padding: 16px 35px;
+    min-height: 50px;
+    padding: 5px 35px;
     align-items: center;
-   
+
     border-bottom: 1px dashed rgba(31, 31, 41, 0.2);
-    &:nth-of-type(odd) {
+
+    &--header {
+      position: relative;
+      min-height: 60px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      border-bottom: none;
+
+      color: #586e8e;
+    }
+    @media (max-width: 575px) {
+      padding: 5px 16px 5px 10px;
+      &--header {
+        padding: 15px 0;
+      }
+    }
+  }
+  //Набор данных
+  &__tab {
+    .prices__item:nth-of-type(odd) {
       background: #f8fafd;
       border-radius: 6px;
     }
   }
+  //Единица данных (td)
   &__data {
     &--name {
       flex-grow: 1;
       font-size: 15px;
       line-height: 18px;
       color: #586e8e;
-      @media (max-width: 768px) {
-        font-size: 14px;
-      }
     }
-
     &--women,
     &--men {
       max-width: 230px;
@@ -223,14 +219,10 @@
       font-size: 16px;
       line-height: 18px;
       color: #293951;
-      @media (max-width: 768px) {
-        max-width: 130px;
-        font-size: 14px;
-      }
     }
     &--women-header,
     &--men-header {
-      label {
+      span {
         padding-right: 25px;
         position: relative;
         &::after {
@@ -244,14 +236,53 @@
         }
       }
     }
-    &--women-header > label {
+    &--women-header span {
       &::after {
         background: url(../../img/icon-woman.svg) no-repeat center;
       }
     }
-    &--men-header > label {
+    &--men-header span {
       &::after {
         background: url(../../img/icon-man.svg) no-repeat center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      &--name {
+        font-size: 14px;
+      }
+      &--women,
+      &--men {
+        max-width: 145px;
+        font-size: 14px;
+      }
+    }
+    @media (max-width: 575px) {
+      &--name-header {
+        display: none;
+      }
+      &--hidden {
+        display: none;
+      }
+      &--active-header {
+        background: #ffffff;
+        box-shadow: 0px 1px 6px rgba(78, 127, 222, 0.2);
+      }
+      &--women,
+      &--men {
+        text-align: right;
+      }
+      &--women-header,
+      &--men-header {
+        width: 50%;
+        max-width: none;
+        padding: 12px;
+      }
+      &--women-header{
+        text-align: left;
+      }
+      &--men-header {
+        text-align: right;
       }
     }
   }
