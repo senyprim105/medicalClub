@@ -2,9 +2,8 @@
   background: linear-gradient(0deg, #f5f6f6, #fff 380px);
   position: relative;
   z-index: -1;
-  padding-bottom: 100px;
   @media (max-width:1200px) {
-    background: none;    
+    padding-bottom: 70px; 
   }
 
   &__wrapper {
