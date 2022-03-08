@@ -1,7 +1,7 @@
 .effect {
+  $this:&;
   &__wrapper {
     @include container;
-    padding-bottom: 53px;
     margin-bottom: 75px;
     background: url(../../img/bg-effect.png) no-repeat center bottom -178px;
   }
@@ -16,24 +16,56 @@
     color: #293951;
   }
   &__list {
-      padding: 15px 0px;
+      padding: 25px 0px;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      &::before{
+        content: "";
+        width: 100%;
+        height: 0;
+        order: 2;
+      }
   }
-  
   &__list-item {
     position: relative;
-    text-align: left;
-    max-width: 300px;
+    width: 50%;
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    order:1;
     color: #586e8e;
-    & + & {
-      margin-top: 80px;
+    &:nth-of-type(n + 3){
+      margin-top: 75px;
     }
-    padding-left: 72px;
+    &--left{
+      justify-content: flex-start;
+      #{$this}__list-item-check{
+        order:1;
+        position: relative;
+        margin-right:12px ;
+      }
+      #{$this}__list-item-text{
+        order:2;
+        max-width: 230px;
+        text-align: left;
+      }
+    }
+    &--right{
+      justify-content: flex-end;
+      #{$this}__list-item-check{
+        order:2;
+        position: relative;
+        margin-left: 17px;
+      }
+      #{$this}__list-item-text{
+        order:1;
+        max-width: 180px;
+        text-align: right;
+      }
+    }
+   
     
     // &::before {
     //   content: "";
