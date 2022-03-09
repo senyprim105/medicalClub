@@ -7,7 +7,7 @@
 // } from 'swiper';
 import menu from "./menu";
 import effect from "./effect";
-
+import examples from "./examples"
 
 (function () {
   function inputMask() {
@@ -210,34 +210,7 @@ import effect from "./effect";
     selectField(tabContainer, dataContainer,config.tabs[0].name);
   }
 
-  function sliderExamples() {
-    var examples = new Swiper(".examples__slider", {
-      effect: "coverflow",
-      initialSlide: 1,
-      slidesPerView: "auto",
-      loop: true,
-      centeredSlides: true,
-      slidesOffsetBefore: 0,
-      slidesOffsetAfter: 0,
-      slideActiveClass: "examples__slider-item--active",
-      slideNextClass: "examples__slider-item--next",
-      slidePrevClass: "examples__slider-item--prev",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 155,
-        depth: 300,
-        modifier: 1,
-      },
-      navigation: {
-        nextEl: ".examples__slider-button--next",
-        prevEl: ".examples__slider-button--prev",
-      },
-      pagination: {
-        el: ".examples__slider-pagination",
-        type: "fraction",
-      },
-    });
-  }
+  
   function sliderLicenses() {
     // Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
     var license = new Swiper(".questions__license-slider", {
@@ -406,7 +379,7 @@ import effect from "./effect";
     sliderZones();
     tabsPrice();
     effect();
-    // sliderExamples();
+    examples();
     // sliderLicenses();
     // sliderReviews();
     // sliderSale();
