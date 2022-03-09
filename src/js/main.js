@@ -7,7 +7,8 @@
 // } from 'swiper';
 import menu from "./menu";
 import effect from "./effect";
-import examples from "./examples"
+import examples from "./examples";
+import choice from "./choice";
 
 (function () {
   function inputMask() {
@@ -380,6 +381,7 @@ import examples from "./examples"
     tabsPrice();
     effect();
     examples();
+    choice();
     // sliderLicenses();
     // sliderReviews();
     // sliderSale();
