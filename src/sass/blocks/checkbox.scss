@@ -18,6 +18,7 @@
   }
   &__label {
     padding-left: 32px;
+    display: block;
     position: relative;
     &::before {
       content: "";

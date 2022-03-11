@@ -9,21 +9,11 @@ import menu from "./menu";
 import effect from "./effect";
 import examples from "./examples";
 import choice from "./choice";
+import questions from "./questions";
+import inputMask from "./inputMask";
 
 (function () {
-  function inputMask() {
-    const feedbackPhone = document.querySelector("#feedback__phone");
-    if (feedbackPhone) {
-      Inputmask({ mask: "+7 (999) 999-99-99" }).mask(feedbackPhone);
-    }
-
-    const questionPhone = document.querySelector(
-      "#questions__form-input--phone"
-    );
-    if (questionPhone) {
-      Inputmask({ mask: "+7 (999) 999-99-99" }).mask(questionPhone);
-    }
-  }
+  
   
   function select() {
     new Selectr(document.getElementById("filials"), {
@@ -213,36 +203,7 @@ import choice from "./choice";
 
   
   function sliderLicenses() {
-    // Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
-    var license = new Swiper(".questions__license-slider", {
-      effect: "coverflow",
-      initialSlide: 1,
-      slidesPerView: "auto",
-      centeredSlides: true,
-      slidesOffsetBefore: 0,
-      slidesOffsetAfter: 0,
-      // wrapperClass:"questions__license-wrapper", Убрал свой клас так как не знаю как уменьшить слайдеры
-      slideClass: "questions__license-item",
-      slideActiveClass: "questions__license-item--active",
-      slideNextClass: "questions__license-item--next",
-      slidePrevClass: "questions__license-item--prev",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 140,
-        depth: 200,
-        modifier: 1,
-        // slideShadows: true,
-      },
-      navigation: {
-        nextEl: ".questions__license-button--prev",
-        prevEl: ".questions__license-button--next",
-      },
-      pagination: {
-        el: ".questions__license-pagination",
-        type: "fraction",
-        currentClass: "questions__license-pagination--current",
-      },
-    });
+   
   }
 
   function sliderReviews() {
@@ -382,11 +343,11 @@ import choice from "./choice";
     effect();
     examples();
     choice();
-    // sliderLicenses();
+    inputMask();
+    questions();
     // sliderReviews();
     // sliderSale();
     // sliderStaff();
-    // inputMask();
     // select();
     selectInPriceSection();
     // ymaps.ready(initMap);

@@ -1,48 +1,49 @@
-//Пришлось внести медиа запрос в логику так как не знаю как 
+//Пришлось внести медиа запрос в логику так как не знаю как
 //сделать по другому - переносить логику в секцию тоже не хочеться
 .accordion {
+  $this: &;
   &__input {
     position: absolute;
     opacity: 0;
     z-index: -1;
   }
- 
-  &__content {
-    max-height: 100 !important;
-    transition: all 0.35s;
+  //Таким селектором дбавляем специфичности
+  //Сжимаем блоки
+  & &__content {
+    max-height: 0;
+    transition: all 0.3s;
     overflow: hidden;
   }
   &__title {
     cursor: pointer;
   }
-
-  @media (max-width: 768px) {
-    &__content {
-      max-height: 0 !important;
+  //Разширяем блок после выбранного радио баттона
+  &__input:checked ~ &__content {
+    max-height: 100vh;
+    margin: auto;
+    clip-path: none;
+    clip: auto;
+  }
+  //Поворачиваем на 180гр для выбранного радио баттона
+  &__input:checked ~ &__label {
+    &::before {
+      transition: all 0.3s;
+      transform: translateY(-50%) rotate(180deg);
     }
-    &__input:checked ~ &__content {
-      max-height: 100vh !important;
-    }
-    &__input:checked ~ &__label {
-      &::before{
-        transition: all 0.3s;
-        transform: translateY(-50%) rotate(180deg);
-      }
-    }
-    &__label{
-      position: relative;
-      &::before{
-        content: "";
-        position: absolute;
-        width: 12px;
-        height: 11px;
-        right:3px;
-        top:50%;
-        transform: translateY(-50%);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url(../../img/icon-triangle-bottom.svg);
-      }
+  }
+  &__label {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 11px;
+      right: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(../../img/icon-triangle-bottom.svg);
     }
   }
 }

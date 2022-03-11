@@ -45,6 +45,12 @@
       align-items: flex-start;
     }
   }
+  & &__indication-wrapper{
+    max-height: 100vh;
+    @media (max-width:768px) {
+      max-height: 0;
+    }
+  }
   &__indication {
     max-width: 400px;
     width: 100%;
@@ -54,6 +60,9 @@
     .for-whom__indication-label {
       text-align: right;
       color: #f78e9b;
+      &::before{
+        content: none;
+      }
     }
     &--contra {
       .for-whom__indication-label {
@@ -95,6 +104,7 @@
       }
     }
   }
+  
   
   &__indication-label {
     font-weight: bold;
