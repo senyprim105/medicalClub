@@ -1,6 +1,6 @@
 .reviews {
   overflow: hidden;
-  
+
   &__wrapper {
     max-width: 1200px;
     padding: 0 15px;
@@ -12,17 +12,17 @@
     font-size: 30px;
     line-height: 34px;
     /* or 113% */
-    
+
     text-align: center;
     text-transform: uppercase;
-    
+
     color: #293951;
     margin-bottom: 23px;
   }
   &__slider {
     width: 1110px;
     position: relative;
-    margin:0 auto;
+    margin: 0 auto;
   }
 
   &__slider-wrapper {
@@ -36,14 +36,16 @@
   &__slider-item {
     width: 100%;
     opacity: 0.6;
-    &+&{
+    & + & {
       margin-left: 30px;
     }
     flex-shrink: 0;
-    
+
     //Рисуем выемки для active и next
 
-    &--active, &--right{
+    &--active,
+    &--right {
+      position: relative;
       &::before {
         content: "";
         position: absolute;
@@ -58,6 +60,7 @@
     }
     &--right {
       opacity: 1;
+      padding: 40px 80px 30px 40px;
       &::before {
         right: 0px;
         transform: translate(50%, -50%);
@@ -70,20 +73,69 @@
         transform: translate(-50%, -50%);
       }
     }
-    &--left{
-      // margin-right: 30px;
+    &--left {
+    }
+    @media (max-width: 1200px) {
+      margin: 0;
+      &--active,
+      &--right {
+        &::before {
+          content: none;
+        }
+      }
+      &--active {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 46px;
+          height: 46px;
+          border-radius: 50%;
+          bottom: 0;
+          top: auto;
+          left: 50%;
+          right: auto;
+          // background-color: #c4c4c4;
+          transform: translate(-50%, 50%) translateX(-50px);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 46px;
+          height: 46px;
+          border-radius: 50%;
+          bottom: 0;
+          top: auto;
+          left: 50%;
+          right: auto;
+          background-color: #fff;
+          box-shadow: inset 0px 4px 16px rgba(88, 110, 142, 0.14);
+          transform: translate(-50%, 50%) translateX(50px);
+        }
+      }
     }
   }
-  &__slider-button{
+  &__slider-button {
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    &--prev{
-      left:-30px;
+    &--prev {
+      left: -30px;
     }
-    &--next{
-      right:-30px;
+    &--next {
+      right: -30px;
+    }
+    @media (max-width: 1200px) {
+      top: auto;
+      bottom: 0;
+      left: 50%;
+      right: auto;
+      &--prev {
+        transform: translate(-50%, 50%) translateX(-50px);
+      }
+      &--next {
+        transform: translate(-50%, 50%) translateX(50px);
+      }
     }
   }
 }

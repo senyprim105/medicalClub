@@ -52,6 +52,7 @@ input[type="radio"].visually-hidden {
 .container-fluid{
     max-width: 1920px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 @mixin container {

@@ -1,74 +1,19 @@
-// import {
-//   Swiper,
-//   Navigation,
-//   Pagination,
-//   Scrollbar,
-//   EffectCoverflow
-// } from 'swiper';
 import menu from "./menu";
 import effect from "./effect";
 import examples from "./examples";
 import choice from "./choice";
 import questions from "./questions";
 import inputMask from "./inputMask";
+import reviews from "./reviews";
+import reviews from "./prices";
+import prices from "./prices";
 
 (function () {
   
   
-  function select() {
-    new Selectr(document.getElementById("filials"), {
-      searchable: false,
-      renderOption: renderer,
-      renderSelection: rendererSelected,
-      defaultSelected: false,
-      placeholder: 'Выберете клинику<span class="red">*</span>',
-      customClass: "feedback__filials",
-    });
+  
 
-    function renderer(data) {
-      var text = data.text;
-      var template = [
-        '<div class="filial"><span class="filial__name" >',
-        data.dataset.filial,
-        '</span> <span class="filial__address">',
-        data.dataset.address,
-        "</span></div>",
-      ];
-      return template.join("");
-    }
-
-    function rendererSelected(data) {
-      var text = data.text;
-      var template = [
-        '<div class="filial filial--selected"><span class="filial__name" >',
-        data.dataset.filial,
-        '</span> <span class="filial__address">',
-        data.dataset.address,
-        "</span></div>",
-      ];
-      return template.join("");
-    }
-  }
-
-  function selectInPriceSection() {
-    new Selectr(document.querySelector(".prices__select"), {
-      searchable: false,
-      renderOption: renderer,
-      renderSelection: rendererSelected,
-      customClass: "prices__select",
-    });
-    function renderer(data) {
-      var text = data.text;
-      var template = ['<div class="prices__select-option">', text, "</div>"];
-      return template.join("");
-    }
-
-    function rendererSelected(data) {
-      var text = data.text;
-      var template = ['<div class="prices__select--selected">', text, "</div>"];
-      return template.join("");
-    }
-  }
+  
 
   function sliderBenefits() {
     var slider = new Swiper(".benefits__slider", {
@@ -202,28 +147,9 @@ import inputMask from "./inputMask";
   }
 
   
-  function sliderLicenses() {
-   
-  }
+  
 
-  function sliderReviews() {
-    //Висит на соплях - настроить брейкпоинты
-    var reviews = new Swiper(".reviews__slider", {
-      slidesOffsetBefore: 0,
-      slidesPerView: 2,
-      // slidesPerGroup:2,
-      wrapperClass: "reviews__slider-wrapper",
-      slideClass: "reviews__slider-item",
-      slideActiveClass: "reviews__slider-item--active",
-      slideNextClass: "reviews__slider-item--right",
-      slidePrevClass: "reviews__slider-item--left",
-
-      navigation: {
-        nextEl: ".reviews__slider-button--next",
-        prevEl: ".reviews__slider-button--prev",
-      },
-    });
-  }
+  
 
   function sliderSale() {
     //Висит на соплях - настроить брейкпоинты
@@ -340,12 +266,13 @@ import inputMask from "./inputMask";
     sliderBenefits();
     sliderZones();
     tabsPrice();
+    prices();
     effect();
     examples();
     choice();
     inputMask();
     questions();
-    // sliderReviews();
+    reviews();
     // sliderSale();
     // sliderStaff();
     // select();
