@@ -3,6 +3,7 @@ export default function () {
   var reviews = new Swiper(".reviews__slider", {
     slidesPerView: "auto",
     centeredSlides: true,
+    spaceBetween:50,
     wrapperClass: "reviews__slider-wrapper",
     slideClass: "reviews__slider-item",
     slideActiveClass: "reviews__slider-item--active",
@@ -18,7 +19,8 @@ export default function () {
         slidesOffsetBefore: 0,
         slidesPerView: 2,
         centeredSlides: false,
-        spaceBetween:30,
+        spaceBetween:50,
+        
       },
     },
   });

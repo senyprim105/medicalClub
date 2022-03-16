@@ -5,7 +5,6 @@ import choice from "./choice";
 import questions from "./questions";
 import inputMask from "./inputMask";
 import reviews from "./reviews";
-import reviews from "./prices";
 import prices from "./prices";
 
 (function () {

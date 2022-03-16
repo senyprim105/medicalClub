@@ -80,7 +80,7 @@
     &__rating {
       width: 70px;
       height: 10px;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
       
       &--5 {
         background-image: url(../../img/icon-rating-5.svg);
@@ -107,5 +107,13 @@
     &__source {
       margin-left: 0px;
     }
+  }
+  @media (max-width:575px) {
+       .review__text{
+        background: linear-gradient(to top, transparent 0%, black 80px);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+       }
   }
 }
