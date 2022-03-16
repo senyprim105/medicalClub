@@ -8,28 +8,18 @@
   background-size: contain, auto, auto;
   background-color: #f8fafd;
   position: relative;
+  text-transform: uppercase;
 
   &__wrapper {
-    max-width: 1360px;
-    padding: 0 15px;
-    margin: 0 auto;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: auto;
-      background: url(../../img/bg-sale-center.png) no-repeat left
-        bottom/contain;
-    }
+    @include container;
+    padding-top: 40px;
+    padding-bottom: 75px;
   }
   &__title {
-    padding-top: 40px;
     font-weight: 900;
     font-size: 80px;
     line-height: 80px;
     text-align: left;
-    text-transform: uppercase;
     background: linear-gradient(
       90deg,
       rgba(232, 106, 173, 0.2) 0%,
@@ -45,7 +35,6 @@
     font-size: 20px;
     line-height: 34px;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
     color: #293951;
     margin-right: 20px;
     margin-bottom: 40px;
@@ -57,29 +46,26 @@
     line-height: 34px;
 
     text-decoration-line: underline;
-    text-transform: uppercase;
 
     color: #e56bae;
   }
   &__slider-block {
-    padding-right:70px;
-    width: 970px; //270*3 + 15*2 на shaddow +30*2 на spacing +70px на панель управления справа
+    padding-right: 70px;
+    width: 940px; //270*3 +30*2 на spacing +70px на панель управления справа
     position: relative;
-    
-    &::before {
 
+    &::before {
     }
   }
   &__slider {
-    padding: 15px;
+    // padding: 15px; Нужна была чтобы показывать тень но от тени на градиенте отказался так как выглядит ужастно
     position: relative;
     overflow: hidden;
-    padding-bottom: 70px;
+    width: 100%;
   }
   &__slider-item {
-    
     & + & {
-      margin-left: 30px;
+      // margin-left: 30px;
     }
   }
 
@@ -91,7 +77,7 @@
       top: 140px;
     }
     &--next {
-      top:215px;
+      top: 215px;
     }
   }
   &__subtitle {
@@ -103,8 +89,79 @@
   &__price {
   }
   &__currency {
-    
   }
   &__button {
+  }
+
+  @media (max-width: 1566px) {
+    background-position: right -100px bottom, left top -100px,
+      right -200px bottom, center;
+  }
+  @media (max-width: 1200px) {
+    background-image: url(../../img/bg-zones-left.png),
+      url(../../img/bg-zones-right.png),
+      linear-gradient(277.33deg, #f0fcfc 2.56%, rgba(255, 255, 255, 0) 67.14%);
+    background-repeat: no-repeat;
+    background-position: left top -100px, right -200px bottom, center;
+    &__wrapper {
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+    &__title {
+      padding-top: 20px;
+      font-size: 40px;
+      line-height: 40px;
+    }
+    &__slider-title {
+      display: block;
+      font-size: 13px;
+      margin: 0px;
+    }
+    &__slider-all-links {
+      display: block;
+      font-size: 10px;
+      margin-bottom: 24px;
+    }
+
+    &__slider-block {
+      padding-right: 0px;
+      width: 100%;
+      max-width: 810px; //240*3 + 15*2 на shaddow +30*2 на spacing
+
+    }
+
+    &__slider {
+      width: 100%;
+      padding-bottom: 65px;
+      overflow:visible;
+    }
+    &__slider-item {
+      max-width: 240px;
+      min-height: 360px;
+    }
+    
+
+    &__slider-button {
+      position: absolute;
+      bottom: 0px;
+      top: auto;
+      z-index: 1;
+      width: 36px;
+      height: 36px;
+
+      &::after {
+        width: 27px;
+        height: 27px;
+      }
+
+      &--prev {
+        left: 0px;
+        right: auto;
+      }
+      &--next {
+        right: 0px;
+        left: auto;
+      }
+    }
   }
 }

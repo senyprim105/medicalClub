@@ -6,13 +6,9 @@ import questions from "./questions";
 import inputMask from "./inputMask";
 import reviews from "./reviews";
 import prices from "./prices";
+import sale from "./sale";
 
 (function () {
-  
-  
-  
-
-  
 
   function sliderBenefits() {
     var slider = new Swiper(".benefits__slider", {
@@ -150,24 +146,7 @@ import prices from "./prices";
 
   
 
-  function sliderSale() {
-    //Висит на соплях - настроить брейкпоинты
-    var sales = new Swiper(".sale__slider", {
-      // loop:true,
-      slidesPerView: 3,
-      slideClass: "sale__slider-item",
-      // spaceBetween:30,
-
-      slideActiveClass: "sale__slider-item--active",
-      slideNextClass: "sale__slider-item--next",
-      slidePrevClass: "sale__slider-item--prev",
-
-      navigation: {
-        nextEl: ".sale__slider-button--next",
-        prevEl: ".sale__slider-button--prev",
-      },
-    });
-  }
+  
   function sliderStaff() {
     //Висит на соплях - настроить брейкпоинты
     var staff = new Swiper(".staff__slider", {
@@ -272,7 +251,7 @@ import prices from "./prices";
     inputMask();
     questions();
     reviews();
-    // sliderSale();
+    sale();
     // sliderStaff();
     // select();
     selectInPriceSection();

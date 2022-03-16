@@ -18,14 +18,14 @@
   &::before {
     content: "";
     position: absolute;
-    width: 250px;
+    left: 15px;
+    right:15px;
     height: 16px;
     background-color: #fff;
     box-shadow: 0px 4px 16px #8e585f;
     border-radius: 6px;
     bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translateY(50%);
   }
   //Нужен как обертка для тени основного элемента
   //Иначе если убрать обертку нижний выступ будет обтекаться этой тенью
@@ -107,16 +107,19 @@
   &__bottom-block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     font-weight: 500;
     font-size: 30px;
     line-height: 18px;
     color: #f78e9b;
     width: 100%;
-    padding: 20px 0 40px;
+    max-height: 153px;
+    height: 100%;
+    padding: 20px 0 0px;
     border-top: 1px dashed #fab2b2;
-    flex-basis: 150px;
+  }
+  &__price{
+    margin-bottom: 27px;
   }
   &__currency {
     font-weight: 400;
@@ -130,5 +133,43 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 18px;
+  }
+  @media (max-width: 1200px) {
+    &__wrapper {
+      padding: 47px 33px 0px;
+    }
+    &__top-block{
+      
+    }
+    
+    &__subtitle {
+      margin-bottom: 12px;
+    }
+    &__condition {
+      min-height: 28px;
+      font-size: 10px;
+      &--big {
+        max-width: 115px;
+      }
+      &--small {
+        max-width: 86px;
+      }
+    }
+    &__bottom-block {
+      font-size: 22px;
+      max-height: 140px;
+      padding: 21px 0 0px;
+      border-top: 1px dashed #fab2b2;
+    }
+    &__price{
+      margin-bottom: 16px;
+    }
+    &__currency {
+      font-size: 22px;
+    }
+    &__button {
+      width: 170px;
+      height: 46px;
+    }
   }
 }
