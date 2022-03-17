@@ -3,6 +3,9 @@
     #f4f5f5;
   position: relative;
   margin-bottom: 90px;
+  @media (max-width:768px) {
+    margin-bottom: 50px;
+  }
 
   &__wrapper {
     @include container;
