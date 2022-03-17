@@ -6,7 +6,9 @@ export default function() {
     //Создаем копию элемента и вставляем ее после оригинала
     const clone = document.createElement("div");
     clone.className = "zones__slider-clone";
-    clone.append(document.querySelector(".zones__images").cloneNode(true));
+    const addElement = document.querySelector(".zones__images");
+    if (!addElement) return;
+    clone.append(addElement.cloneNode(true));
     clone.append(
       document.querySelector(".zones__slider-controls").cloneNode(true)
     );
