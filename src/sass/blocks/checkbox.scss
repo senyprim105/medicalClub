@@ -11,21 +11,23 @@
       height: 10px;
       background-image: url(../../img/icon-checked.svg);
       left: 3px;
-      top: 50%;
+      top: 0.8em;
       transform: translateY(-50%);
       background-repeat: no-repeat;
     }
   }
   &__label {
     padding-left: 32px;
+    display: block;
     position: relative;
+    text-align: left;
     &::before {
       content: "";
       position: absolute;
       width: 16px;
       height: 16px;
       left: 0;
-      top: 50%;
+      top: 0.8em;
       transform: translateY(-50%);
       background: #6cb0f4;
       border: 1px solid rgba(92, 121, 162, 0.15);
@@ -34,5 +36,6 @@
     &--link {
       color: #fae5ea;
     }
+   
   }
 }

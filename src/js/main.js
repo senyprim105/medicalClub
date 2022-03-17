@@ -1,252 +1,95 @@
-// import {
-//   Swiper,
-//   Navigation,
-//   Pagination,
-//   Scrollbar,
-//   EffectCoverflow
-// } from 'swiper';
+import menu from "./menu";
+import effect from "./effect";
+import examples from "./examples";
+import choice from "./choice";
+import questions from "./questions";
+import inputMask from "./inputMask";
+import reviews from "./reviews";
+import prices from "./prices";
+import sale from "./sale";
+import staff from "./staff";
+import benefits from "./benefits";
+import zones from "./zones";
+import form from "./form";
+
 
 (function () {
-  function inputMask() {
-    const feedbackPhone = document.querySelector("#feedback__phone");
-    if (feedbackPhone) {
-      Inputmask({ mask: "+7 (999) 999-99-99" }).mask(feedbackPhone);
-    }
+  
 
-    const questionPhone = document.querySelector("#questions__form-input--phone");
-    if (questionPhone) {
-      Inputmask({ mask: "+7 (999) 999-99-99" }).mask(questionPhone);
-    }
-  }
-  function menu() {
-    NO_JS_CLASS = "main-nav--no-js";
-    NO_JS_MENU_CLASS = "main-nav__menu--no-js";
-    NO_JS_MENU_BLOCK_CLASS = "main-nav__menu-block--no-js";
+  function tabsPrice() {
+    const config = {
+      tabsContainer: "prices__item--header",
+      dataContainer: `prices__tab--all`,
+      dataItem: `prices__data`,
+      hiddenClass: `prices__data--hidden`,
+      activeClass: `prices__data--active-header`,
+      tabs: [
+        {
+          name: `women`,
+          tabName: `prices__data--women-header`,
+          dataName: `prices__data--women`,
+        },
+        {
+          name: `men`,
+          tabName: `prices__data--men-header`,
+          dataName: `prices__data--men`,
+        },
+      ],
+    };
 
-    NAV_OPEN_CLASS = "main-nav--open";
-    MENU_OPEN_CLASS = "main-nav__menu--open";
-    MENU_BLOCK_OPEN_CLASS="main-nav__menu-block--open";
-    const mainNav = document.querySelector(".main-nav");
-    const menu = document.querySelector(".main-nav__menu");
-    const button = document.querySelector(".main-nav__toggle");
-    const menuBlock = document.querySelector(".main-nav__menu-block");
-    //Убараем метки no--js 
-    menu.classList.remove(NO_JS_MENU_CLASS);
-    mainNav.classList.remove(NO_JS_CLASS);
-    menuBlock.classList.remove(NO_JS_MENU_BLOCK_CLASS);
-    //Устанавливаем убираем классы открытия меню
-
-    if (button) {
-        button.addEventListener("click", () => {
-        mainNav.classList.toggle(NAV_OPEN_CLASS);
-        menu.classList.toggle(MENU_OPEN_CLASS);
-        menuBlock.classList.toggle(MENU_BLOCK_OPEN_CLASS);
+    const addClass = (container, selector, className) => {
+      const items = container.querySelectorAll(selector);
+      items.forEach((element) => {
+        element.classList.add(className);
       });
-    }
-  }
-  function select() {
-    new Selectr(document.getElementById("filials"), {
-      searchable: false,
-      renderOption: renderer,
-      renderSelection: rendererSelected,
-      defaultSelected: false,
-      placeholder: 'Выберете клинику<span class="red">*</span>',
-      customClass:"feedback__filials",
-    });
-
-    function renderer(data) {
-      var text = data.text;
-      var template = [
-        '<div class="filial"><span class="filial__name" >',
-        data.dataset.filial,
-        '</span> <span class="filial__address">',
-        data.dataset.address,
-        "</span></div>",
-      ];
-      return template.join("");
-    }
-
-    function rendererSelected(data) {
-      var text = data.text;
-      var template = [
-        '<div class="filial filial--selected"><span class="filial__name" >',
-        data.dataset.filial,
-        '</span> <span class="filial__address">',
-        data.dataset.address,
-        "</span></div>",
-      ];
-      return template.join("");
-    }
-  }
-
-
-  function selectInPriceSection(){
-    new Selectr(document.querySelector(".prices__select"), {
-      searchable: false,
-      renderOption: renderer,
-      renderSelection: rendererSelected,
-      customClass:"prices__select",
-    });
-    function renderer(data) {
-      var text = data.text;
-      var template = [
-        '<div class="prices__select-option">',text,'</div>'];
-      return template.join("");
-    }
-
-    function rendererSelected(data) {
-      var text = data.text;
-      var template = [
-        '<div class="prices__select--selected">',text,'</div>'];
-      return template.join("");
-    }
-  }
-
-  function sliderBenefits() {
-    var slider = new Swiper(".benefits__slider", {
-      slidesPerView: "auto",
-      
-      wrapperClass:"benefits__list",
-      slideClass: "benefits__item",
-      slideActiveClass:"benefits__item--active",
-      slideNextClass: "benefits__item--right",
-      slidePrevClass: "benefits__item--left",
-      spaceBetween:30,
-      autoHeight:true,
-      navigation: {
-        nextEl: ".benefits__button--next",
-        prevEl: ".benefits__button--prev",
-      },
-      breakpoints: {
-        768: {
-          spaceBetween: 20,
+    };
+    const removeClass = (container, selector, className) => {
+      const items = container.querySelectorAll(selector);
+      items.forEach((element) => {
+        element.classList.remove(className);
+      });
+    };
+    //Перебираем данные о табах - в искомом удаляем клас hidden 
+    //В остальных добавляем
+    const showField = (dataContainer, fieldName) => {
+      config.tabs.forEach((tab) => {
+        if (tab.name == fieldName) {
+          removeClass(dataContainer, `.${tab.dataName}`, config.hiddenClass);
         }
-      }
+        else {
+          addClass(dataContainer, `.${tab.dataName}`, config.hiddenClass);
+        }
+      });
+    };
+     //Перебираем данные о табах - в искомом добавляем клас hidden 
+    //В остальных убираем
+    const setActiveTab = (tabContainer, fieldName) => {
+      config.tabs.forEach((tab) => {
+        if (tab.name == fieldName)
+          addClass(tabContainer, `.${tab.tabName}`, config.activeClass);
+        else removeClass(tabContainer, `.${tab.tabName}`, config.activeClass);
+      });
+    };
+
+    const selectField = (tabContainer, dataContainer, fieldName) => {
+      setActiveTab(tabContainer, fieldName);
+      showField(dataContainer, fieldName);
+    };
+    //Устанавливаем обработчики
+    config.tabs.forEach((data) => {
+      const tabContainer = document.querySelector(`.${config.tabsContainer}`);
+      const dataContainer = document.querySelector(`.${config.dataContainer}`);
+      const tab = tabContainer.querySelector(`.${data.tabName}`);
+
+      tab.addEventListener(`click`, () => {
+        selectField(tabContainer, dataContainer, data.name);
+      });
     });
+    //Устанавливаем начальное состояние
+    const tabContainer = document.querySelector(`.${config.tabsContainer}`);
+    const dataContainer = document.querySelector(`.${config.dataContainer}`);
+    selectField(tabContainer, dataContainer,config.tabs[0].name);
   }
-
-
-
-  function sliderExamples() {
-    var examples = new Swiper(".examples__slider", {
-      effect: "coverflow",
-      initialSlide: 1,
-      slidesPerView: "auto",
-      loop: true,
-      centeredSlides: true,
-      slidesOffsetBefore:0,
-      slidesOffsetAfter:0,
-      slideActiveClass: "examples__slider-item--active",
-      slideNextClass: "examples__slider-item--next",
-      slidePrevClass: "examples__slider-item--prev",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 155,
-        depth: 300,
-        modifier: 1,
-      },
-      navigation: {
-        nextEl: ".examples__slider-button--next",
-        prevEl: ".examples__slider-button--prev",
-      },
-      pagination: {
-        el: ".examples__slider-pagination",
-        type: "fraction",
-      },
-    });
-  }
-  function sliderLicenses() {
-    // Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
-    var license = new Swiper(".questions__license-slider", {
-      effect: "coverflow",
-      initialSlide: 1,
-      slidesPerView: "auto",
-      centeredSlides: true,
-      slidesOffsetBefore:0,
-      slidesOffsetAfter:0,
-      // wrapperClass:"questions__license-wrapper", Убрал свой клас так как не знаю как уменьшить слайдеры
-      slideClass: "questions__license-item",
-      slideActiveClass: "questions__license-item--active",
-      slideNextClass: "questions__license-item--next",
-      slidePrevClass: "questions__license-item--prev",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 140,
-        depth: 200,
-        modifier: 1,
-        // slideShadows: true,
-      },
-      navigation: {
-        nextEl: ".questions__license-button--prev",
-        prevEl: ".questions__license-button--next",
-      },
-      pagination: {
-        el: ".questions__license-pagination",
-        type: "fraction",
-        currentClass: "questions__license-pagination--current",
-      },
-    });
-  }
-
-  function sliderReviews() {
-    //Висит на соплях - настроить брейкпоинты
-    var reviews = new Swiper(".reviews__slider", {
-      slidesOffsetBefore:0,
-      slidesPerView: 2,
-      // slidesPerGroup:2,
-      wrapperClass:"reviews__slider-wrapper",
-      slideClass: "reviews__slider-item",
-      slideActiveClass:"reviews__slider-item--active",
-      slideNextClass: "reviews__slider-item--right",
-      slidePrevClass: "reviews__slider-item--left",
-
-      navigation: {
-        nextEl: ".reviews__slider-button--next",
-        prevEl: ".reviews__slider-button--prev",
-      },
-    });
-  }
-
-  function sliderSale() {
-    //Висит на соплях - настроить брейкпоинты
-    var sales = new Swiper(".sale__slider", {
-      // loop:true,
-      slidesPerView: 3,
-      slideClass: "sale__slider-item",
-      // spaceBetween:30,
-
-      slideActiveClass: "sale__slider-item--active",
-      slideNextClass: "sale__slider-item--next",
-      slidePrevClass: "sale__slider-item--prev",
-
-      navigation: {
-        nextEl: ".sale__slider-button--next",
-        prevEl: ".sale__slider-button--prev",
-      },
-    });
-  }
-  function sliderStaff() {
-    //Висит на соплях - настроить брейкпоинты
-    var staff = new Swiper(".staff__slider", {
-      // loop:true,
-
-      slidesPerView: 2,
-      spaceBetween: 30,
-      slideClass: "staff__item",
-      wrapperClass: "staff__slider-wrapper",
-
-      slideActiveClass: "staff__item--active",
-      slideNextClass: "staff__item--next",
-      slidePrevClass: "staff__item--prev",
-      slidesOffsetBefore: 0,
-
-      navigation: {
-        nextEl: ".staff__button--next",
-        prevEl: ".staff__button--prev",
-      },
-    });
-  }
-
   //#region
   // function initMap() {
   //   // Создание экземпляра карты и его привязка к контейнеру с
@@ -319,15 +162,18 @@
   document.addEventListener("DOMContentLoaded", (event) => {
     console.log("load");
     menu();
-    sliderBenefits();
-    sliderExamples();
-    sliderLicenses();
-    sliderReviews();
-    sliderSale();
-    sliderStaff();
+    benefits();
+    zones();
+    prices();
+    effect();
+    examples();
+    choice();
     inputMask();
-    select();
-    selectInPriceSection();
-    // ymaps.ready(initMap);
+    questions();
+    reviews();
+    sale();
+    staff();
+    form();
+    // selectInPriceSection();
   });
 })();

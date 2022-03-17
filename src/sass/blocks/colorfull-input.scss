@@ -2,7 +2,6 @@ $padding-left: 22px;
 $padding-right: $padding-left;
 $padding-top: 14px;
 $padding-bottom: $padding-top;
-$color-placeholder: #ccc;
 $color-placeholder-2: #f93238;
 
 .colorfull-input {
@@ -32,7 +31,7 @@ $color-placeholder-2: #f93238;
     top: $padding-top;
     bottom: $padding-bottom;
     left: $padding-left;
-    color: $color-placeholder;
+    color: currentColor;
   }
   &__placeholder-red {
     color: $color-placeholder-2;
