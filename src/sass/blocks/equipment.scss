@@ -22,6 +22,7 @@
       font-size: 18px;
       line-height: 26px;
       margin-bottom: 16px;
+     
     }
   }
   &__sub-header {
@@ -40,6 +41,7 @@
       font-size: 13px;
       line-height: 18px;
       margin-bottom: 30px;
+      margin-top: 16px;
     }
   }
   &__content {
@@ -265,7 +267,7 @@
     }
     @media (max-width: 768px) {
       left: 50%;
-      bottom: 30px;
+      bottom: 50px;
       width: 260px;
       min-height: 46px;
       font-weight: bold;
