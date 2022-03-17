@@ -11,8 +11,8 @@
   &::before {
     content: "";
     position: absolute;
-    left:10px;
-    right:10px;
+    left: 10px;
+    right: 10px;
     height: 16px;
     background-color: #fff;
     box-shadow: 0px 4px 16px rgba(88, 110, 142, 0.14);
@@ -56,25 +56,74 @@
     line-height: 22px;
     color: #293951;
     padding-bottom: 14px;
-    border-bottom: 1px dashed #EDAFBF;
-    margin-bottom: 10px;
-
+    border-bottom: 1px dashed #edafbf;
   }
   &__experience {
     font-weight: bold;
     font-size: 15px;
     line-height: 30px;
-    color: #F78E9B;
+    color: #f78e9b;
     padding-bottom: 10px;
-    border-bottom: 1px dashed #EDAFBF;
+    padding-top: 10px;
+    border-bottom: 1px dashed #edafbf;
     margin-bottom: 10px;
   }
   &__filial {
-      font-size: 13px;
-      margin-bottom: 25px;
+    font-size: 13px;
+    margin-bottom: 25px;
   }
   &__button {
-      width: 210px;
-      height: 46px;
+    width: 210px;
+    height: 46px;
+  }
+  @media (max-width: 1200px) {
+    max-width: 240px;
+    min-height: 450px;
+    border-radius: 6px;
+    &__wrapper {
+      padding: 17px 25px 35px 15px;
+      flex-direction: column;
+    }
+
+    &__image-block {
+      max-width: 160px;
+      width: 100%;
+      padding-right: 40px;
+      width: 100%;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+    &__data-block {
+      max-width: auto;
+    }
+    &__data {
+    }
+    &__name {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__job {
+      font-size: 13px;
+      line-height: 20px;
+    }
+    &__experience {
+      font-size: 13px;
+      padding-top: 5;
+      padding-bottom: 7px;
+      border-bottom: 1px dashed #edafbf;
+      margin-bottom: 10px;
+    }
+    &__filial {
+      font-size: 12px;
+      margin-bottom: 25px;
+      min-height: 60px;
+    }
+    &__button {
+      min-width: 1px;
+      max-width: 210px;
+      min-height: 46px;
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 }

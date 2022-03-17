@@ -1,5 +1,5 @@
 .staff {
-  padding: 40px 0 0px;
+  padding: 40px 0 40px;
   &__wrapper {
     @include container;
   }
@@ -18,13 +18,12 @@
 
   &__slider {
     width: 100%;
-    margin-bottom: 80px;
-    padding: 16px 10px 90px ;
+    padding: 16px 10px 60px;
     overflow: hidden;
   }
   &__slider-wrapper {
-      display: flex;
-      width: 100%;
+    display: flex;
+    width: 100%;
   }
   &__item {
     // padding: 16px 8px 32px;
@@ -33,5 +32,49 @@
   }
   &__controls {
     display: none;
+  }
+  @media (max-width: 1200px) {
+    padding: 40px 0 40px;
+    &__wrapper {
+      @include container;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    &__slider-container {
+    }
+    &__slider {
+      width: 100%;
+      padding: 16px 16px 60px;
+      position: relative;
+      overflow: visible;
+    }
+    &__slider-wrapper {
+      display: flex;
+      width: 100%;
+    }
+    &__item {
+      // padding: 16px 8px 32px;
+      height: auto; //Элементы становятся по самому высокому
+      flex-shrink: 0;
+    }
+    &__controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+    }
+  }
+  @media (max-width: 575px) {
+    &__item {
+      &--prev {
+        opacity: 0;
+      }
+    }
   }
 }

@@ -7,64 +7,12 @@ import inputMask from "./inputMask";
 import reviews from "./reviews";
 import prices from "./prices";
 import sale from "./sale";
+import staff from "./staff";
+import benefits from "./benefits";
+import zones from "./zones";
 
 (function () {
-
-  function sliderBenefits() {
-    var slider = new Swiper(".benefits__slider", {
-      slidesPerView: "auto",
-
-      wrapperClass: "benefits__list",
-      slideClass: "benefits__item",
-      slideActiveClass: "benefits__item--active",
-      slideNextClass: "benefits__item--right",
-      slidePrevClass: "benefits__item--left",
-      spaceBetween: 30,
-      autoHeight: true,
-      navigation: {
-        nextEl: ".benefits__button--next",
-        prevEl: ".benefits__button--prev",
-      },
-      breakpoints: {
-        768: {
-          spaceBetween: 20,
-        },
-      },
-    });
-  }
-  function sliderZones() {
-    //Так как вначале сладера нет то либо при загрузке страницы создаем дублирующий слайдер
-    //либо ставим обработчик на onResize который при лпределенном размере создаст слайдер а при другом удалит его
-
-    //Метод 2
-    //Создаем копию элемента и вставляем ее после оригинала
-    const clone = document.createElement("div");
-    clone.className = "zones__slider-clone";
-    clone.append(document.querySelector(".zones__images").cloneNode(true));
-    clone.append(
-      document.querySelector(".zones__slider-controls").cloneNode(true)
-    );
-    document.querySelector(`.zones__slider`).after(clone);
-
-    var slider = new Swiper(".zones__slider-clone", {
-      slidesPerView: "auto",
-
-      wrapperClass: "zones__images",
-      slideClass: "zones__item",
-
-      spaceBetween: 13,
-      navigation: {
-        nextEl: ".zones__slider-next",
-        prevEl: ".zones__slider-prev",
-      },
-      pagination: {
-        el: ".zones__slider-pagination",
-        type: "fraction",
-        currentClass: "zones__slider-pagination--curent",
-        totalClass: "zones__slider-pagination--total",
-      },
-    });
-  }
+  
 
   function tabsPrice() {
     const config = {
@@ -147,27 +95,7 @@ import sale from "./sale";
   
 
   
-  function sliderStaff() {
-    //Висит на соплях - настроить брейкпоинты
-    var staff = new Swiper(".staff__slider", {
-      // loop:true,
-
-      slidesPerView: 2,
-      spaceBetween: 30,
-      slideClass: "staff__item",
-      wrapperClass: "staff__slider-wrapper",
-
-      slideActiveClass: "staff__item--active",
-      slideNextClass: "staff__item--next",
-      slidePrevClass: "staff__item--prev",
-      slidesOffsetBefore: 0,
-
-      navigation: {
-        nextEl: ".staff__button--next",
-        prevEl: ".staff__button--prev",
-      },
-    });
-  }
+  
 
   //#region
   // function initMap() {
@@ -241,9 +169,8 @@ import sale from "./sale";
   document.addEventListener("DOMContentLoaded", (event) => {
     console.log("load");
     menu();
-    sliderBenefits();
-    sliderZones();
-    tabsPrice();
+    benefits();
+    zones();
     prices();
     effect();
     examples();
@@ -252,9 +179,7 @@ import sale from "./sale";
     questions();
     reviews();
     sale();
-    // sliderStaff();
-    // select();
+    staff();
     selectInPriceSection();
-    // ymaps.ready(initMap);
   });
 })();
