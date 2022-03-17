@@ -32,6 +32,11 @@
     letter-spacing: 0.06em;
     max-width: 850px;
     margin: 0 auto 32px;
+    @media (max-width:768px) {
+      font-size: 16px;
+      line-height: 22px; 
+      margin-bottom: 42px;
+    }
   }
   &__slider {
     width: 100%;
