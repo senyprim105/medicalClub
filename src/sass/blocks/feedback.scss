@@ -10,6 +10,9 @@
     padding: 20px 10px 30px;
     max-width: 350px;
     margin: 0 auto;
+    @media (max-width: 768px) {
+      padding: 10px 20px 20px;
+    }
   }
   &__title {
     font-weight: bold;
@@ -19,6 +22,9 @@
     text-transform: uppercase;
 
     color: #293951;
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
   }
   &__text {
     font-weight: normal;
@@ -30,6 +36,15 @@
       font-weight: bold;
       font-size: 18px;
       color: #e36caf;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+      font-size: 13px;
+      line-height: 18px;
+      &--strong {
+        font-size: 13px;
+      }
+      margin-bottom: 24px;
     }
   }
 
@@ -43,22 +58,34 @@
     line-height: 18px;
     color: #6a86af;
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+      margin-bottom: 14px;
+    }
   }
   &__placeholder {
     color: #ccc;
   }
   &__email {
-    &::placeholder{
+    &::placeholder {
       color: #ccc;
     }
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+      margin-bottom: 14px;
+    }
   }
-  &__filials{
+  &__filials {
     margin-bottom: 18px;
   }
   &__button {
     margin-bottom: 20px;
     width: 100%;
+    @media (max-width: 768px) {
+      margin-bottom: 25px;
+      font-size: 12px;
+      line-height: 24px;
+      min-height: 46px;
+    }
   }
   &__checkbox {
     font-size: 11px;
