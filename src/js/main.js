@@ -10,6 +10,8 @@ import sale from "./sale";
 import staff from "./staff";
 import benefits from "./benefits";
 import zones from "./zones";
+import form from "./form";
+
 
 (function () {
   
@@ -88,15 +90,6 @@ import zones from "./zones";
     const dataContainer = document.querySelector(`.${config.dataContainer}`);
     selectField(tabContainer, dataContainer,config.tabs[0].name);
   }
-
-  
-  
-
-  
-
-  
-  
-
   //#region
   // function initMap() {
   //   // Создание экземпляра карты и его привязка к контейнеру с
@@ -180,6 +173,7 @@ import zones from "./zones";
     reviews();
     sale();
     staff();
-    selectInPriceSection();
+    form();
+    // selectInPriceSection();
   });
 })();
