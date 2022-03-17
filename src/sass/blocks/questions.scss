@@ -1,7 +1,10 @@
 .questions {
   margin-bottom: 70px;
-  padding-bottom: 50px;
+  padding-bottom: 16px;
   overflow: hidden;
+  @media (max-width:768px) {
+        margin-bottom: 50px;
+  }
   &__wrapper {
     @include container;
     display: flex;
@@ -174,6 +177,9 @@
     @media (max-width: 1200px) {
       max-width: 290px;
       margin-bottom: 60px;
+    }
+    @media (max-width: 1200px) {
+     margin-bottom: 0;
     }
   }
   &__license-wrapper {
