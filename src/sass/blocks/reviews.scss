@@ -8,6 +8,9 @@
     padding: 0 15px;
     margin: 0 auto;
     margin-bottom: 90px;
+    @media (max-width:1200px) {
+      margin-bottom: 60px;
+    }
   }
   &__title {
     font-weight: 600;
@@ -20,6 +23,10 @@
 
     color: #293951;
     margin-bottom: 23px;
+    @media (max-width:1200px) {
+      font-size: 18px;
+      margin-bottom: 13px;
+    }
   }
   &__slider {
     width: 1110px;
