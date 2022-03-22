@@ -589,7 +589,7 @@
                   </p>
                 </div>
               </div>
-          
+
               <ul class="equipment__list">
                 <li class="equipment__list-item">
                   <span> Лазер MeDioStar NeXT PRO произведен в Германии</span>
@@ -1566,7 +1566,7 @@
               </ul>
             </div>
             <div class="form__right-block">
-              <div class="form__title"><span>-40%</span></div>
+              <div class="form__title"><span class="colorfull">-40%</span></div>
               <form form="POST" class="form__feedback feedback">
                 <div class="feedback__wrapper">
                   <h4 class="feedback__title">Оставьте заявку</h4>
@@ -1615,7 +1615,7 @@
                       id="feedback__email"
                       placeholder="Email"
                     />
-                    <select id="filials" name="filial">
+                    <select id="form-filials" name="filial">
                       <option
                         class="filial"
                         value="1"
@@ -1724,6 +1724,276 @@
         </div>
       </footer>
     </div>
+    <div class="modal" id="popup-sign-in">
+      <div class="modal__content sign-up">
+        <div class="modal__button-close sign-up__button-close"></div>
+        <div class="sign-up__content">
+          <form form="POST" class="sign-up__feedback feedback">
+            <div class="sign-up__feedback-wrapper feedback__wrapper">
+              <h4 class="sign-up__feedback-title feedback__title">
+                Записаться на эпиляцию
+              </h4>
+              <p class="sign-up__feedback-text feedback__text">
+                Оставьте свои данные для записи на процедуру.
+              </p>
+              <fieldset class="sign-up__feedback-fields feedback__fields">
+                <div
+                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    class="colorfull-input__element feedback__input sign-up__feedback-input"
+                    id="feedback__name"
+                    required
+                  />
+                  <span
+                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
+                    >Ваше имя<span
+                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
+                      >*</span
+                    ></span
+                  >
+                </div>
+                <div
+                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
+                >
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="colorfull-input__element feedback__input sign-up__feedback-input"
+                    id="feedback__phone"
+                    required
+                  />
+                  <span
+                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
+                    >+7 (---) ---_--_--<span
+                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
+                      >*</span
+                    ></span
+                  >
+                </div>
+                <select id="popup-filials" name="filial">
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                </select>
+                <textarea
+                  class="feedback__textarea colorfull-input__element sign-up__feedback-textarea"
+                  placeholder="Желаемое время и дата"
+                ></textarea>
+                <button
+                  class="button feedback__button sign-up__feedback-button"
+                >
+                  Отправить
+                </button>
+                <div
+                  class="checkbox feedback__checkbox sign-up__feedback-checkbox"
+                >
+                  <input
+                    class="checkbox__input"
+                    type="checkbox"
+                    checked
+                    name="agree"
+                    id="popup-checkbox-input"
+                  />
+                  <label for="popup-checkbox-input" class="checkbox__label"
+                    ><span
+                      >Даю согласие на обработку своих персональных данных (
+                      <a class="checkbox__label--link" href="#"
+                        >Политика конфиденциальности</a
+                      >)</span
+                    ></label
+                  >
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="popup-sign-in-onsale">
+      <div class="modal__content sign-up">
+        <div class="modal__button-close sign-up__button-close"></div>
+        <div class="sign-up__content">
+          <div class="form__title sign-up__sale">
+            <span class="colorfull">-40%</span>
+          </div>
+          <form form="POST" class="sign-up__feedback feedback">
+            <div class="sign-up__feedback-wrapper feedback__wrapper">
+              <h4
+                class="sign-up__feedback-title--onsale feedback__title colorfull"
+              >
+                Получите скидку -
+              </h4>
+              <p class="sign-up__feedback-text--onsale feedback__text">
+                Оставьте свои данные для записи на процедуру.
+              </p>
+              <fieldset class="sign-up__feedback-fields feedback__fields">
+                <div
+                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    class="colorfull-input__element feedback__input sign-up__feedback-input"
+                    id="feedback__name"
+                    required
+                  />
+                  <span
+                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
+                    >Ваше имя<span
+                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
+                      >*</span
+                    ></span
+                  >
+                </div>
+                <div
+                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
+                >
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="colorfull-input__element feedback__input sign-up__feedback-input"
+                    id="feedback__phone"
+                    required
+                  />
+                  <span
+                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
+                    >+7 (---) ---_--_--<span
+                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
+                      >*</span
+                    ></span
+                  >
+                </div>
+                <select id="popup-onsale-filials" name="filial">
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                </select>
+                <textarea
+                  class="feedback__textarea colorfull-input__element sign-up__feedback-textarea"
+                  placeholder="Желаемое время и дата"
+                ></textarea>
+                <button
+                  class="button feedback__button sign-up__feedback-button"
+                >
+                  Отправить
+                </button>
+                <div
+                  class="checkbox feedback__checkbox sign-up__feedback-checkbox"
+                >
+                  <input
+                    class="checkbox__input"
+                    type="checkbox"
+                    checked
+                    name="agree"
+                    id="popup-checkbox-input"
+                  />
+                  <label for="popup-checkbox-input" class="checkbox__label"
+                    ><span
+                      >Даю согласие на обработку своих персональных данных (
+                      <a class="checkbox__label--link" href="#"
+                        >Политика конфиденциальности</a
+                      >)</span
+                    ></label
+                  >
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="popup-message-sign-in">
+      <div class="modal__content popup-message">
+        <div class="modal__button-close popup-message__button-close"></div>
+        <div class="popup-message__content">
+          <div class="popup-message__content-wrapper">
+            <h4 class="popup-message__feedback-title feedback__title colorfull">
+              Ваша заявка отправлена
+            </h4>
+            <p class="popup-message__feedback-text feedback__text">
+              В ближайшее время наш специалист свяжется с Вами для записи на процедуру.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--show" id="popup-message-sign-in--onsale">
+      <div class="modal__content popup-message">
+        <div class="modal__button-close popup-message__button-close"></div>
+        <div class="popup-message__content">
+          <div class="popup-message__content-wrapper">
+            <h4 class="popup-message__feedback-title feedback__title colorfull">
+              Спасибо за Ваше обращение
+            </h4>
+            <p class="popup-message__feedback-text feedback__text">
+              Наш мастер свяжется с Вами в ближайшее время.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/lib.js"></script>
     <script src="js/main.js"></script>
   </body>

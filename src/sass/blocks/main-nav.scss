@@ -274,9 +274,10 @@
       }
     }
     &:hover .main-nav__link {
-      background: linear-gradient(0deg, #e86aad, #5cbafe);
+      background: linear-gradient(90deg, #e86aad, #5cbafe);
       background-clip: text;
-      color: transparent;
+      -webkit-text-fill-color: transparent;
+      // color: transparent;
     }
     @media (max-width: 1200px) {
       min-height: 68px;

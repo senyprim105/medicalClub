@@ -1,3 +1,4 @@
+import initSelectFilials from "./select-filials";
 import menu from "./menu";
 import effect from "./effect";
 import examples from "./examples";
@@ -10,86 +11,14 @@ import sale from "./sale";
 import staff from "./staff";
 import benefits from "./benefits";
 import zones from "./zones";
-import form from "./form";
+import showModal from "./showModal";
+
 
 
 (function () {
   
 
-  function tabsPrice() {
-    const config = {
-      tabsContainer: "prices__item--header",
-      dataContainer: `prices__tab--all`,
-      dataItem: `prices__data`,
-      hiddenClass: `prices__data--hidden`,
-      activeClass: `prices__data--active-header`,
-      tabs: [
-        {
-          name: `women`,
-          tabName: `prices__data--women-header`,
-          dataName: `prices__data--women`,
-        },
-        {
-          name: `men`,
-          tabName: `prices__data--men-header`,
-          dataName: `prices__data--men`,
-        },
-      ],
-    };
-
-    const addClass = (container, selector, className) => {
-      const items = container.querySelectorAll(selector);
-      items.forEach((element) => {
-        element.classList.add(className);
-      });
-    };
-    const removeClass = (container, selector, className) => {
-      const items = container.querySelectorAll(selector);
-      items.forEach((element) => {
-        element.classList.remove(className);
-      });
-    };
-    //Перебираем данные о табах - в искомом удаляем клас hidden 
-    //В остальных добавляем
-    const showField = (dataContainer, fieldName) => {
-      config.tabs.forEach((tab) => {
-        if (tab.name == fieldName) {
-          removeClass(dataContainer, `.${tab.dataName}`, config.hiddenClass);
-        }
-        else {
-          addClass(dataContainer, `.${tab.dataName}`, config.hiddenClass);
-        }
-      });
-    };
-     //Перебираем данные о табах - в искомом добавляем клас hidden 
-    //В остальных убираем
-    const setActiveTab = (tabContainer, fieldName) => {
-      config.tabs.forEach((tab) => {
-        if (tab.name == fieldName)
-          addClass(tabContainer, `.${tab.tabName}`, config.activeClass);
-        else removeClass(tabContainer, `.${tab.tabName}`, config.activeClass);
-      });
-    };
-
-    const selectField = (tabContainer, dataContainer, fieldName) => {
-      setActiveTab(tabContainer, fieldName);
-      showField(dataContainer, fieldName);
-    };
-    //Устанавливаем обработчики
-    config.tabs.forEach((data) => {
-      const tabContainer = document.querySelector(`.${config.tabsContainer}`);
-      const dataContainer = document.querySelector(`.${config.dataContainer}`);
-      const tab = tabContainer.querySelector(`.${data.tabName}`);
-
-      tab.addEventListener(`click`, () => {
-        selectField(tabContainer, dataContainer, data.name);
-      });
-    });
-    //Устанавливаем начальное состояние
-    const tabContainer = document.querySelector(`.${config.tabsContainer}`);
-    const dataContainer = document.querySelector(`.${config.dataContainer}`);
-    selectField(tabContainer, dataContainer,config.tabs[0].name);
-  }
+  
   //#region
   // function initMap() {
   //   // Создание экземпляра карты и его привязка к контейнеру с
@@ -160,6 +89,11 @@ import form from "./form";
   //#endregion
 
   document.addEventListener("DOMContentLoaded", (event) => {
+    const showSignInModal=(idPopup,classCloseButton,showClass)=>(evt)=>{
+      evt.preventDefault();
+      showModal(idPopup);
+      console.log('Показать модальное окно');
+    }
     console.log("load");
     menu();
     benefits();
@@ -173,7 +107,22 @@ import form from "./form";
     reviews();
     sale();
     staff();
-    form();
-    // selectInPriceSection();
+    const formSelect=initSelectFilials("form-filials");
+    const popupSelect=initSelectFilials("popup-filials");
+    const popupOnSaleSelect=initSelectFilials("popup-onsale-filials");
+
+    const headerButton= document.querySelector(`.main-nav__contact-button`);
+    if (headerButton) headerButton.addEventListener('click',showSignInModal("popup-sign-in"));
+    
+    const equipmentButton = document.querySelector(`.equipment__button-wrapper`);
+    if (equipmentButton) equipmentButton.addEventListener('click',showSignInModal("popup-sign-in"));
+    
+    const examplesButton = document.querySelector(`.examples__button`);
+    if (examplesButton) examplesButton.addEventListener('click',showSignInModal("popup-sign-in"));
+
+
+    const saleButton= document.querySelector(`.banner__button`);
+    if (saleButton) saleButton.addEventListener('click',showSignInModal("popup-sign-in-onsale"));
+    
   });
 })();

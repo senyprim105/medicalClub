@@ -1,5 +1,7 @@
-export default function () {
-    new Selectr(document.getElementById("filials"), {
+export default function (idElement) {
+    const element = document.getElementById(idElement);
+    if (!element) return ;
+    const select = new Selectr(element, {
       searchable: false,
       renderOption: renderer,
       renderSelection: rendererSelected,
@@ -7,6 +9,8 @@ export default function () {
       placeholder: 'Выберете клинику<span class="red">*</span>',
       customClass: "feedback__filials",
     });
+    return select;
+    
 
     function renderer(data) {
       var text = data.text;
