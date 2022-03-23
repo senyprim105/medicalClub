@@ -1,1652 +1,2152 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>МЕДИКАЛ КЛАБ</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>МЕДИКАЛ КЛАБ</title>
+    <!-- <link rel="stylesheet" href="./css/lib.css" />
+  <link rel="stylesheet" href="./css/style.css" /> -->
+  </head>
 
-  <link rel="stylesheet" href="./css/lib.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
-
-<body>
-  <!-- SVG-спрайт -->
-  <svg class="visually-hidden">
-    <clipPath id="clip-path-sale-item" clipPathUnits="objectBoundingBox">
-      <path d="M0,0.015 C0,0.007,0.01,0,0.022,0 H0.978 C0.99,0,1,0.007,1,0.015
+  <body>
+    <!-- SVG-спрайт -->
+    <svg class="visually-hidden">
+      <clipPath id="clip-path-sale-item" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.015 C0,0.007,0.01,0,0.022,0 H0.978 C0.99,0,1,0.007,1,0.015
           V0.557 C0.972,0.567,0.952,0.587,0.952,0.61
           C0.952,0.634,0.972,0.654,1,0.663 V0.985 C1,0.993,0.99,1,0.978,1 H0.022
           C0.01,1,0,0.993,0,0.985 V0.663 C0.028,0.654,0.048,0.634,0.048,0.61
-          C0.048,0.587,0.028,0.567,0,0.557 V0.015"></path>
-    </clipPath>
-  </svg>
+          C0.048,0.587,0.028,0.567,0,0.557 V0.015"
+        ></path>
+      </clipPath>
+    </svg>
 
-  <div style="display: none">
-    <!-- <include src="build/img/inline.svg"></include> -->
-  </div>
-  <div class="container-fluid">
-    <div class="header">
-      <div class="header__wrapper">
-        <nav class="main-nav main-nav--no-js">
-          <div class="main-nav__inner">
-            <button class="main-nav__toggle">
-              <span></span>
-            </button>
-            <div class="main-nav__top-block">
-              <div class="main-nav__logo-inner">
-                <a href="#" class="main-nav__logo">
-                  <picture class="main-nav__logo-image">
-                    <source srcset="./img/logo.webp" type="image/webp">
-                    <img src="./img/logo.png" width="175" height="45" alt="Логотип: Медико" />
+    <div style="display: none">
+      <!-- <include src="build/img/inline.svg"></include> -->
+    </div>
+    <div class="container-fluid">
+      <div class="header">
+        <div class="header__wrapper">
+          <nav class="main-nav main-nav--no-js">
+            <div class="main-nav__inner">
+              <button class="main-nav__toggle">
+                <span></span>
+              </button>
+              <div class="main-nav__top-block">
+                <div class="main-nav__logo-inner">
+                  <a href="#" class="main-nav__logo">
+                    <picture class="main-nav__logo-image">
+                      <source srcset="./img/logo.webp" type="image/webp" />
+                      <img
+                        src="./img/logo.png"
+                        width="175"
+                        height="45"
+                        alt="Логотип: Медико"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <div class="main-nav__filials-block">
+                  <h4 class="main-nav__filials-title">
+                    <a href="" class="main-nav__filials-link">Адреса</a>
+                  </h4>
+                  <ul class="main-nav__filials-list">
+                    <li class="filial main-nav__filial">
+                      <div class="filial__name">Жулебино</div>
+                      <div class="filial__address">Жулебинский бульвар 25</div>
+                    </li>
+                    <li class="filial main-nav__filial">
+                      <div class="filial__name">Жулебино</div>
+                      <div class="filial__address">Жулебинский бульвар 25</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="main-nav__menu-block main-nav__menu-block--no-js">
+                <div class="main-nav__contact-block">
+                  <div class="contact main-nav__contact">
+                    <p class="contact__text">
+                      Есть вопросы?<a href="tel:84951268925" class="red"
+                        >Звоните!</a
+                      >
+                    </p>
+                    <a href="tel:84951268925" class="contact__phone"
+                      >8 495 126-89-25</a
+                    >
+                  </div>
+                  <a href="" class="button main-nav__contact-button">
+                    <span> Записаться на эпиляцию</span></a
+                  >
+                </div>
+                <ul class="main-nav__menu main-nav__menu--no-js">
+                  <li class="main-nav__item">
+                    <a href="" class="main-nav__link">НАШИ ФИЛИАЛЫ</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="" class="main-nav__link">ЗОНЫ ЭПИЛЯЦИИ</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="" class="main-nav__link">НАШИ ЦЕНЫ</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="" class="main-nav__link"
+                      >О ЛАЗЕРЕ MeDioStar NeXT PRO</a
+                    >
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="" class="main-nav__link">РЕЗУЛЬТАТЫ</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="" class="main-nav__link">ОТЗЫВЫ</a>
+                  </li>
+                  <li class="main-nav__item main-nav__item--active">
+                    <a href="" class="main-nav__link">На сайт клиники</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <main class="page__index">
+        <section class="banner">
+          <div class="banner__wrapper">
+            <ul class="banner__breadcrumbs breadcrubs">
+              <li class="breadcrubs__item">
+                <a href="" class="breadcrubs__link">МедикалКлаб</a>
+              </li>
+              <li class="breadcrubs__item">
+                <a href="" class="breadcrubs__link">Отделения</a>
+              </li>
+              <li class="breadcrubs__item">
+                <a href="" class="breadcrubs__link">Косметология</a>
+              </li>
+              <li class="breadcrubs__item">
+                <a href="" class="breadcrubs__link">Лазерная эпиляция</a>
+              </li>
+            </ul>
+            <div class="banner__content">
+              <h1 class="banner__title">
+                Эпиляция диодным лазером
+                <span class="banner__equipment red"
+                  >MeDioStar NeXT PRO
+                  <span class="banner__equipment-flag"></span>
+                </span>
+              </h1>
+              <p class="baner__sub-title">
+                Избавим от волос надолго на самом современном оборудовании!
+              </p>
+              <div class="banner__price">
+                <p class="banner__price-title red">Стоимость сеанса:</p>
+                <span class="banner__price-text"
+                  >от
+                  <span class="banner__price-text--money"
+                    >1 200
+                    <span class="rouble banner__price-text--rouble">е</span>
+                  </span>
+                </span>
+              </div>
+              <div class="banner__text">
+                Запишись к нам сегодня и получи скидку!
+              </div>
+              <a href="" class="button banner__button">
+                <span> Получить скидку! </span>
+              </a>
+            </div>
+            <ul class="banner__block-list">
+              <li class="banner__block-list-item banner__block-list-item--time">
+                Длительность сеанса:<span>5-10 минут</span>
+              </li>
+              <li
+                class="banner__block-list-item banner__block-list-item--course"
+              >
+                Курс процедур:<span>6-8 / за 6 месяцев</span>
+              </li>
+              <li
+                class="banner__block-list-item banner__block-list-item--weekend"
+              >
+                Работаем<span>без выходных</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="epilation">
+          <div class="epilation__wrapper">
+            <h2 class="epilation__title">
+              Абсолютно безопасная и безболезненная эпиляция лазером
+            </h2>
+            <p class="epilation__text">
+              Небольшой текст о процедуре. Принцип действия аппарата Soprano Ice
+              Platinum с технологией Titanium основан на запатентованной
+              инновационной технологии удаления волос — SHR ™. Технология Super
+              Hair Removal предполагает воздействие на фолликулу луча лазера и
+              его тепловой энергии. В волос поступает 10 импульсов до
+              разрушения, но тепла выделяется меньше. Это обеспечивает быстроту
+              и безболезненность процесса.
+            </p>
+
+            <h3 class="epilation__title-about">
+              ЧТО ТАКОЕ АППАРАТНАЯ ЭПИЛЯЦИЯ
+            </h3>
+            <div class="epilation__flash red">
+              ВСПЫШКА АППАРАТА MeDioStar NeXT PRO
+            </div>
+            <div class="epilation__images-container">
+              <ul class="epilation__images">
+                <li class="epilation__item">
+                  <picture>
+                    <source srcset="./img/img-epic-1.webp" type="image/webp" />
+                    <img src="./img/img-epic-1.png" alt="" />
                   </picture>
+                  Вспышка света с определенной длиной волны на фолликул волоса
+                </li>
+                <li class="epilation__item">
+                  <picture>
+                    <source srcset="./img/img-epic-2.webp" type="image/webp" />
+                    <img src="./img/img-epic-2.png" alt="" />
+                  </picture>
+                  Меланин (кожный пигмент) поглощает красный свет диодного
+                  лазере MeDioStar NeXT PRO и нагревается
+                </li>
+                <li class="epilation__item">
+                  <picture>
+                    <source srcset="./img/img-epic-3.webp" type="image/webp" />
+                    <img src="./img/img-epic-3.png" alt="" />
+                  </picture>
+                  Фолликулы волос в активной стадии роста сгорают изнутри,
+                  прекращают рост и выпадают через 2 недели
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="benefits">
+          <div class="benefits__wrapper">
+            <h3 class="benefits__title">
+              ПРЕИМУЩЕСТВА ЛАЗЕРНОЙ ЭПИЛЯЦИИ В МЕДЦЕНТРЕ "МЕДИКАЛКЛАБ"
+            </h3>
+            <div class="benefits__slider">
+              <ul class="benefits__list">
+                <li class="benefits__item benefits__item--fast">
+                  <div class="benefits__item-title">
+                    Диодный лазер (Германия)
+
+                    <span class="red">MeDioStar NeXT PRO</span>
+                  </div>
+                  <p class="benefits__item-text">
+                    Наиболее высокоскоростной лазер сокращает время сеансов
+                    эпиляции - процедура пройдет максимально быстро;
+                  </p>
+                </li>
+                <li class="benefits__item benefits__item--painfall">
+                  <div class="benefits__item-title">
+                    Абсолютно
+
+                    <span class="red"> безболезненные сеансы</span>
+                  </div>
+                  <p class="benefits__item-text">
+                    Интегрированная система охлаждения лазера обеспечиает
+                    интенсивное охлаждение, комфорт и безопасность процедуры;
+                  </p>
+                </li>
+                <li class="benefits__item benefits__item--every-day">
+                  <div class="benefits__item-title">
+                    Эпиляция
+
+                    <span class="red">365 дней в году</span>
+                  </div>
+                  <p class="benefits__item-text">
+                    Инновационная технология двойного импульсапозволяет
+                    производить эпиляцию круглый год и исключает
+                    гиперпигментацию кожи;
+                  </p>
+                </li>
+                <li class="benefits__item benefits__item--not-hair">
+                  <div class="benefits__item-title">
+                    Избавим от нежелательных волос
+                    <span class="red">навсегда</span>
+                  </div>
+                  <p class="benefits__item-text">
+                    Волны (810 нм + 940 нм) диодного лазера воздействуют и на
+                    волосяной фолликул и на сосуды, питающие волос. Таким
+                    образом, волосы не просто удаляются, а перестают расти;
+                  </p>
+                </li>
+              </ul>
+              <div class="benefits__controls">
+                <span
+                  class="round-button round-button--left benefits__button--prev benefits__button"
+                >
+                  <span class="round-button__content"></span>
+                </span>
+                <span
+                  class="round-button round-button--right benefits__button--next benefits__button"
+                >
+                  <span class="round-button__content"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="zones">
+          <div class="zones__container">
+            <h3 class="zones__title">Зоны диодной лазерной эпиляции</h3>
+            <div class="zones__slider slider">
+              <div class="zones__images-wrapper">
+                <ul class="zones__images">
+                  <li class="zones__item">
+                    <div class="zones__text">Лицо</div>
+                    <picture>
+                      <source
+                        srcset="./img/img-zone-1.webp"
+                        type="image/webp"
+                      />
+                      <img src="./img/img-zone-1.png" alt="" />
+                    </picture>
+                  </li>
+                  <li class="zones__item">
+                    <div class="zones__text">Живот</div>
+                    <picture>
+                      <source
+                        srcset="./img/img-zone-2.webp"
+                        type="image/webp"
+                      />
+                      <img src="./img/img-zone-2.png" alt="" />
+                    </picture>
+                  </li>
+                  <li class="zones__item">
+                    <div class="zones__text">Подмышечные впадины</div>
+                    <picture>
+                      <source
+                        srcset="./img/img-zone-3.webp"
+                        type="image/webp"
+                      />
+                      <img src="./img/img-zone-3.png" alt="" />
+                    </picture>
+                  </li>
+                  <li class="zones__item">
+                    <div class="zones__text">Спина</div>
+                    <picture>
+                      <source
+                        srcset="./img/img-zone-4.webp"
+                        type="image/webp"
+                      />
+                      <img src="./img/img-zone-4.png" alt="" />
+                    </picture>
+                  </li>
+                  <li class="zones__item">
+                    <div class="zones__text">Бикини</div>
+                    <picture>
+                      <source
+                        srcset="./img/img-zone-5.webp"
+                        type="image/webp"
+                      />
+                      <img src="./img/img-zone-5.png" alt="" />
+                    </picture>
+                  </li>
+                  <li class="zones__item">
+                    <div class="zones__text">Грудь</div>
+                    <picture>
+                      <source
+                        srcset="./img/img-zone-6.webp"
+                        type="image/webp"
+                      />
+                      <img src="./img/img-zone-6.png" alt="" />
+                    </picture>
+                  </li>
+                  <li class="zones__item">
+                    <div class="zones__text">Ноги</div>
+                    <picture>
+                      <source
+                        srcset="./img/img-zone-7.webp"
+                        type="image/webp"
+                      />
+                      <img src="./img/img-zone-7.png" alt="" />
+                    </picture>
+                  </li>
+                </ul>
+              </div>
+              <div class="slider__controls zones__slider-controls">
+                <div
+                  class="round-button round-button--left round-button--small zones__slider-prev"
+                >
+                  <span class="round-button__content"></span>
+                </div>
+                <div class="zones__slider-pagination">
+                  <span class="zones__slider-pagination--curent"></span>
+                  /
+                  <span class="zones__slider-pagination--total"></span>
+                </div>
+                <div
+                  class="round-button round-button--right round-button--small zones__slider-next"
+                >
+                  <span class="round-button__content"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="for-whom">
+          <div class="for-whom__wrapper">
+            <h3 class="for-whom__title">ДЛЯ КОГО ПОДХОДИТ ЛАЗЕРНАЯ ЭПИЛЯЦИЯ</h3>
+            <div class="for-whom__text">
+              Небольшой текст о процедуре. Принцип действия аппарата Soprano Ice
+              Platinum с технологией Titanium основан на запатентованной
+              инновационной технологии удаления волос — SHR ™. Технология Super
+              Hair Removal предполагает воздействие на фолликулу луча лазера и
+              его тепловой энергии. В волос поступает 10 импульсов до
+              разрушения, но тепла выделяется меньше. Это обеспечивает быстроту
+              и безболезненность процесса.
+            </div>
+            <div class="for-whom__block">
+              <div class="for-whom__indication accordion">
+                <input
+                  class="accordion__input for-whom__indication-input"
+                  id="indication"
+                  type="radio"
+                  name="indication"
+                  checked
+                />
+                <label
+                  class="accordion__label for-whom__indication-label"
+                  for="indication"
+                  >Показания:</label
+                >
+                <div class="accordion__content for-whom__indication-wrapper">
+                  <ul class="for-whom__indication-list">
+                    <li class="for-whom__indication-item">Длительном кашле</li>
+                    <li class="for-whom__indication-item">Сильной одышке</li>
+                    <li class="for-whom__indication-item">
+                      Частых респираторно-вирусных заболеваниях
+                    </li>
+                    <li class="for-whom__indication-item">Резком похудении</li>
+                    <li class="for-whom__indication-item">
+                      Обострении хронических заболеваний легких
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="for-whom__indication for-whom__indication--contra accordion"
+              >
+                <input
+                  class="accordion__input for-whom__indication-input"
+                  id="un-indication"
+                  type="radio"
+                  name="indication"
+                />
+                <label
+                  class="accordion__label for-whom__indication-label"
+                  for="un-indication"
+                  >Противопоказания:</label
+                >
+                <div class="accordion__content for-whom__indication-wrapper">
+                  <ul class="for-whom__indication-list">
+                    <li class="for-whom__indication-item">
+                      Воспалительных и других заболеваний легких и плевры;
+                    </li>
+                    <li class="for-whom__indication-item">
+                      Заболеваний сердца и крупных сосудов;
+                    </li>
+                    <li class="for-whom__indication-item">
+                      Туберкулеза легких;
+                    </li>
+                    <li class="for-whom__indication-item">
+                      Новообразований легких и органов средостения.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="prices">
+          <div class="prices__wrapper">
+            <div class="prices__container">
+              <h3 class="prices__title">ЦЕНЫ НА ЛАЗЕРНУЮ ЭПИЛЯЦИЮ:</h3>
+
+              <div class="prices__filials">
+                <p class="prices__notice">
+                  Цены отличаются в зависимости от филиала, пожалуйста, выберите
+                  нужный<br />
+                  Вам филиал:
+                </p>
+                <select class="prices__select">
+                  <option class="prices__select-option" value="1">
+                    Медцентр на Малой Юшуньской
+                  </option>
+                  <option class="prices__select-option" value="2">
+                    Медцентр на Малой Красной площади
+                  </option>
+                  <option class="prices__select-option" value="3">
+                    Медцентр на Малой Юшуньской
+                  </option>
+                  <option class="prices__select-option" value="4">
+                    Медцентр на Малой Юшуньской
+                  </option>
+                </select>
+              </div>
+              <div class="prices__list">
+                <div class="prices__item--header prices__item">
+                  <div
+                    class="prices__data prices__data--name prices__data--name-header"
+                  >
+                    <span>Лазерная эпиляция</span>
+                  </div>
+                  <div
+                    class="prices__data prices__data--women prices__data--women-header"
+                  >
+                    <span>Для женщин</span>
+                  </div>
+                  <div
+                    class="prices__data prices__data--men prices__data--men-header"
+                  >
+                    <span>Для мужчин</span>
+                  </div>
+                </div>
+                <ul class="prices__tab prices__tab--all">
+                  <li class="prices__item">
+                    <div class="prices__data prices__data--name">
+                      Верхняя губа
+                    </div>
+                    <div class="prices__data prices__data--women">
+                      1 200 <span class="rouble">е</span>
+                    </div>
+                    <div class="prices__data prices__data--men">
+                      1 800 <span class="rouble">е</span>
+                    </div>
+                  </li>
+                  <li class="prices__item">
+                    <div class="prices__data prices__data--name">
+                      Подбородок
+                    </div>
+                    <div class="prices__data prices__data--women">
+                      1 300 <span class="rouble">е</span>
+                    </div>
+                    <div class="prices__data prices__data--men">
+                      1 900 <span class="rouble">е</span>
+                    </div>
+                  </li>
+                  <li class="prices__item">
+                    <div class="prices__data prices__data--name">
+                      Межбровная зона
+                    </div>
+                    <div class="prices__data prices__data--women">
+                      1 200 <span class="rouble">е</span>
+                    </div>
+                    <div class="prices__data prices__data--men">
+                      1 800 <span class="rouble">е</span>
+                    </div>
+                  </li>
+                  <li class="prices__item">
+                    <div class="prices__data prices__data--name">Щекиа</div>
+                    <div class="prices__data prices__data--women">
+                      1 700 <span class="rouble">е</span>
+                    </div>
+                    <div class="prices__data prices__data--men">
+                      2 300 <span class="rouble">е</span>
+                    </div>
+                  </li>
+                  <li class="prices__item">
+                    <div class="prices__data prices__data--name">
+                      Бакенбарды
+                    </div>
+                    <div class="prices__data prices__data--women">
+                      1 200 <span class="rouble">е</span>
+                    </div>
+                    <div class="prices__data prices__data--men">
+                      1 800 <span class="rouble">е</span>
+                    </div>
+                  </li>
+                  <li class="prices__item">
+                    <div class="prices__data prices__data--name">Шея</div>
+                    <div class="prices__data prices__data--women">
+                      1 700 <span class="rouble">е</span>
+                    </div>
+                    <div class="prices__data prices__data--men">
+                      2 300 <span class="rouble">е</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="prices__footer">
+                <p class="prices__footer-text">
+                  Узнать подробности и записаться на лазерную эпиляцию вы можете
+                  по телефону
+                </p>
+                <a href="tel:+74956600303" class="prices__footer-contact"
+                  ><span>8 495 660-03-03</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="equipment">
+          <div class="equipment__wrapper">
+            <h2 class="equipment__header">
+              ИСПОЛЬЗУЕМ ОБОРУДОВАНИЕ НОВОГО ПОКОЛЕНИЯ
+              <span class="equipment__sub-header">
+                диодный лазер MeDioStar NeXT PRO
+              </span>
+            </h2>
+            <div class="equipment__content">
+              <div class="equipment__difference">
+                <div class="equipment__difference-wrapper">
+                  <div class="equipment__difference-title">
+                    Важное отличие лазера MeDioStar NeXT PRO
+                  </div>
+                  <p class="equipment__difference-text">
+                    Лазер исключает возможность появления пигментных пятен,
+                    благодаря чему процедуру можно проводить летом, до или сразу
+                    после отпуска в жаркой стране.
+                  </p>
+                </div>
+              </div>
+
+              <ul class="equipment__list">
+                <li class="equipment__list-item">
+                  <span> Лазер MeDioStar NeXT PRO произведен в Германии</span>
+                  компанией Asclepion. Уже более 50 лет компания Asclepion
+                  является мировым лидером на рынке лазеров хирургии и
+                  эстетической медицины.
+                </li>
+                <li class="equipment__list-item">
+                  <span
+                    >MeDioStar NeXT PRO - это диодный лазер с двумя длинами волн
+                    - 810 нм + 940 нм</span
+                  >- которые работают одновременно.
+                </li>
+                <li class="equipment__list-item">
+                  <span>Основная длина волны - 810 нм</span> - клинически
+                  подтверждена как идеальная для удаления нежелательных волос.
+                </li>
+                <li class="equipment__list-item">
+                  <span>Длина волны 940 нм</span>разрушает сосуд, питающий
+                  волос, поэтому волосы удаляются эффективно и безвозвратно.
+                </li>
+              </ul>
+              <div class="equipment__play-button">
+                <a href="#" class="equipment__play-button-link">
+                  <img
+                    src="./img/icon-play-button.svg"
+                    alt=""
+                    class="equipment__play-button-img"
+                  />
                 </a>
               </div>
-              <div class="main-nav__filials-block">
-                <h4 class="main-nav__filials-title">
-                  <a href="" class="main-nav__filials-link">Адреса</a>
-                </h4>
-                <ul class="main-nav__filials-list">
-                  <li class="filial main-nav__filial">
-                    <div class="filial__name">Жулебино</div>
-                    <div class="filial__address">Жулебинский бульвар 25</div>
-                  </li>
-                  <li class="filial main-nav__filial">
-                    <div class="filial__name">Жулебино</div>
-                    <div class="filial__address">Жулебинский бульвар 25</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="main-nav__menu-block main-nav__menu-block--no-js">
-              <div class="main-nav__contact-block">
-                <div class="contact main-nav__contact">
-                  <p class="contact__text">
-                    Есть вопросы?<a href="tel:84951268925" class="red">Звоните!</a>
-                  </p>
-                  <a href="tel:84951268925" class="contact__phone">8 495 126-89-25</a>
-                </div>
-                <a href="" class="button main-nav__contact-button">
-                  <span> Записаться на эпиляцию</span></a>
-              </div>
-              <ul class="main-nav__menu main-nav__menu--no-js">
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">НАШИ ФИЛИАЛЫ</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">ЗОНЫ ЭПИЛЯЦИИ</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">НАШИ ЦЕНЫ</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">О ЛАЗЕРЕ MeDioStar NeXT PRO</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">РЕЗУЛЬТАТЫ</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">ОТЗЫВЫ</a>
-                </li>
-                <li class="main-nav__item main-nav__item--active">
-                  <a href="" class="main-nav__link">На сайт клиники</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-
-    <main class="page__index">
-      <section class="banner">
-        <div class="banner__wrapper">
-          <ul class="banner__breadcrumbs breadcrubs">
-            <li class="breadcrubs__item">
-              <a href="" class="breadcrubs__link">МедикалКлаб</a>
-            </li>
-            <li class="breadcrubs__item">
-              <a href="" class="breadcrubs__link">Отделения</a>
-            </li>
-            <li class="breadcrubs__item">
-              <a href="" class="breadcrubs__link">Косметология</a>
-            </li>
-            <li class="breadcrubs__item">
-              <a href="" class="breadcrubs__link">Лазерная эпиляция</a>
-            </li>
-          </ul>
-          <div class="banner__content">
-            <h1 class="banner__title">
-              Эпиляция диодным лазером
-              <span class="banner__equipment red">MeDioStar NeXT PRO
-                <span class="banner__equipment-flag"></span>
-              </span>
-            </h1>
-            <p class="baner__sub-title">
-              Избавим от волос надолго на самом современном оборудовании!
-            </p>
-            <div class="banner__price">
-              <p class="banner__price-title red">Стоимость сеанса:</p>
-              <span class="banner__price-text">от
-                <span class="banner__price-text--money">1 200
-                  <span class="rouble banner__price-text--rouble">е</span>
-                </span>
-              </span>
-            </div>
-            <div class="banner__text">
-              Запишись к нам сегодня и получи скидку!
-            </div>
-            <a href="" class="button banner__button">
-              <span> Получить скидку! </span>
-            </a>
-          </div>
-          <ul class="banner__block-list">
-            <li class="banner__block-list-item banner__block-list-item--time">
-              Длительность сеанса:<span>5-10 минут</span>
-            </li>
-            <li class="banner__block-list-item banner__block-list-item--course">
-              Курс процедур:<span>6-8 / за 6 месяцев</span>
-            </li>
-            <li class="banner__block-list-item banner__block-list-item--weekend">
-              Работаем<span>без выходных</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="epilation">
-        <div class="epilation__wrapper">
-          <h2 class="epilation__title">
-            Абсолютно безопасная и безболезненная эпиляция лазером
-          </h2>
-          <p class="epilation__text">
-            Небольшой текст о процедуре. Принцип действия аппарата Soprano Ice
-            Platinum с технологией Titanium основан на запатентованной
-            инновационной технологии удаления волос — SHR ™. Технология Super
-            Hair Removal предполагает воздействие на фолликулу луча лазера и
-            его тепловой энергии. В волос поступает 10 импульсов до
-            разрушения, но тепла выделяется меньше. Это обеспечивает быстроту
-            и безболезненность процесса.
-          </p>
-
-          <h3 class="epilation__title-about">
-            ЧТО ТАКОЕ АППАРАТНАЯ ЭПИЛЯЦИЯ
-          </h3>
-          <div class="epilation__flash red">
-            ВСПЫШКА АППАРАТА MeDioStar NeXT PRO
-          </div>
-          <div class="epilation__images-container">
-            <ul class="epilation__images">
-              <li class="epilation__item">
-                <picture>
-                  <source srcset="./img/img-epic-1.webp" type="image/webp">
-                  <img src="./img/img-epic-1.png" alt="" />
-                </picture>
-                Вспышка света с
-                определенной длиной волны на фолликул волоса
-              </li>
-              <li class="epilation__item">
-                <picture>
-                  <source srcset="./img/img-epic-2.webp" type="image/webp">
-                  <img src="./img/img-epic-2.png" alt="" />
-                </picture>
-                Меланин (кожный
-                пигмент) поглощает красный свет диодного лазере MeDioStar NeXT
-                PRO и нагревается
-              </li>
-              <li class="epilation__item">
-                <picture>
-                  <source srcset="./img/img-epic-3.webp" type="image/webp">
-                  <img src="./img/img-epic-3.png" alt="" />
-                </picture>
-                Фолликулы волос в
-                активной стадии роста сгорают изнутри, прекращают рост и
-                выпадают через 2 недели
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="benefits">
-        <div class="benefits__wrapper">
-          <h3 class="benefits__title">
-            ПРЕИМУЩЕСТВА ЛАЗЕРНОЙ ЭПИЛЯЦИИ В МЕДЦЕНТРЕ "МЕДИКАЛКЛАБ"
-          </h3>
-          <div class="benefits__slider">
-            <ul class="benefits__list">
-              <li class="benefits__item benefits__item--fast">
-                <div class="benefits__item-title">
-                  Диодный лазер (Германия)
-
-                  <span class="red">MeDioStar NeXT PRO</span>
-                </div>
-                <p class="benefits__item-text">
-                  Наиболее высокоскоростной лазер сокращает время сеансов
-                  эпиляции - процедура пройдет максимально быстро;
-                </p>
-              </li>
-              <li class="benefits__item benefits__item--painfall">
-                <div class="benefits__item-title">
-                  Абсолютно
-
-                  <span class="red"> безболезненные сеансы</span>
-                </div>
-                <p class="benefits__item-text">
-                  Интегрированная система охлаждения лазера обеспечиает
-                  интенсивное охлаждение, комфорт и безопасность процедуры;
-                </p>
-              </li>
-              <li class="benefits__item benefits__item--every-day">
-                <div class="benefits__item-title">
-                  Эпиляция
-
-                  <span class="red">365 дней в году</span>
-                </div>
-                <p class="benefits__item-text">
-                  Инновационная технология двойного импульсапозволяет
-                  производить эпиляцию круглый год и исключает
-                  гиперпигментацию кожи;
-                </p>
-              </li>
-              <li class="benefits__item benefits__item--not-hair">
-                <div class="benefits__item-title">
-                  Избавим от нежелательных волос
-                  <span class="red">навсегда</span>
-                </div>
-                <p class="benefits__item-text">
-                  Волны (810 нм + 940 нм) диодного лазера воздействуют и на
-                  волосяной фолликул и на сосуды, питающие волос. Таким
-                  образом, волосы не просто удаляются, а перестают расти;
-                </p>
-              </li>
-            </ul>
-            <div class="benefits__controls">
-              <span class="round-button round-button--left benefits__button--prev benefits__button">
-                <span class="round-button__content"></span>
-              </span>
-              <span class="round-button round-button--right benefits__button--next benefits__button">
-                <span class="round-button__content"></span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="zones">
-        <div class="zones__container">
-          <h3 class="zones__title">Зоны диодной лазерной эпиляции</h3>
-          <div class="zones__slider slider">
-            <div class="zones__images-wrapper">
-              <ul class="zones__images">
-                <li class="zones__item">
-                  <div class="zones__text">Лицо</div>
-                  <picture>
-                    <source srcset="./img/img-zone-1.webp" type="image/webp">
-                    <img src="./img/img-zone-1.png" alt="" />
-                  </picture>
-                </li>
-                <li class="zones__item">
-                  <div class="zones__text">Живот</div>
-                  <picture>
-                    <source srcset="./img/img-zone-2.webp" type="image/webp">
-                    <img src="./img/img-zone-2.png" alt="" />
-                  </picture>
-
-                </li>
-                <li class="zones__item">
-                  <div class="zones__text">Подмышечные впадины</div>
-                  <picture>
-                    <source srcset="./img/img-zone-3.webp" type="image/webp">
-                    <img src="./img/img-zone-3.png" alt="" />
-                  </picture>
-                </li>
-                <li class="zones__item">
-                  <div class="zones__text">Спина</div>
-                  <picture>
-                    <source srcset="./img/img-zone-4.webp" type="image/webp">
-                    <img src="./img/img-zone-4.png" alt="" />
-                  </picture>
-
-
-                </li>
-                <li class="zones__item">
-                  <div class="zones__text">Бикини</div>
-                  <picture>
-                    <source srcset="./img/img-zone-5.webp" type="image/webp">
-                    <img src="./img/img-zone-5.png" alt="" />
-                  </picture>
-
-                </li>
-                <li class="zones__item">
-                  <div class="zones__text">Грудь</div>
-                  <picture>
-                    <source srcset="./img/img-zone-6.webp" type="image/webp">
-                    <img src="./img/img-zone-6.png" alt="" />
-                  </picture>
-
-                </li>
-                <li class="zones__item">
-                  <div class="zones__text">Ноги</div>
-                  <picture>
-                    <source srcset="./img/img-zone-7.webp" type="image/webp">
-                    <img src="./img/img-zone-7.png" alt="" />
-                  </picture>
-                </li>
-              </ul>
-            </div>
-            <div class="slider__controls zones__slider-controls">
-              <div class="round-button round-button--left round-button--small zones__slider-prev">
-                <span class="round-button__content"></span>
-              </div>
-              <div class="zones__slider-pagination">
-                <span class="zones__slider-pagination--curent"></span>
-                /
-                <span class="zones__slider-pagination--total"></span>
-              </div>
-              <div class="round-button round-button--right round-button--small zones__slider-next">
-                <span class="round-button__content"></span>
+              <div class="equipment__button">
+                <a href="#" class="equipment__button-wrapper button">
+                  <span>записаться на эпиляцию</span>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="for-whom">
-        <div class="for-whom__wrapper">
-          <h3 class="for-whom__title">ДЛЯ КОГО ПОДХОДИТ ЛАЗЕРНАЯ ЭПИЛЯЦИЯ</h3>
-          <div class="for-whom__text">
-            Небольшой текст о процедуре. Принцип действия аппарата Soprano Ice
-            Platinum с технологией Titanium основан на запатентованной
-            инновационной технологии удаления волос — SHR ™. Технология Super
-            Hair Removal предполагает воздействие на фолликулу луча лазера и
-            его тепловой энергии. В волос поступает 10 импульсов до
-            разрушения, но тепла выделяется меньше. Это обеспечивает быстроту
-            и безболезненность процесса.
-          </div>
-          <div class="for-whom__block">
-            <div class="for-whom__indication accordion">
-              <input class="accordion__input for-whom__indication-input" id="indication" type="radio" name="indication"
-                checked />
-              <label class="accordion__label for-whom__indication-label" for="indication">Показания:</label>
-              <div class="accordion__content for-whom__indication-wrapper">
-                <ul class="for-whom__indication-list">
-                  <li class="for-whom__indication-item">Длительном кашле</li>
-                  <li class="for-whom__indication-item">Сильной одышке</li>
-                  <li class="for-whom__indication-item">
-                    Частых респираторно-вирусных заболеваниях
-                  </li>
-                  <li class="for-whom__indication-item">Резком похудении</li>
-                  <li class="for-whom__indication-item">
-                    Обострении хронических заболеваний легких
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="for-whom__indication for-whom__indication--contra accordion">
-              <input class="accordion__input for-whom__indication-input" id="un-indication" type="radio"
-                name="indication" />
-              <label class="accordion__label for-whom__indication-label" for="un-indication">Противопоказания:</label>
-              <div class="accordion__content for-whom__indication-wrapper">
-                <ul class="for-whom__indication-list">
-                  <li class="for-whom__indication-item">
-                    Воспалительных и других заболеваний легких и плевры;
-                  </li>
-                  <li class="for-whom__indication-item">
-                    Заболеваний сердца и крупных сосудов;
-                  </li>
-                  <li class="for-whom__indication-item">
-                    Туберкулеза легких;
-                  </li>
-                  <li class="for-whom__indication-item">
-                    Новообразований легких и органов средостения.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="prices">
-        <div class="prices__wrapper">
-          <div class="prices__container">
-            <h3 class="prices__title">ЦЕНЫ НА ЛАЗЕРНУЮ ЭПИЛЯЦИЮ:</h3>
-
-            <div class="prices__filials">
-              <p class="prices__notice">
-                Цены отличаются в зависимости от филиала, пожалуйста, выберите
-                нужный<br />
-                Вам филиал:
-              </p>
-              <select class="prices__select">
-                <option class="prices__select-option" value="1">
-                  Медцентр на Малой Юшуньской
-                </option>
-                <option class="prices__select-option" value="2">
-                  Медцентр на Малой Красной площади
-                </option>
-                <option class="prices__select-option" value="3">
-                  Медцентр на Малой Юшуньской
-                </option>
-                <option class="prices__select-option" value="4">
-                  Медцентр на Малой Юшуньской
-                </option>
-              </select>
-            </div>
-            <div class="prices__list">
-              <div class="prices__item--header prices__item">
-                <div class="prices__data prices__data--name prices__data--name-header">
-                  <span>Лазерная эпиляция</span>
-                </div>
-                <div class="prices__data prices__data--women prices__data--women-header">
-                  <span>Для женщин</span>
-                </div>
-                <div class="prices__data prices__data--men prices__data--men-header">
-                  <span>Для мужчин</span>
-                </div>
-              </div>
-              <ul class="prices__tab prices__tab--all">
-                <li class="prices__item">
-                  <div class="prices__data prices__data--name">
-                    Верхняя губа
-                  </div>
-                  <div class="prices__data prices__data--women">
-                    1 200 <span class="rouble">е</span>
-                  </div>
-                  <div class="prices__data prices__data--men">
-                    1 800 <span class="rouble">е</span>
-                  </div>
-                </li>
-                <li class="prices__item">
-                  <div class="prices__data prices__data--name">
-                    Подбородок
-                  </div>
-                  <div class="prices__data prices__data--women">
-                    1 300 <span class="rouble">е</span>
-                  </div>
-                  <div class="prices__data prices__data--men">
-                    1 900 <span class="rouble">е</span>
-                  </div>
-                </li>
-                <li class="prices__item">
-                  <div class="prices__data prices__data--name">
-                    Межбровная зона
-                  </div>
-                  <div class="prices__data prices__data--women">
-                    1 200 <span class="rouble">е</span>
-                  </div>
-                  <div class="prices__data prices__data--men">
-                    1 800 <span class="rouble">е</span>
-                  </div>
-                </li>
-                <li class="prices__item">
-                  <div class="prices__data prices__data--name">Щекиа</div>
-                  <div class="prices__data prices__data--women">
-                    1 700 <span class="rouble">е</span>
-                  </div>
-                  <div class="prices__data prices__data--men">
-                    2 300 <span class="rouble">е</span>
-                  </div>
-                </li>
-                <li class="prices__item">
-                  <div class="prices__data prices__data--name">
-                    Бакенбарды
-                  </div>
-                  <div class="prices__data prices__data--women">
-                    1 200 <span class="rouble">е</span>
-                  </div>
-                  <div class="prices__data prices__data--men">
-                    1 800 <span class="rouble">е</span>
-                  </div>
-                </li>
-                <li class="prices__item">
-                  <div class="prices__data prices__data--name">Шея</div>
-                  <div class="prices__data prices__data--women">
-                    1 700 <span class="rouble">е</span>
-                  </div>
-                  <div class="prices__data prices__data--men">
-                    2 300 <span class="rouble">е</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="prices__footer">
-              <p class="prices__footer-text">
-                Узнать подробности и записаться на лазерную эпиляцию вы можете
-                по телефону
-              </p>
-              <a href="tel:+74956600303" class="prices__footer-contact"><span>8 495 660-03-03</span></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="equipment">
-        <div class="equipment__wrapper">
-          <h2 class="equipment__header">
-            ИСПОЛЬЗУЕМ ОБОРУДОВАНИЕ НОВОГО ПОКОЛЕНИЯ
-            <p class="equipment__sub-header">
-              диодный лазер MeDioStar NeXT PRO
-            </p>
-          </h2>
-          <div class="equipment__content">
-            <div class="equipment__difference">
-              <div class="equipment__difference-wrapper">
-                <div class="equipment__difference-title">
-                  Важное отличие лазера MeDioStar NeXT PRO
-                </div>
-                <p class="equipment__difference-text">
-                  Лазер исключает возможность появления пигментных пятен,
-                  благодаря чему процедуру можно проводить летом, до или сразу
-                  после отпуска в жаркой стране.
-                </p>
-              </div>
-            </div>
-
-            <ul class="equipment__list">
-              <li class="equipment__list-item">
-                <span> Лазер MeDioStar NeXT PRO произведен в Германии</span>
-                компанией Asclepion. Уже более 50 лет компания Asclepion
-                является мировым лидером на рынке лазеров хирургии и
-                эстетической медицины.
-              </li>
-              <li class="equipment__list-item">
-                <span>MeDioStar NeXT PRO - это диодный лазер с двумя длинами волн
-                  - 810 нм + 940 нм</span>- которые работают одновременно.
-              </li>
-              <li class="equipment__list-item">
-                <span>Основная длина волны - 810 нм</span> - клинически
-                подтверждена как идеальная для удаления нежелательных волос.
-              </li>
-              <li class="equipment__list-item">
-                <span>Длина волны 940 нм</span>разрушает сосуд, питающий
-                волос, поэтому волосы удаляются эффективно и безвозвратно.
-              </li>
-            </ul>
-            <div class="equipment__play-button">
-              <a href="#" class="equipment__play-button-link">
-
-                <img src="./img/icon-play-button.svg" alt="" class="equipment__play-button-img" />
-              </a>
-            </div>
-            <div class="equipment__button">
-              <a href="#" class="equipment__button-wrapper button">
-                <span>записаться на эпиляцию</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="effect">
-        <div class="effect__wrapper">
-          <h3 class="effect__title">
-            КАКОЙ ЭФФЕКТ ДАЕТ КУРС ЛАЗЕРНОЙ ЭПИЛЯЦИИ
-          </h3>
-          <div class="effect__slider">
-            <ul class="effect__list">
-              <li class="effect__list-item effect__list-item--left">
-                <span class="effect__list-item-check check"></span>
-                <span class="effect__list-item-text">
-                  Гладкая кожа без раздражения
-                </span>
-              </li>
-              <li class="effect__list-item effect__list-item--right">
-                <span class="effect__list-item-check effect__list-item-check--right check"></span>
-                <span class="effect__list-item-text">
-                  Больше никаких вросших волос
-                </span>
-              </li>
-              <li class="effect__list-item effect__list-item--left">
-                <span class="effect__list-item-check check check--red"></span>
-                <span class="effect__list-item-text">
-                  Максимально длительный эффект на 3-5 лет
-                </span>
-              </li>
-              <li class="effect__list-item effect__list-item--right">
-                <span class="effect__list-item-check effect__list-item-check--right check check--red"></span>
-                <span class="effect__list-item-text">
-                  Ante egestas ac adipiscing facilisi.
-                </span>
-              </li>
-
-              <li class="effect__list-item effect__list-item--left">
-                <span class="effect__list-item-check check"></span>
-                <span class="effect__list-item-text">
-                  Уход без использования бритвы!
-                </span>
-              </li>
-
-              <li class="effect__list-item effect__list-item--right">
-                <span class="effect__list-item-check effect__list-item-check--right check"></span>
-                <span class="effect__list-item-text">
-                  Ante egestas ac adipiscing facilisi.
-                </span>
-              </li>
-              <li class="effect__list-item effect__list-item--left">
-                <span class="effect__list-item-check check check--red"></span>
-                <span class="effect__list-item-text">
-                  Кожа мягкая и бархатистая
-                </span>
-              </li>
-              <li class="effect__list-item effect__list-item--right">
-                <span class="effect__list-item-check effect__list-item-check--right check check--red"></span>
-                <span class="effect__list-item-text">
-                  Ante egestas ac adipiscing facilisi.
-                </span>
-              </li>
-            </ul>
-            <div class="slider__controls effect__slider-controls">
-              <div class="slider__prev effect__slider-prev"></div>
-              <div class="effect__slider-scrollbar"></div>
-              <div class="slider__next effect__slider-next"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="examples">
-        <div class="examples__wrapper">
-          <h3 class="examples__title">Примеры наших работ</h3>
-          <div class="examples__content">
-            <div class="examples__slider slider swiper-container">
-              <div class="examples__slider-list swiper-wrapper">
-                <div class="examples__slider-item slider__item swiper-slide">
-                  <picture>
-                    <source srcset="./img/img-examples-slider-1.webp" type="image/webp">
-                    <img src="./img/img-examples-slider-1.jpg" alt="" class="slider__img" />
-                  </picture>
-
-                </div>
-                <div class="examples__slider-item slider__item swiper-slide">
-                  <picture>
-                    <source srcset="./img/img-examples-slider-1.webp" type="image/webp">
-                    <img src="./img/img-examples-slider-1.jpg" alt="" class="slider__img" />
-                  </picture>
-
-                </div>
-                <div class="examples__slider-item slider__item swiper-slide">
-                  <picture>
-                    <source srcset="./img/img-examples-slider-1.webp" type="image/webp">
-                    <img src="./img/img-examples-slider-1.jpg" alt="" class="slider__img" />
-                  </picture>
-                </div>
-                <div class="examples__slider-item slider__item swiper-slide">
-                  <picture>
-                    <source srcset="./img/img-examples-slider-1.webp" type="image/webp">
-                    <img src="./img/img-examples-slider-1.jpg" alt="" class="slider__img" />
-                  </picture>
-                </div>
-              </div>
-            </div>
-            <div class="slider__controls examples__slider-controls">
-              <button class="examples__slider-button examples__slider-button--prev round-button round-button--left">
-                <span class="round-button__content"></span>
-              </button>
-              <div class="examples__slider-button--next examples__slider-button round-button round-button--right">
-                <span class="round-button__content"></span>
-              </div>
-              <div class="examples__slider-pagination"></div>
-            </div>
-          </div>
-          <a href="" class="button examples__button">Записаться на эпиляцию</a>
-        </div>
-      </section>
-
-      <section class="choice">
-        <div class="choice__wrapper">
-          <h3 class="choice__title">
-            ПОЧЕМУ ВЫБИРАЮТ МЕДЦЕНТР
-
-            <span class="red"> “МЕДИКАЛКЛАБ”</span>
-          </h3>
-          <div class="choice__slider">
-            <ul class="choice__slider-wrapper">
-              <li class="slider__item choice__slider-item choice__slider-item--heart">
-                <div class="choice__slider-item-text">
-                  Официальный медицинский центр
-                  <span class="red">Работаем более 20 лет</span>
-                </div>
-              </li>
-              <li class="slider__item choice__slider-item choice__slider-item--time">
-                <div class="choice__slider-item-text">
-                  <span class="red">Комфортные условия</span> у нас нет
-                  очередей
-                </div>
-              </li>
-              <li class="slider__item choice__slider-item choice__slider-item--education">
-                <div class="choice__slider-item-text">
-                  Все спецалисты
-                  <span class="red"> с медицинским образованием</span>
-                </div>
-              </li>
-              <li class="slider__item choice__slider-item choice__slider-item--award">
-                <div class="choice__slider-item-text">
-                  <span class="red">Сертифицированное оборудование</span> с
-                  регистрацией в РФ
-                </div>
-              </li>
-            </ul>
-            <div class="choice__slider-controls">
-              <div class="choice__slider-prev"></div>
-              <div class="choice__slider-scrollbar"></div>
-              <div class="choice__slider-next"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="questions">
-        <div class="questions__wrapper">
-          <div class="questions__answers-wrapper">
-            <h3 class="questions__answers-title">
-              ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ / ЛАЗЕРНАЯ ЭПИЛЯЦИЯ
+        <section class="effect">
+          <div class="effect__wrapper">
+            <h3 class="effect__title">
+              КАКОЙ ЭФФЕКТ ДАЕТ КУРС ЛАЗЕРНОЙ ЭПИЛЯЦИИ
             </h3>
-            <ol class="accordion questions__list">
-              <li class="accordion__item questions__item">
-                <input class="accordion__input questions__checked" id="accordion1" type="radio" name="number" checked />
-                <label class="accordion__title questions__item-title" for="accordion1">Какой у вас аппарат?</label>
-                <div class="accordion__content">
-                  <p class="questions__item-content">
-                    Диодная лазерная эпиляция, которую мы используем в салонах
-                    La Chance это - Возможность работать с разными типами
-                    волос; Безболезненность и безопасность; Отсутствие
-                    раздражений, ожогов после эпиляции; Селективное
-                    воздействие только на фолликул волоса; Быстрая обработка
-                    больших участков кожи; Обширное поражение фолликулов на
-                    один сеанс
-                  </p>
-                </div>
-              </li>
-              <li class="accordion__item questions__item">
-                <input class="accordion__input questions__checked" id="accordion2" type="radio" name="number" />
-                <label class="accordion__title questions__item-title" for="accordion2">В чем преимущества диодной
-                  лазерной эпиляции?</label>
-                <div class="accordion__content">
-                  <p class="questions__item-content">
-                    Диодная лазерная эпиляция, которую мы используем в салонах
-                    La Chance это - Возможность работать с разными типами
-                    волос; Безболезненность и безопасность; Отсутствие
-                    раздражений, ожогов после эпиляции; Селективное
-                    воздействие только на фолликул волоса; Быстрая обработка
-                    больших участков кожи; Обширное поражение фолликулов на
-                    один сеанс
-                  </p>
-                </div>
-              </li>
-              <li class="accordion__item questions__item">
-                <input class="accordion__input questions__checked" id="accordion3" type="radio" name="number" />
-                <label class="accordion__title questions__item-title" for="accordion3">В чем преимущества диодной
-                  лазерной эпиляции?</label>
-                <div class="accordion__content">
-                  <p class="questions__item-content">
-                    Диодная лазерная эпиляция, которую мы используем в салонах
-                    La Chance это - Возможность работать с разными типами
-                    волос; Безболезненность и безопасность; Отсутствие
-                    раздражений, ожогов после эпиляции; Селективное
-                    воздействие только на фолликул волоса; Быстрая обработка
-                    больших участков кожи; Обширное поражение фолликулов на
-                    один сеанс
-                  </p>
-                </div>
-              </li>
-            </ol>
-          </div>
-          <div class="questions__license">
-            <h3 class="questions__license-title">Наши лицензии</h3>
-            <div class="questions__license-slider slider">
-              <div class="questions__license-wrapper swiper-wrapper">
-                <div class="questions__license-item">
-                  <picture>
-                    <source srcset="./img/img-license-1.webp" type="image/webp">
-                    <img src="./img/img-license-1.jpg" alt="" class="license__image" />
-                  </picture>
+            <div class="effect__slider">
+              <ul class="effect__list">
+                <li class="effect__list-item effect__list-item--left">
+                  <span class="effect__list-item-check check"></span>
+                  <span class="effect__list-item-text">
+                    Гладкая кожа без раздражения
+                  </span>
+                </li>
+                <li class="effect__list-item effect__list-item--right">
+                  <span
+                    class="effect__list-item-check effect__list-item-check--right check"
+                  ></span>
+                  <span class="effect__list-item-text">
+                    Больше никаких вросших волос
+                  </span>
+                </li>
+                <li class="effect__list-item effect__list-item--left">
+                  <span class="effect__list-item-check check check--red"></span>
+                  <span class="effect__list-item-text">
+                    Максимально длительный эффект на 3-5 лет
+                  </span>
+                </li>
+                <li class="effect__list-item effect__list-item--right">
+                  <span
+                    class="effect__list-item-check effect__list-item-check--right check check--red"
+                  ></span>
+                  <span class="effect__list-item-text">
+                    Ante egestas ac adipiscing facilisi.
+                  </span>
+                </li>
 
-                </div>
-                <div class="questions__license-item">
-                  <picture>
-                    <source srcset="./img/img-license-1.webp" type="image/webp">
-                    <img src="./img/img-license-1.jpg" alt="" class="license__image" />
-                  </picture>
-                </div>
-                <div class="questions__license-item">
-                  <picture>
-                    <source srcset="./img/img-license-1.webp" type="image/webp">
-                    <img src="./img/img-license-1.jpg" alt="" class="license__image" />
-                  </picture>
-                </div>
-                <div class="questions__license-item">
-                  <picture>
-                    <source srcset="./img/img-license-1.webp" type="image/webp">
-                    <img src="./img/img-license-1.jpg" alt="" class="license__image" />
-                  </picture>
-                </div>
-              </div>
-              <div class="questions__license-controls">
-                <div class="questions__license-button questions__license-button--prev round-button round-button--left">
-                  <span class="round-button__content"></span>
-                </div>
-                <div class="questions__license-button questions__license-button--next round-button round-button--right">
-                  <span class="round-button__content"></span>
-                </div>
-                <div class="questions__license-pagination"></div>
+                <li class="effect__list-item effect__list-item--left">
+                  <span class="effect__list-item-check check"></span>
+                  <span class="effect__list-item-text">
+                    Уход без использования бритвы!
+                  </span>
+                </li>
+
+                <li class="effect__list-item effect__list-item--right">
+                  <span
+                    class="effect__list-item-check effect__list-item-check--right check"
+                  ></span>
+                  <span class="effect__list-item-text">
+                    Ante egestas ac adipiscing facilisi.
+                  </span>
+                </li>
+                <li class="effect__list-item effect__list-item--left">
+                  <span class="effect__list-item-check check check--red"></span>
+                  <span class="effect__list-item-text">
+                    Кожа мягкая и бархатистая
+                  </span>
+                </li>
+                <li class="effect__list-item effect__list-item--right">
+                  <span
+                    class="effect__list-item-check effect__list-item-check--right check check--red"
+                  ></span>
+                  <span class="effect__list-item-text">
+                    Ante egestas ac adipiscing facilisi.
+                  </span>
+                </li>
+              </ul>
+              <div class="slider__controls effect__slider-controls">
+                <div class="slider__prev effect__slider-prev"></div>
+                <div class="effect__slider-scrollbar"></div>
+                <div class="slider__next effect__slider-next"></div>
               </div>
             </div>
           </div>
-          <div class="questions__form">
-            <div class="questions__form-wrapper">
-              <div class="questions__form-banner">
-                <div class="questions__form-banner-wrapper">
-                  <div class="questions__form-banner-name">Иванова Ирина</div>
-                  <div class="questions__form-banner-job">Косметолог</div>
-                  <div class="questions__form-banner-experience">
-                    Опыт работы - 7 лет
+        </section>
+
+        <section class="examples">
+          <div class="examples__wrapper">
+            <h3 class="examples__title">Примеры наших работ</h3>
+            <div class="examples__content">
+              <div class="examples__slider slider swiper-container">
+                <div class="examples__slider-list swiper-wrapper">
+                  <div class="examples__slider-item slider__item swiper-slide">
+                    <picture>
+                      <source
+                        srcset="./img/img-examples-slider-1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/img-examples-slider-1.jpg"
+                        alt=""
+                        class="slider__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="examples__slider-item slider__item swiper-slide">
+                    <picture>
+                      <source
+                        srcset="./img/img-examples-slider-1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/img-examples-slider-1.jpg"
+                        alt=""
+                        class="slider__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="examples__slider-item slider__item swiper-slide">
+                    <picture>
+                      <source
+                        srcset="./img/img-examples-slider-1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/img-examples-slider-1.jpg"
+                        alt=""
+                        class="slider__img"
+                      />
+                    </picture>
+                  </div>
+                  <div class="examples__slider-item slider__item swiper-slide">
+                    <picture>
+                      <source
+                        srcset="./img/img-examples-slider-1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/img-examples-slider-1.jpg"
+                        alt=""
+                        class="slider__img"
+                      />
+                    </picture>
                   </div>
                 </div>
               </div>
-              <form action="post" class="questions__form-block">
-                <div class="questions__form-block-wrapper">
-                  <h3 class="questions__form-title">
-                    Задайте вопрос квалифицированному специалисту
-                  </h3>
-                  <input type="text" class="questions__form-input colorfull-input__element" placeholder="Ваш вопрос"
-                    name="question" />
-                  <div class="colorfull-input questions__input-block">
-                    <input type="phone" id="questions__form-input--phone"
-                      class="questions__form-input questions__form-input--phone colorfull-input__element" name="phone"
-                      required />
-                    <span class="colorfull-input__placeholder questions__form-input-placeholder">
-                      +7(___) ---_--_--<span class="colorfull-input__placeholder-red">*</span>
-                    </span>
+              <div class="slider__controls examples__slider-controls">
+                <button
+                  class="examples__slider-button examples__slider-button--prev round-button round-button--left"
+                >
+                  <span class="round-button__content"></span>
+                </button>
+                <div
+                  class="examples__slider-button--next examples__slider-button round-button round-button--right"
+                >
+                  <span class="round-button__content"></span>
+                </div>
+                <div class="examples__slider-pagination"></div>
+              </div>
+            </div>
+            <a href="" class="button examples__button"
+              >Записаться на эпиляцию</a
+            >
+          </div>
+        </section>
+
+        <section class="choice">
+          <div class="choice__wrapper">
+            <h3 class="choice__title">
+              ПОЧЕМУ ВЫБИРАЮТ МЕДЦЕНТР
+
+              <span class="red"> “МЕДИКАЛКЛАБ”</span>
+            </h3>
+            <div class="choice__slider">
+              <ul class="choice__slider-wrapper">
+                <li
+                  class="slider__item choice__slider-item choice__slider-item--heart"
+                >
+                  <div class="choice__slider-item-text">
+                    Официальный медицинский центр
+                    <span class="red">Работаем более 20 лет</span>
                   </div>
-                  <button class="questions__form-submit button" type="submit">
-                    Задать вопрос
-                  </button>
-                  <div class="questions__form-checkbox checkbox">
-                    <input class="checkbox__input" type="checkbox" checked name="agree"
-                      id="questions-form-checkbox-input" />
-                    <label for="questions-form-checkbox-input"
-                      class="checkbox__label questions__form-checkbox-label"><span>Даю согласие на обработку своих
-                        персональных данных (
-                        <a class="checkbox__label--link" href="#">Политика конфиденциальности</a>)</span>
-                    </label>
+                </li>
+                <li
+                  class="slider__item choice__slider-item choice__slider-item--time"
+                >
+                  <div class="choice__slider-item-text">
+                    <span class="red">Комфортные условия</span> у нас нет
+                    очередей
                   </div>
+                </li>
+                <li
+                  class="slider__item choice__slider-item choice__slider-item--education"
+                >
+                  <div class="choice__slider-item-text">
+                    Все спецалисты
+                    <span class="red"> с медицинским образованием</span>
+                  </div>
+                </li>
+                <li
+                  class="slider__item choice__slider-item choice__slider-item--award"
+                >
+                  <div class="choice__slider-item-text">
+                    <span class="red">Сертифицированное оборудование</span> с
+                    регистрацией в РФ
+                  </div>
+                </li>
+              </ul>
+              <div class="choice__slider-controls">
+                <div class="choice__slider-prev"></div>
+                <div class="choice__slider-scrollbar"></div>
+                <div class="choice__slider-next"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="questions">
+          <div class="questions__wrapper">
+            <div class="questions__answers-wrapper">
+              <h3 class="questions__answers-title">
+                ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ / ЛАЗЕРНАЯ ЭПИЛЯЦИЯ
+              </h3>
+              <ol class="accordion questions__list">
+                <li class="accordion__item questions__item">
+                  <input
+                    class="accordion__input questions__checked"
+                    id="accordion1"
+                    type="radio"
+                    name="number"
+                    checked
+                  />
+                  <label
+                    class="accordion__title questions__item-title"
+                    for="accordion1"
+                    >Какой у вас аппарат?</label
+                  >
+                  <div class="accordion__content">
+                    <p class="questions__item-content">
+                      Диодная лазерная эпиляция, которую мы используем в салонах
+                      La Chance это - Возможность работать с разными типами
+                      волос; Безболезненность и безопасность; Отсутствие
+                      раздражений, ожогов после эпиляции; Селективное
+                      воздействие только на фолликул волоса; Быстрая обработка
+                      больших участков кожи; Обширное поражение фолликулов на
+                      один сеанс
+                    </p>
+                  </div>
+                </li>
+                <li class="accordion__item questions__item">
+                  <input
+                    class="accordion__input questions__checked"
+                    id="accordion2"
+                    type="radio"
+                    name="number"
+                  />
+                  <label
+                    class="accordion__title questions__item-title"
+                    for="accordion2"
+                    >В чем преимущества диодной лазерной эпиляции?</label
+                  >
+                  <div class="accordion__content">
+                    <p class="questions__item-content">
+                      Диодная лазерная эпиляция, которую мы используем в салонах
+                      La Chance это - Возможность работать с разными типами
+                      волос; Безболезненность и безопасность; Отсутствие
+                      раздражений, ожогов после эпиляции; Селективное
+                      воздействие только на фолликул волоса; Быстрая обработка
+                      больших участков кожи; Обширное поражение фолликулов на
+                      один сеанс
+                    </p>
+                  </div>
+                </li>
+                <li class="accordion__item questions__item">
+                  <input
+                    class="accordion__input questions__checked"
+                    id="accordion3"
+                    type="radio"
+                    name="number"
+                  />
+                  <label
+                    class="accordion__title questions__item-title"
+                    for="accordion3"
+                    >В чем преимущества диодной лазерной эпиляции?</label
+                  >
+                  <div class="accordion__content">
+                    <p class="questions__item-content">
+                      Диодная лазерная эпиляция, которую мы используем в салонах
+                      La Chance это - Возможность работать с разными типами
+                      волос; Безболезненность и безопасность; Отсутствие
+                      раздражений, ожогов после эпиляции; Селективное
+                      воздействие только на фолликул волоса; Быстрая обработка
+                      больших участков кожи; Обширное поражение фолликулов на
+                      один сеанс
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div class="questions__license">
+              <h3 class="questions__license-title">Наши лицензии</h3>
+              <div class="questions__license-slider slider">
+                <div class="questions__license-wrapper swiper-wrapper">
+                  <div class="questions__license-item">
+                    <picture>
+                      <source
+                        srcset="./img/img-license-1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/img-license-1.jpg"
+                        alt=""
+                        class="license__image"
+                      />
+                    </picture>
+                  </div>
+                  <div class="questions__license-item">
+                    <picture>
+                      <source
+                        srcset="./img/img-license-1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/img-license-1.jpg"
+                        alt=""
+                        class="license__image"
+                      />
+                    </picture>
+                  </div>
+                  <div class="questions__license-item">
+                    <picture>
+                      <source
+                        srcset="./img/img-license-1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/img-license-1.jpg"
+                        alt=""
+                        class="license__image"
+                      />
+                    </picture>
+                  </div>
+                  <div class="questions__license-item">
+                    <picture>
+                      <source
+                        srcset="./img/img-license-1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/img-license-1.jpg"
+                        alt=""
+                        class="license__image"
+                      />
+                    </picture>
+                  </div>
+                </div>
+                <div class="questions__license-controls">
+                  <div
+                    class="questions__license-button questions__license-button--prev round-button round-button--left"
+                  >
+                    <span class="round-button__content"></span>
+                  </div>
+                  <div
+                    class="questions__license-button questions__license-button--next round-button round-button--right"
+                  >
+                    <span class="round-button__content"></span>
+                  </div>
+                  <div class="questions__license-pagination"></div>
+                </div>
+              </div>
+            </div>
+            <div class="questions__form">
+              <div class="questions__form-wrapper">
+                <div class="questions__form-banner">
+                  <div class="questions__form-banner-wrapper">
+                    <div class="questions__form-banner-name">Иванова Ирина</div>
+                    <div class="questions__form-banner-job">Косметолог</div>
+                    <div class="questions__form-banner-experience">
+                      Опыт работы - 7 лет
+                    </div>
+                  </div>
+                </div>
+                <form action="post" class="questions__form-block">
+                  <div class="questions__form-block-wrapper">
+                    <h3 class="questions__form-title">
+                      Задайте вопрос квалифицированному специалисту
+                    </h3>
+                    <input
+                      type="text"
+                      class="questions__form-input colorfull-input__element"
+                      placeholder="Ваш вопрос"
+                      name="question"
+                    />
+                    <div class="colorfull-input questions__input-block">
+                      <input
+                        type="tel"
+                        id="questions__form-input--phone"
+                        class="questions__form-input questions__form-input--phone colorfull-input__element"
+                        name="phone"
+                        required
+                      />
+                      <span
+                        class="colorfull-input__placeholder questions__form-input-placeholder"
+                      >
+                        +7(___) ---_--_--<span
+                          class="colorfull-input__placeholder-red"
+                          >*</span
+                        >
+                      </span>
+                    </div>
+                    <button class="questions__form-submit button" type="submit">
+                      Задать вопрос
+                    </button>
+                    <div class="questions__form-checkbox checkbox">
+                      <input
+                        class="checkbox__input"
+                        type="checkbox"
+                        checked
+                        name="agree"
+                        id="questions-form-checkbox-input"
+                      />
+                      <label
+                        for="questions-form-checkbox-input"
+                        class="checkbox__label questions__form-checkbox-label"
+                        ><span
+                          >Даю согласие на обработку своих персональных данных (
+                          <a class="checkbox__label--link" href="#"
+                            >Политика конфиденциальности</a
+                          >)</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews">
+          <div class="reviews__wrapper">
+            <h3 class="reviews__title">Отзывы наших клиентов</h3>
+            <div class="reviews__slider">
+              <div class="reviews__slider-wrapper swiper-wrapper">
+                <div class="reviews__slider-item review">
+                  <div class="review__wrapper reviews__slider-item-wrapper">
+                    <div class="review__name">Анна</div>
+                    <div class="review__data">03/09/2020</div>
+                    <div class="review__rating review__rating--5"></div>
+                    <div class="review__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse sapien interdum tellus sem. Pellentesque
+                      vitae, vitae, interdum sit magna a scelerisque augue
+                      habitant. Faucibus volutpat sit pretium, velit. Erat in
+                      molestie praesent egestas quam vestibulum. Diam hendrerit
+                      praesent amet ornare iaculis pulvinar tempor dui,
+                      dignissim. Amet mi semper pretium, dignissim adipiscing
+                      diam sed. Amet, quisque risus et arcu suscipit feugiat.
+                      Suspendisse tellus senectus in dolor mattis at. Et
+                      consectetur interdum neque et faucibus euismod.Facilisi
+                      aliquet aliquam dolor netus. Mi in et id sit ultricies.
+                    </div>
+                    <div class="review__source">
+                      источник:
+                      <a href="" class="review__link">prodoctorov.ru</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slider-item review">
+                  <div class="review__wrapper reviews__slider-item-wrapper">
+                    <div class="review__name">Анна</div>
+                    <div class="review__data">03/09/2020</div>
+                    <div class="review__rating review__rating--5"></div>
+                    <div class="review__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse sapien interdum tellus sem. Pellentesque
+                      vitae, vitae, interdum sit magna a scelerisque augue
+                      habitant. Faucibus volutpat sit pretium, velit. Erat in
+                      molestie praesent egestas quam vestibulum. Diam hendrerit
+                      praesent amet ornare iaculis pulvinar tempor dui,
+                      dignissim. Amet mi semper pretium, dignissim adipiscing
+                      diam sed. Amet, quisque risus et arcu suscipit feugiat.
+                      Suspendisse tellus senectus in dolor mattis at. Et
+                      consectetur interdum neque et faucibus euismod.Facilisi
+                      aliquet aliquam dolor netus. Mi in et id sit ultricies.
+                    </div>
+                    <div class="review__source">
+                      источник:
+                      <a href="" class="review__link">prodoctorov.ru</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slider-item review">
+                  <div class="review__wrapper reviews__slider-item-wrapper">
+                    <div class="review__name">Анна</div>
+                    <div class="review__data">03/09/2020</div>
+                    <div class="review__rating review__rating--5"></div>
+                    <div class="review__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse sapien interdum tellus sem. Pellentesque
+                      vitae, vitae, interdum sit magna a scelerisque augue
+                      habitant. Faucibus volutpat sit pretium, velit. Erat in
+                      molestie praesent egestas quam vestibulum. Diam hendrerit
+                      praesent amet ornare iaculis pulvinar tempor dui,
+                      dignissim. Amet mi semper pretium, dignissim adipiscing
+                      diam sed. Amet, quisque risus et arcu suscipit feugiat.
+                      Suspendisse tellus senectus in dolor mattis at. Et
+                      consectetur interdum neque et faucibus euismod.Facilisi
+                      aliquet aliquam dolor netus. Mi in et id sit ultricies.
+                    </div>
+                    <div class="review__source">
+                      источник:
+                      <a href="" class="review__link">prodoctorov.ru</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slider-item review">
+                  <div class="review__wrapper reviews__slider-item-wrapper">
+                    <div class="review__name">Анна</div>
+                    <div class="review__data">03/09/2020</div>
+                    <div class="review__rating review__rating--5"></div>
+                    <div class="review__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse sapien interdum tellus sem. Pellentesque
+                      vitae, vitae, interdum sit magna a scelerisque augue
+                      habitant. Faucibus volutpat sit pretium, velit. Erat in
+                      molestie praesent egestas quam vestibulum. Diam hendrerit
+                      praesent amet ornare iaculis pulvinar tempor dui,
+                      dignissim. Amet mi semper pretium, dignissim adipiscing
+                      diam sed. Amet, quisque risus et arcu suscipit feugiat.
+                      Suspendisse tellus senectus in dolor mattis at. Et
+                      consectetur interdum neque et faucibus euismod.Facilisi
+                      aliquet aliquam dolor netus. Mi in et id sit ultricies.
+                    </div>
+                    <div class="review__source">
+                      источник:
+                      <a href="" class="review__link">prodoctorov.ru</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__slider-controls">
+                <div
+                  class="reviews__slider-button reviews__slider-button--prev round-button round-button--left"
+                >
+                  <span class="round-button__content"></span>
+                </div>
+                <div
+                  class="reviews__slider-button reviews__slider-button--next round-button round-button--right"
+                >
+                  <span class="round-button__content"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sale">
+          <div class="sale__wrapper">
+            <h3 class="sale__title">АКЦИИ и скидки</h3>
+            <h4 class="sale__slider-title">Выгодные предложения</h4>
+            <a href="" class="sale__slider-all-links">Смотреть все цены</a>
+
+            <div class="sale__slider-block">
+              <div class="sale__slider">
+                <div class="swiper-wrapper">
+                  <div class="sale__slider-item sale-item">
+                    <div class="sale-item__shadow">
+                      <div class="sale-item__wrapper">
+                        <div class="sale-item__top-block">
+                          <h5 class="sale-item__title">«Супер Лето»</h5>
+                          <div class="sale-item__subtitle">КОМПЛЕКС</div>
+                          <span
+                            class="sale-item__condition sale-item__condition--big"
+                            >Подмышки</span
+                          >
+                          <span class="sale-item__condition-plus">+</span>
+                          <span
+                            class="sale-item__condition sale-item__condition--small"
+                            >Бикини</span
+                          >
+                        </div>
+                        <div class="sale-item__bottom-block">
+                          <div class="sale-item__price">
+                            2 999
+                            <span class="rouble sale-item__currency">:</span>
+                          </div>
+                          <button
+                            class="sale-item__button button button--small"
+                          >
+                            <span>Записаться</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sale__slider-item sale-item">
+                    <div class="sale-item__shadow">
+                      <div class="sale-item__wrapper">
+                        <div class="sale-item__top-block">
+                          <h5 class="sale-item__title">«Супер Лето»</h5>
+                          <div class="sale-item__subtitle">КОМПЛЕКС</div>
+                          <span
+                            class="sale-item__condition sale-item__condition--big"
+                            >Подмышки</span
+                          >
+                          <span class="sale-item__condition-plus">+</span>
+                          <span
+                            class="sale-item__condition sale-item__condition--small"
+                            >Бикини</span
+                          >
+                        </div>
+                        <div class="sale-item__bottom-block">
+                          <div class="sale-item__price">
+                            2 990
+                            <span class="rouble sale-item__currency">:</span>
+                          </div>
+                          <button
+                            class="sale-item__button button button--small"
+                          >
+                            <span>Записаться</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sale__slider-item sale-item">
+                    <div class="sale-item__shadow">
+                      <div class="sale-item__wrapper">
+                        <div class="sale-item__top-block">
+                          <h5 class="sale-item__title">«Супер Лето»</h5>
+                          <div class="sale-item__subtitle">КОМПЛЕКС</div>
+                          <span
+                            class="sale-item__condition sale-item__condition--big"
+                            >Подмышки</span
+                          >
+                          <span class="sale-item__condition-plus">+</span>
+                          <span
+                            class="sale-item__condition sale-item__condition--small"
+                            >Бикини</span
+                          >
+                        </div>
+                        <div class="sale-item__bottom-block">
+                          <div class="sale-item__price">
+                            2 990
+                            <span class="rouble sale-item__currency">:</span>
+                          </div>
+                          <button
+                            class="sale-item__button button button--small"
+                          >
+                            <span>Записаться</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sale__slider-item sale-item">
+                    <div class="sale-item__shadow">
+                      <div class="sale-item__wrapper">
+                        <div class="sale-item__top-block">
+                          <h5 class="sale-item__title">«Супер Лето»</h5>
+                          <div class="sale-item__subtitle">КОМПЛЕКС</div>
+                          <span
+                            class="sale-item__condition sale-item__condition--big"
+                            >Подмышки</span
+                          >
+                          <span class="sale-item__condition-plus">+</span>
+                          <span
+                            class="sale-item__condition sale-item__condition--small"
+                            >Бикини</span
+                          >
+                        </div>
+                        <div class="sale-item__bottom-block">
+                          <div class="sale-item__price">
+                            2 990
+                            <span class="rouble sale-item__currency">:</span>
+                          </div>
+                          <button
+                            class="sale-item__button button button--small"
+                          >
+                            <span>Записаться</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sale__slider-item sale-item">
+                    <div class="sale-item__shadow">
+                      <div class="sale-item__wrapper">
+                        <div class="sale-item__top-block">
+                          <h5 class="sale-item__title">«Супер Лето»</h5>
+                          <div class="sale-item__subtitle">КОМПЛЕКС</div>
+                          <span
+                            class="sale-item__condition sale-item__condition--big"
+                            >Подмышки</span
+                          >
+                          <span class="sale-item__condition-plus">+</span>
+                          <span
+                            class="sale-item__condition sale-item__condition--small"
+                            >Бикини</span
+                          >
+                        </div>
+                        <div class="sale-item__bottom-block">
+                          <div class="sale-item__price">
+                            2 990
+                            <span class="rouble sale-item__currency">:</span>
+                          </div>
+                          <button
+                            class="sale-item__button button button--small"
+                          >
+                            <span>Записаться</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sale__slider-controls">
+                <button
+                  class="sale__slider-button sale__slider-button--next round-button round-button--right"
+                >
+                  <span class="round-button__content"></span>
+                </button>
+                <button
+                  class="sale__slider-button sale__slider-button--prev round-button round-button--left"
+                >
+                  <span class="round-button__content"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="staff">
+          <div class="staff__wrapper">
+            <h3 class="staff__title">СПЕЦИАЛИСТЫ ПО ЛАЗЕРНОЙ ЭПИЛЯЦИИ</h3>
+            <div class="staff__slider">
+              <div class="staff__slider-wrapper">
+                <div class="staff__item">
+                  <div class="worker">
+                    <div class="worker__wrapper">
+                      <div class="worker__image-block">
+                        <picture>
+                          <source
+                            srcset="./img/img-worker-1.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            src="./img/img-worker-1.png"
+                            alt=""
+                            class="worker__image"
+                          />
+                        </picture>
+                      </div>
+                      <div class="worker__data-block">
+                        <div class="worker__data">
+                          <div class="worker__name">Иванова Анастасия</div>
+                          <div class="worker__job">Косметолог</div>
+                          <div class="worker__experience">
+                            Опыт работы - 7 лет
+                          </div>
+                          <div class="worker__filial filial filial--active">
+                            <div class="filial__name">Домодедовская</div>
+                            <div class="filial__address">
+                              пос. Володарского, ул. Центральная, д. 30А
+                            </div>
+                          </div>
+                        </div>
+                        <button class="button worker__button">
+                          Подробнее о враче
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="staff__item">
+                  <div class="worker">
+                    <div class="worker__wrapper">
+                      <div class="worker__image-block">
+                        <picture>
+                          <source
+                            srcset="./img/img-worker-2.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            src="./img/img-worker-2.png"
+                            alt=""
+                            class="worker__image"
+                          />
+                        </picture>
+                      </div>
+                      <div class="worker__data-block">
+                        <div class="worker__data">
+                          <div class="worker__name">Юсупова Милана</div>
+                          <div class="worker__job">Косметолог</div>
+                          <div class="worker__experience">
+                            Опыт работы - 7 лет
+                          </div>
+                          <div class="worker__filial filial filial--active">
+                            <div class="filial__name">Жулебино</div>
+                            <div class="filial__address">
+                              Жулебинский бульвар 25
+                            </div>
+                          </div>
+                        </div>
+                        <button class="button worker__button">
+                          Подробнее о враче
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="staff__item">
+                  <div class="worker">
+                    <div class="worker__wrapper">
+                      <div class="worker__image-block">
+                        <picture>
+                          <source
+                            srcset="./img/img-worker-1.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            src="./img/img-worker-1.png"
+                            alt=""
+                            class="worker__image"
+                          />
+                        </picture>
+                      </div>
+                      <div class="worker__data-block">
+                        <div class="worker__data">
+                          <div class="worker__name">Иванова Анастасия</div>
+                          <div class="worker__job">Косметолог</div>
+                          <div class="worker__experience">
+                            Опыт работы - 7 лет
+                          </div>
+                          <div class="worker__filial filial filial--active">
+                            <div class="filial__name">Домодедовская</div>
+                            <div class="filial__address">
+                              пос. Володарского, ул. Центральная, д. 30А
+                            </div>
+                          </div>
+                        </div>
+                        <button class="button worker__button">
+                          Подробнее о враче
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="staff__item">
+                  <div class="worker">
+                    <div class="worker__wrapper">
+                      <div class="worker__image-block">
+                        <picture>
+                          <source
+                            srcset="./img/img-worker-2.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            src="./img/img-worker-2.png"
+                            alt=""
+                            class="worker__image"
+                          />
+                        </picture>
+                      </div>
+                      <div class="worker__data-block">
+                        <div class="worker__data">
+                          <div class="worker__name">Юсупова Милана</div>
+                          <div class="worker__job">Косметолог</div>
+                          <div class="worker__experience">
+                            Опыт работы - 7 лет
+                          </div>
+                          <div class="worker__filial filial filial--active">
+                            <div class="filial__name">Жулебино</div>
+                            <div class="filial__address">
+                              Жулебинский бульвар 25
+                            </div>
+                          </div>
+                        </div>
+                        <button class="button worker__button">
+                          Подробнее о враче
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="staff__item">
+                  <div class="worker">
+                    <div class="worker__wrapper">
+                      <div class="worker__image-block">
+                        <picture>
+                          <source
+                            srcset="./img/img-worker-1.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            src="./img/img-worker-1.png"
+                            alt=""
+                            class="worker__image"
+                          />
+                        </picture>
+                      </div>
+                      <div class="worker__data-block">
+                        <div class="worker__data">
+                          <div class="worker__name">Иванова Анастасия</div>
+                          <div class="worker__job">Косметолог</div>
+                          <div class="worker__experience">
+                            Опыт работы - 7 лет
+                          </div>
+                          <div class="worker__filial filial filial--active">
+                            <div class="filial__name">Домодедовская</div>
+                            <div class="filial__address">
+                              пос. Володарского, ул. Центральная, д. 30А
+                            </div>
+                          </div>
+                        </div>
+                        <button class="button worker__button">
+                          Подробнее о враче
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="staff__item">
+                  <div class="worker">
+                    <div class="worker__wrapper">
+                      <div class="worker__image-block">
+                        <picture>
+                          <source
+                            srcset="./img/img-worker-2.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            src="./img/img-worker-2.png"
+                            alt=""
+                            class="worker__image"
+                          />
+                        </picture>
+                      </div>
+                      <div class="worker__data-block">
+                        <div class="worker__data">
+                          <div class="worker__name">Юсупова Милана</div>
+                          <div class="worker__job">Косметолог</div>
+                          <div class="worker__experience">
+                            Опыт работы - 7 лет
+                          </div>
+                          <div class="worker__filial filial filial--active">
+                            <div class="filial__name">Жулебино</div>
+                            <div class="filial__address">
+                              Жулебинский бульвар 25
+                            </div>
+                          </div>
+                        </div>
+                        <button class="button worker__button">
+                          Подробнее о враче
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="staff__controls">
+                <div
+                  class="staff__button staff__button--prev round-button round-button--left round-button--small"
+                >
+                  <span class="round-button__content"></span>
+                </div>
+                <div
+                  class="staff__button staff__button--next round-button round-button--right round-button--small"
+                >
+                  <span class="round-button__content"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form">
+          <div class="form__wrapper">
+            <h3 class="visually-hidden">Акция</h3>
+
+            <div class="form__about">
+              <div class="form__about-title">
+                Лазерная эпиляция в <span class="red">«МЕДИКАЛКЛАБ»</span>
+              </div>
+              <ul class="form__advantages">
+                <li class="form__advantage">
+                  <div class="form__advantage-wrapper">
+                    <span class="check form__advantage-check"></span>
+                    <span class="form__advantage-title">Быстро</span>
+                    <span class="form__advantage-text">5-10 минут</span>
+                  </div>
+                </li>
+                <li class="form__advantage">
+                  <div class="form__advantage-wrapper">
+                    <span class="check form__advantage-check"></span>
+                    <span class="form__advantage-title">Эффективно</span>
+                    <span class="form__advantage-text">эффект на 3-5 лет</span>
+                  </div>
+                </li>
+                <li class="form__advantage">
+                  <div class="form__advantage-wrapper">
+                    <span class="check form__advantage-check"></span>
+                    <span class="form__advantage-title">Без боли</span>
+                    <span class="form__advantage-text">мягкость и комфорт</span>
+                  </div>
+                </li>
+              </ul>
+              <p class="form__notice">
+                Акция действует только для новых клиентов
+                <strong>до конца мая 2021 года</strong>
+              </p>
+              <ul class="form__filials">
+                <li class="form__filial">
+                  <div class="filial">
+                    <div class="filial__name">Жулебино</div>
+                    <div class="filial__address">Жулебинский бульвар 25</div>
+                  </div>
+                </li>
+                <li class="form__filial">
+                  <div class="filial">
+                    <div class="filial__name">Жулебино</div>
+                    <div class="filial__address">Жулебинский бульвар 25</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="form__right-block">
+              <div class="form__title"><span class="colorfull">-40%</span></div>
+              <form method="POST" class="form__feedback feedback">
+                <div class="feedback__wrapper">
+                  <h4 class="feedback__title">Оставьте заявку</h4>
+                  <p class="feedback__text">
+                    Оставьте заявку прямо сейчас и получите фиксированную
+
+                    <span class="feedback__text--strong">скидку -40% </span> на
+                    первый сеанс эпиляции
+                  </p>
+                  <fieldset class="feedback__fields">
+                    <div class="colorfull-input feedback__colorfull-input">
+                      <input
+                        type="text"
+                        name="name"
+                        class="colorfull-input__element feedback__input"
+                        id="feedback__name"
+                        required
+                      />
+                      <span
+                        class="colorfull-input__placeholder feedback__placeholder"
+                        >Ваше имя<span class="colorfull-input__placeholder-red"
+                          >*</span
+                        ></span
+                      >
+                    </div>
+                    <div class="colorfull-input feedback__colorfull-input">
+                      <input
+                        type="tel"
+                        name="phone"
+                        class="colorfull-input__element feedback__input"
+                        id="feedback__phone"
+                        required
+                      />
+                      <span
+                        class="colorfull-input__placeholder feedback__placeholder"
+                        >+7 (---) ---_--_--<span
+                          class="colorfull-input__placeholder-red"
+                          >*</span
+                        ></span
+                      >
+                    </div>
+                    <input
+                      type="text"
+                      name="email"
+                      class="colorfull-input__element feedback__input feedback__email"
+                      id="feedback__email"
+                      placeholder="Email"
+                    />
+                    <select id="form-filials" name="filial">
+                      <option
+                        class="filial"
+                        value="1"
+                        data-filial="Жулебино"
+                        data-address="Жулебинский бульвар 25"
+                      >
+                        Жулебино Жулебинский бульвар 25
+                      </option>
+                      <option
+                        class="filial"
+                        value="1"
+                        data-filial="Жулебино"
+                        data-address="Жулебинский бульвар 25"
+                      >
+                        Жулебино Жулебинский бульвар 25
+                      </option>
+                      <option
+                        class="filial"
+                        value="1"
+                        data-filial="Жулебино"
+                        data-address="Жулебинский бульвар 25"
+                      >
+                        Жулебино Жулебинский бульвар 25
+                      </option>
+                      <option
+                        class="filial"
+                        value="1"
+                        data-filial="Жулебино"
+                        data-address="Жулебинский бульвар 25"
+                      >
+                        Жулебино Жулебинский бульвар 25
+                      </option>
+                    </select>
+                    <button class="button feedback__button">
+                      Получить скидку!
+                    </button>
+                    <div class="checkbox feedback__checkbox">
+                      <input
+                        class="checkbox__input"
+                        type="checkbox"
+                        checked
+                        name="agree"
+                        id="feedback-checkbox-input"
+                      />
+                      <label
+                        for="feedback-checkbox-input"
+                        class="checkbox__label"
+                        ><span
+                          >Даю согласие на обработку своих персональных данных (
+                          <a class="checkbox__label--link" href="#"
+                            >Политика конфиденциальности</a
+                          >)</span
+                        ></label
+                      >
+                    </div>
+                  </fieldset>
                 </div>
               </form>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="reviews">
-        <div class="reviews__wrapper">
-          <h3 class="reviews__title">Отзывы наших клиентов</h3>
-          <div class="reviews__slider">
-            <div class="reviews__slider-wrapper swiper-wrapper">
-              <div class="reviews__slider-item review">
-                <div class="review__wrapper reviews__slider-item-wrapper">
-                  <div class="review__name">Анна</div>
-                  <div class="review__data">03/09/2020</div>
-                  <div class="review__rating review__rating--5"></div>
-                  <div class="review__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse sapien interdum tellus sem. Pellentesque
-                    vitae, vitae, interdum sit magna a scelerisque augue
-                    habitant. Faucibus volutpat sit pretium, velit. Erat in
-                    molestie praesent egestas quam vestibulum. Diam hendrerit
-                    praesent amet ornare iaculis pulvinar tempor dui,
-                    dignissim. Amet mi semper pretium, dignissim adipiscing
-                    diam sed. Amet, quisque risus et arcu suscipit feugiat.
-                    Suspendisse tellus senectus in dolor mattis at. Et
-                    consectetur interdum neque et faucibus euismod.Facilisi
-                    aliquet aliquam dolor netus. Mi in et id sit ultricies.
-                  </div>
-                  <div class="review__source">
-                    источник:
-                    <a href="" class="review__link">prodoctorov.ru</a>
-                  </div>
-                </div>
-              </div>
-              <div class="reviews__slider-item review">
-                <div class="review__wrapper reviews__slider-item-wrapper">
-                  <div class="review__name">Анна</div>
-                  <div class="review__data">03/09/2020</div>
-                  <div class="review__rating review__rating--5"></div>
-                  <div class="review__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse sapien interdum tellus sem. Pellentesque
-                    vitae, vitae, interdum sit magna a scelerisque augue
-                    habitant. Faucibus volutpat sit pretium, velit. Erat in
-                    molestie praesent egestas quam vestibulum. Diam hendrerit
-                    praesent amet ornare iaculis pulvinar tempor dui,
-                    dignissim. Amet mi semper pretium, dignissim adipiscing
-                    diam sed. Amet, quisque risus et arcu suscipit feugiat.
-                    Suspendisse tellus senectus in dolor mattis at. Et
-                    consectetur interdum neque et faucibus euismod.Facilisi
-                    aliquet aliquam dolor netus. Mi in et id sit ultricies.
-                  </div>
-                  <div class="review__source">
-                    источник:
-                    <a href="" class="review__link">prodoctorov.ru</a>
-                  </div>
-                </div>
-              </div>
-              <div class="reviews__slider-item review">
-                <div class="review__wrapper reviews__slider-item-wrapper">
-                  <div class="review__name">Анна</div>
-                  <div class="review__data">03/09/2020</div>
-                  <div class="review__rating review__rating--5"></div>
-                  <div class="review__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse sapien interdum tellus sem. Pellentesque
-                    vitae, vitae, interdum sit magna a scelerisque augue
-                    habitant. Faucibus volutpat sit pretium, velit. Erat in
-                    molestie praesent egestas quam vestibulum. Diam hendrerit
-                    praesent amet ornare iaculis pulvinar tempor dui,
-                    dignissim. Amet mi semper pretium, dignissim adipiscing
-                    diam sed. Amet, quisque risus et arcu suscipit feugiat.
-                    Suspendisse tellus senectus in dolor mattis at. Et
-                    consectetur interdum neque et faucibus euismod.Facilisi
-                    aliquet aliquam dolor netus. Mi in et id sit ultricies.
-                  </div>
-                  <div class="review__source">
-                    источник:
-                    <a href="" class="review__link">prodoctorov.ru</a>
-                  </div>
-                </div>
-              </div>
-              <div class="reviews__slider-item review">
-                <div class="review__wrapper reviews__slider-item-wrapper">
-                  <div class="review__name">Анна</div>
-                  <div class="review__data">03/09/2020</div>
-                  <div class="review__rating review__rating--5"></div>
-                  <div class="review__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse sapien interdum tellus sem. Pellentesque
-                    vitae, vitae, interdum sit magna a scelerisque augue
-                    habitant. Faucibus volutpat sit pretium, velit. Erat in
-                    molestie praesent egestas quam vestibulum. Diam hendrerit
-                    praesent amet ornare iaculis pulvinar tempor dui,
-                    dignissim. Amet mi semper pretium, dignissim adipiscing
-                    diam sed. Amet, quisque risus et arcu suscipit feugiat.
-                    Suspendisse tellus senectus in dolor mattis at. Et
-                    consectetur interdum neque et faucibus euismod.Facilisi
-                    aliquet aliquam dolor netus. Mi in et id sit ultricies.
-                  </div>
-                  <div class="review__source">
-                    источник:
-                    <a href="" class="review__link">prodoctorov.ru</a>
-                  </div>
-                </div>
-              </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__top-wrapper">
+            <div class="footer__logo">
+              <picture>
+                <source srcset="./img/logo.webp" type="image/webp" />
+                <img src="./img/logo.png" alt="" />
+              </picture>
             </div>
-            <div class="reviews__slider-controls">
-              <div class="reviews__slider-button reviews__slider-button--prev round-button round-button--left">
-                <span class="round-button__content"></span>
+            <div class="footer__contact">
+              <div class="contact footer__main-contact">
+                <a
+                  href="mailto:info@medicalclub.ru"
+                  class="contact__text footer__contact-text"
+                  >info@medicalclub.ru</a
+                >
+                <a
+                  href="tel:84951268925"
+                  class="footer__contact-phone contact__phone"
+                  >8 495 126-89-25</a
+                >
               </div>
-              <div class="reviews__slider-button reviews__slider-button--next round-button round-button--right">
-                <span class="round-button__content"></span>
+              <div class="footer__social-links social__links">
+                <a href="" class="social__link social__link--vk"></a>
+                <a href="" class="social__link social__link--inst"></a>
+                <a href="" class="social__link social__link--fb"></a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="sale">
-        <div class="sale__wrapper">
-          <h3 class="sale__title">АКЦИИ и скидки</h3>
-          <h4 class="sale__slider-title">Выгодные предложения</h4>
-          <a href="" class="sale__slider-all-links">Смотреть все цены</a>
-
-          <div class="sale__slider-block">
-            <div class="sale__slider">
-              <div class="swiper-wrapper">
-                <div class="sale__slider-item sale-item">
-                  <div class="sale-item__shadow">
-                    <div class="sale-item__wrapper">
-                      <div class="sale-item__top-block">
-                        <h5 class="sale-item__title">«Супер Лето»</h5>
-                        <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                        <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
-                        <span class="sale-item__condition-plus">+</span>
-                        <span class="sale-item__condition sale-item__condition--small">Бикини</span>
-                      </div>
-                      <div class="sale-item__bottom-block">
-                        <div class="sale-item__price">
-                          2 999
-                          <span class="rouble sale-item__currency">:</span>
-                        </div>
-                        <button class="sale-item__button button button--small">
-                          <span>Записаться</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="sale__slider-item sale-item">
-                  <div class="sale-item__shadow">
-                    <div class="sale-item__wrapper">
-                      <div class="sale-item__top-block">
-                        <h5 class="sale-item__title">«Супер Лето»</h5>
-                        <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                        <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
-                        <span class="sale-item__condition-plus">+</span>
-                        <span class="sale-item__condition sale-item__condition--small">Бикини</span>
-                      </div>
-                      <div class="sale-item__bottom-block">
-                        <div class="sale-item__price">
-                          2 990
-                          <span class="rouble sale-item__currency">:</span>
-                        </div>
-                        <button class="sale-item__button button button--small">
-                          <span>Записаться</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="sale__slider-item sale-item">
-                  <div class="sale-item__shadow">
-                    <div class="sale-item__wrapper">
-                      <div class="sale-item__top-block">
-                        <h5 class="sale-item__title">«Супер Лето»</h5>
-                        <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                        <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
-                        <span class="sale-item__condition-plus">+</span>
-                        <span class="sale-item__condition sale-item__condition--small">Бикини</span>
-                      </div>
-                      <div class="sale-item__bottom-block">
-                        <div class="sale-item__price">
-                          2 990
-                          <span class="rouble sale-item__currency">:</span>
-                        </div>
-                        <button class="sale-item__button button button--small">
-                          <span>Записаться</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="sale__slider-item sale-item">
-                  <div class="sale-item__shadow">
-                    <div class="sale-item__wrapper">
-                      <div class="sale-item__top-block">
-                        <h5 class="sale-item__title">«Супер Лето»</h5>
-                        <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                        <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
-                        <span class="sale-item__condition-plus">+</span>
-                        <span class="sale-item__condition sale-item__condition--small">Бикини</span>
-                      </div>
-                      <div class="sale-item__bottom-block">
-                        <div class="sale-item__price">
-                          2 990
-                          <span class="rouble sale-item__currency">:</span>
-                        </div>
-                        <button class="sale-item__button button button--small">
-                          <span>Записаться</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="sale__slider-item sale-item">
-                  <div class="sale-item__shadow">
-                    <div class="sale-item__wrapper">
-                      <div class="sale-item__top-block">
-                        <h5 class="sale-item__title">«Супер Лето»</h5>
-                        <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                        <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
-                        <span class="sale-item__condition-plus">+</span>
-                        <span class="sale-item__condition sale-item__condition--small">Бикини</span>
-                      </div>
-                      <div class="sale-item__bottom-block">
-                        <div class="sale-item__price">
-                          2 990
-                          <span class="rouble sale-item__currency">:</span>
-                        </div>
-                        <button class="sale-item__button button button--small">
-                          <span>Записаться</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="footer__trademark">
+          <div class="footer__trademark-wrapper">
+            <div class="footer__trademark-text">
+              <p>
+                © ООО «Аркада», ООО «Доктор с Вами», ООО «Меди Клаб» 2000-2020.
+                Политика конфиденциальности
+              </p>
             </div>
-            <div class="sale__slider-controls">
-              <button class="sale__slider-button sale__slider-button--next round-button round-button--right">
-                <span class="round-button__content"></span>
-              </button>
-              <button class="sale__slider-button sale__slider-button--prev round-button round-button--left">
-                <span class="round-button__content"></span>
-              </button>
+            <div class="footer__trademark-sign">
+              <picture>
+                <source
+                  srcset="./img/img-footer-trademark.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./img/img-footer-trademark.png"
+                  alt=""
+                  class="footer__tradmark-image"
+                />
+              </picture>
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="staff">
-        <div class="staff__wrapper">
-          <h3 class="staff__title">СПЕЦИАЛИСТЫ ПО ЛАЗЕРНОЙ ЭПИЛЯЦИИ</h3>
-          <div class="staff__slider">
-            <div class="staff__slider-wrapper">
-              <div class="staff__item">
-                <div class="worker">
-                  <div class="worker__wrapper">
-                    <div class="worker__image-block">
-                      <picture>
-                        <source srcset="./img/img-worker-1.webp" type="image/webp">
-                        <img src="./img/img-worker-1.png" alt="" class="worker__image" />
-                      </picture>
-                    
-                    </div>
-                    <div class="worker__data-block">
-                      <div class="worker__data">
-                        <div class="worker__name">Иванова Анастасия</div>
-                        <div class="worker__job">Косметолог</div>
-                        <div class="worker__experience">
-                          Опыт работы - 7 лет
-                        </div>
-                        <div class="worker__filial filial filial--active">
-                          <div class="filial__name">Домодедовская</div>
-                          <div class="filial__address">
-                            пос. Володарского, ул. Центральная, д. 30А
-                          </div>
-                        </div>
-                      </div>
-                      <button class="button worker__button">
-                        Подробнее о враче
-                      </button>
-                    </div>
-                  </div>
+      </footer>
+    </div>
+    <div class="modal" id="popup-sign-in">
+      <div class="modal__content sign-up">
+        <div class="modal__button-close sign-up__button-close"></div>
+        <div class="sign-up__content">
+          <form method="POST" class="sign-up__feedback feedback">
+            <div class="sign-up__feedback-wrapper feedback__wrapper">
+              <h4 class="sign-up__feedback-title feedback__title">
+                Записаться на эпиляцию
+              </h4>
+              <p class="sign-up__feedback-text feedback__text">
+                Оставьте свои данные для записи на процедуру.
+              </p>
+              <fieldset class="sign-up__feedback-fields feedback__fields">
+                <div
+                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    class="colorfull-input__element feedback__input sign-up__feedback-input"
+                    id="popup-sign-in-name"
+                    required
+                  />
+                  <span
+                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
+                    >Ваше имя<span
+                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
+                      >*</span
+                    ></span
+                  >
                 </div>
-              </div>
-              <div class="staff__item">
-                <div class="worker">
-                  <div class="worker__wrapper">
-                    <div class="worker__image-block">
-                      <picture>
-                        <source srcset="./img/img-worker-2.webp" type="image/webp">
-                        <img src="./img/img-worker-2.png" alt="" class="worker__image" />
-                      </picture>
-                    </div>
-                    <div class="worker__data-block">
-                      <div class="worker__data">
-                        <div class="worker__name">Юсупова Милана</div>
-                        <div class="worker__job">Косметолог</div>
-                        <div class="worker__experience">
-                          Опыт работы - 7 лет
-                        </div>
-                        <div class="worker__filial filial filial--active">
-                          <div class="filial__name">Жулебино</div>
-                          <div class="filial__address">
-                            Жулебинский бульвар 25
-                          </div>
-                        </div>
-                      </div>
-                      <button class="button worker__button">
-                        Подробнее о враче
-                      </button>
-                    </div>
-                  </div>
+                <div
+                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
+                >
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="colorfull-input__element feedback__input sign-up__feedback-input"
+                    id="popup-sign-in-phone"
+                    required
+                  />
+                  <span
+                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
+                    >+7 (---) ---_--_--<span
+                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
+                      >*</span
+                    ></span
+                  >
                 </div>
-              </div>
-
-              <div class="staff__item">
-                <div class="worker">
-                  <div class="worker__wrapper">
-                    <div class="worker__image-block">
-                      <picture>
-                        <source srcset="./img/img-worker-1.webp" type="image/webp">
-                        <img src="./img/img-worker-1.png" alt="" class="worker__image" />
-                      </picture>
-                    </div>
-                    <div class="worker__data-block">
-                      <div class="worker__data">
-                        <div class="worker__name">Иванова Анастасия</div>
-                        <div class="worker__job">Косметолог</div>
-                        <div class="worker__experience">
-                          Опыт работы - 7 лет
-                        </div>
-                        <div class="worker__filial filial filial--active">
-                          <div class="filial__name">Домодедовская</div>
-                          <div class="filial__address">
-                            пос. Володарского, ул. Центральная, д. 30А
-                          </div>
-                        </div>
-                      </div>
-                      <button class="button worker__button">
-                        Подробнее о враче
-                      </button>
-                    </div>
-                  </div>
+                <select id="popup-filials" name="filial">
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                </select>
+                <textarea
+                  class="feedback__textarea colorfull-input__element sign-up__feedback-textarea"
+                  placeholder="Желаемое время и дата"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="button feedback__button sign-up__feedback-button"
+                >
+                  Отправить
+                </button>
+                <div
+                  class="checkbox feedback__checkbox sign-up__feedback-checkbox"
+                >
+                  <input
+                    class="checkbox__input"
+                    type="checkbox"
+                    checked
+                    name="agree"
+                    id="popup-sign-in-checkbox-input"
+                  />
+                  <label
+                    for="popup-sign-in-checkbox-input"
+                    class="checkbox__label"
+                    ><span
+                      >Даю согласие на обработку своих персональных данных (
+                      <a class="checkbox__label--link" href="#"
+                        >Политика конфиденциальности</a
+                      >)</span
+                    ></label
+                  >
                 </div>
-              </div>
-              <div class="staff__item">
-                <div class="worker">
-                  <div class="worker__wrapper">
-                    <div class="worker__image-block">
-                      <picture>
-                        <source srcset="./img/img-worker-2.webp" type="image/webp">
-                        <img src="./img/img-worker-2.png" alt="" class="worker__image" />
-                      </picture>
-                    </div>
-                    <div class="worker__data-block">
-                      <div class="worker__data">
-                        <div class="worker__name">Юсупова Милана</div>
-                        <div class="worker__job">Косметолог</div>
-                        <div class="worker__experience">
-                          Опыт работы - 7 лет
-                        </div>
-                        <div class="worker__filial filial filial--active">
-                          <div class="filial__name">Жулебино</div>
-                          <div class="filial__address">
-                            Жулебинский бульвар 25
-                          </div>
-                        </div>
-                      </div>
-                      <button class="button worker__button">
-                        Подробнее о враче
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="staff__item">
-                <div class="worker">
-                  <div class="worker__wrapper">
-                    <div class="worker__image-block">
-                      <picture>
-                        <source srcset="./img/img-worker-1.webp" type="image/webp">
-                        <img src="./img/img-worker-1.png" alt="" class="worker__image" />
-                      </picture>
-                    </div>
-                    <div class="worker__data-block">
-                      <div class="worker__data">
-                        <div class="worker__name">Иванова Анастасия</div>
-                        <div class="worker__job">Косметолог</div>
-                        <div class="worker__experience">
-                          Опыт работы - 7 лет
-                        </div>
-                        <div class="worker__filial filial filial--active">
-                          <div class="filial__name">Домодедовская</div>
-                          <div class="filial__address">
-                            пос. Володарского, ул. Центральная, д. 30А
-                          </div>
-                        </div>
-                      </div>
-                      <button class="button worker__button">
-                        Подробнее о враче
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="staff__item">
-                <div class="worker">
-                  <div class="worker__wrapper">
-                    <div class="worker__image-block">
-                      <picture>
-                        <source srcset="./img/img-worker-2.webp" type="image/webp">
-                        <img src="./img/img-worker-2.png" alt="" class="worker__image" />
-                      </picture>
-                    </div>
-                    <div class="worker__data-block">
-                      <div class="worker__data">
-                        <div class="worker__name">Юсупова Милана</div>
-                        <div class="worker__job">Косметолог</div>
-                        <div class="worker__experience">
-                          Опыт работы - 7 лет
-                        </div>
-                        <div class="worker__filial filial filial--active">
-                          <div class="filial__name">Жулебино</div>
-                          <div class="filial__address">
-                            Жулебинский бульвар 25
-                          </div>
-                        </div>
-                      </div>
-                      <button class="button worker__button">
-                        Подробнее о враче
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </fieldset>
             </div>
-            <div class="staff__controls">
-              <div class="staff__button staff__button--prev round-button round-button--left round-button--small">
-                <span class="round-button__content"></span>
-              </div>
-              <div class="staff__button staff__button--next round-button round-button--right round-button--small">
-                <span class="round-button__content"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="form">
-        <div class="form__wrapper">
-          <h3 class="visually-hidden">Акция</h3>
-
-          <div class="form__about">
-            <div class="form__about-title">
-              Лазерная эпиляция в <span class="red">«МЕДИКАЛКЛАБ»</span>
-            </div>
-            <ul class="form__advantages">
-              <li class="form__advantage">
-                <div class="form__advantage-wrapper">
-                  <span class="check form__advantage-check"></span>
-                  <span class="form__advantage-title">Быстро</span>
-                  <span class="form__advantage-text">5-10 минут</span>
-                </div>
-              </li>
-              <li class="form__advantage">
-                <div class="form__advantage-wrapper">
-                  <span class="check form__advantage-check"></span>
-                  <span class="form__advantage-title">Эффективно</span>
-                  <span class="form__advantage-text">эффект на 3-5 лет</span>
-                </div>
-              </li>
-              <li class="form__advantage">
-                <div class="form__advantage-wrapper">
-                  <span class="check form__advantage-check"></span>
-                  <span class="form__advantage-title">Без боли</span>
-                  <span class="form__advantage-text">мягкость и комфорт</span>
-                </div>
-              </li>
-            </ul>
-            <p class="form__notice">
-              Акция действует только для новых клиентов
-              <strong>до конца мая 2021 года</strong>
-            </p>
-            <ul class="form__filials">
-              <li class="form__filial">
-                <div class="filial">
-                  <div class="filial__name">Жулебино</div>
-                  <div class="filial__address">Жулебинский бульвар 25</div>
-                </div>
-              </li>
-              <li class="form__filial">
-                <div class="filial">
-                  <div class="filial__name">Жулебино</div>
-                  <div class="filial__address">Жулебинский бульвар 25</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="form__right-block">
-            <div class="form__title"><span class="colorfull">-40%</span></div>
-            <form form="POST" class="form__feedback feedback">
-              <div class="feedback__wrapper">
-                <h4 class="feedback__title">Оставьте заявку</h4>
-                <p class="feedback__text">
-                  Оставьте заявку прямо сейчас и получите фиксированную
-
-                  <span class="feedback__text--strong">скидку -40% </span> на
-                  первый сеанс эпиляции
-                </p>
-                <fieldset class="feedback__fields">
-                  <div class="colorfull-input feedback__colorfull-input">
-                    <input type="text" name="name" class="colorfull-input__element feedback__input" id="feedback__name"
-                      required />
-                    <span class="colorfull-input__placeholder feedback__placeholder">Ваше имя<span
-                        class="colorfull-input__placeholder-red">*</span></span>
-                  </div>
-                  <div class="colorfull-input feedback__colorfull-input">
-                    <input type="tel" name="phone" class="colorfull-input__element feedback__input" id="feedback__phone"
-                      required />
-                    <span class="colorfull-input__placeholder feedback__placeholder">+7 (---) ---_--_--<span
-                        class="colorfull-input__placeholder-red">*</span></span>
-                  </div>
-                  <input type="text" name="email" class="colorfull-input__element feedback__input feedback__email"
-                    id="feedback__email" placeholder="Email" />
-                  <select id="form-filials" name="filial">
-                    <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                      Жулебино Жулебинский бульвар 25
-                    </option>
-                    <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                      Жулебино Жулебинский бульвар 25
-                    </option>
-                    <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                      Жулебино Жулебинский бульвар 25
-                    </option>
-                    <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                      Жулебино Жулебинский бульвар 25
-                    </option>
-                  </select>
-                  <button class="button feedback__button">
-                    Получить скидку!
-                  </button>
-                  <div class="checkbox feedback__checkbox">
-                    <input class="checkbox__input" type="checkbox" checked name="agree" id="feedback-checkbox-input" />
-                    <label for="feedback-checkbox-input" class="checkbox__label"><span>Даю согласие на обработку своих
-                        персональных данных (
-                        <a class="checkbox__label--link" href="#">Политика конфиденциальности</a>)</span></label>
-                  </div>
-                </fieldset>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__top">
-        <div class="footer__top-wrapper">
-          <div class="footer__logo">
-            <picture>
-              <source srcset="./img/logo.webp" type="image/webp">
-              <img src="./img/logo.png" alt="" />
-            </picture>
-          </div>
-          <div class="footer__contact">
-            <div class="contact footer__main-contact">
-              <a href="mailto:info@medicalclub.ru" class="contact__text footer__contact-text">info@medicalclub.ru</a>
-              <a href="tel:84951268925" class="footer__contact-phone contact__phone">8 495 126-89-25</a>
-            </div>
-            <div class="footer__social-links social__links">
-              <a href="" class="social__link social__link--vk"></a>
-              <a href="" class="social__link social__link--inst"></a>
-              <a href="" class="social__link social__link--fb"></a>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
-      <div class="footer__trademark">
-        <div class="footer__trademark-wrapper">
-          <div class="footer__trademark-text">
-            <p>
-              © ООО «Аркада», ООО «Доктор с Вами», ООО «Меди Клаб» 2000-2020.
-              Политика конфиденциальности
-            </p>
+    </div>
+    <div class="modal" id="popup-sign-in-onsale">
+      <div class="modal__content sign-up">
+        <div class="modal__button-close sign-up__button-close"></div>
+        <div class="sign-up__content">
+          <div class="form__title sign-up__sale">
+            <span class="colorfull">-40%</span>
           </div>
-          <div class="footer__trademark-sign">
-            <picture>
-              <source srcset="./img/img-footer-trademark.webp" type="image/webp">
-              <img src="./img/img-footer-trademark.png" alt="" class="footer__tradmark-image" />
-            </picture>
-          </div>
+          <form method="POST" class="sign-up__feedback feedback">
+            <div class="sign-up__feedback-wrapper feedback__wrapper">
+              <h4
+                class="sign-up__feedback-title--onsale feedback__title colorfull"
+              >
+                Получите скидку -
+              </h4>
+              <p class="sign-up__feedback-text--onsale feedback__text">
+                Оставьте свои данные для записи на процедуру.
+              </p>
+              <fieldset class="sign-up__feedback-fields feedback__fields">
+                <div
+                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    class="colorfull-input__element feedback__input sign-up__feedback-input"
+                    id="popup-sign-in-onsale-name"
+                    required
+                  />
+                  <span
+                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
+                    >Ваше имя<span
+                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
+                      >*</span
+                    ></span
+                  >
+                </div>
+                <div
+                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
+                >
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="colorfull-input__element feedback__input sign-up__feedback-input"
+                    id="popup-sign-in-onsale-phone"
+                    required
+                  />
+                  <span
+                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
+                    >+7 (---) ---_--_--<span
+                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
+                      >*</span
+                    ></span
+                  >
+                </div>
+                <select id="popup-onsale-filials" name="filial">
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                  <option
+                    class="filial"
+                    value="1"
+                    data-filial="Жулебино"
+                    data-address="Жулебинский бульвар 25"
+                  >
+                    Жулебино Жулебинский бульвар 25
+                  </option>
+                </select>
+                <textarea
+                  class="feedback__textarea colorfull-input__element sign-up__feedback-textarea"
+                  placeholder="Желаемое время и дата"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="button feedback__button sign-up__feedback-button"
+                >
+                  Отправить
+                </button>
+                <div
+                  class="checkbox feedback__checkbox sign-up__feedback-checkbox"
+                >
+                  <input
+                    class="checkbox__input"
+                    type="checkbox"
+                    checked
+                    name="agree"
+                    id="popup-sign-in-onsale-checkbox-input"
+                  />
+                  <label
+                    for="popup-sign-in-onsale-checkbox-input"
+                    class="checkbox__label"
+                    ><span
+                      >Даю согласие на обработку своих персональных данных (
+                      <a class="checkbox__label--link" href="#"
+                        >Политика конфиденциальности</a
+                      >)</span
+                    ></label
+                  >
+                </div>
+              </fieldset>
+            </div>
+          </form>
         </div>
       </div>
-    </footer>
-  </div>
-  <div class="modal" id="popup-sign-in">
-    <div class="modal__content sign-up">
-      <div class="modal__button-close sign-up__button-close"></div>
-      <div class="sign-up__content">
-        <form form="POST" class="sign-up__feedback feedback">
-          <div class="sign-up__feedback-wrapper feedback__wrapper">
-            <h4 class="sign-up__feedback-title feedback__title">
-              Записаться на эпиляцию
+    </div>
+    <div class="modal" id="popup-message-sign-in">
+      <div class="modal__content popup-message">
+        <div class="modal__button-close popup-message__button-close"></div>
+        <div class="popup-message__content">
+          <div class="popup-message__content-wrapper">
+            <h4 class="popup-message__feedback-title feedback__title colorfull">
+              Ваша заявка отправлена
             </h4>
-            <p class="sign-up__feedback-text feedback__text">
-              Оставьте свои данные для записи на процедуру.
+            <p class="popup-message__feedback-text feedback__text">
+              В ближайшее время наш специалист свяжется с Вами для записи на
+              процедуру.
             </p>
-            <fieldset class="sign-up__feedback-fields feedback__fields">
-              <div class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input">
-                <input type="text" name="name" class="colorfull-input__element feedback__input sign-up__feedback-input"
-                  id="feedback__name" required />
-                <span class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder">Ваше
-                  имя<span class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red">*</span></span>
-              </div>
-              <div class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input">
-                <input type="tel" name="phone" class="colorfull-input__element feedback__input sign-up__feedback-input"
-                  id="feedback__phone" required />
-                <span class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder">+7 (---)
-                  ---_--_--<span
-                    class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red">*</span></span>
-              </div>
-              <select id="popup-filials" name="filial">
-                <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                  Жулебино Жулебинский бульвар 25
-                </option>
-                <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                  Жулебино Жулебинский бульвар 25
-                </option>
-                <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                  Жулебино Жулебинский бульвар 25
-                </option>
-                <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                  Жулебино Жулебинский бульвар 25
-                </option>
-              </select>
-              <textarea class="feedback__textarea colorfull-input__element sign-up__feedback-textarea"
-                placeholder="Желаемое время и дата"></textarea>
-              <button type="submit" class="button feedback__button sign-up__feedback-button">
-                Отправить
-              </button>
-              <div class="checkbox feedback__checkbox sign-up__feedback-checkbox">
-                <input class="checkbox__input" type="checkbox" checked name="agree" id="popup-checkbox-input" />
-                <label for="popup-checkbox-input" class="checkbox__label"><span>Даю согласие на обработку своих
-                    персональных данных (
-                    <a class="checkbox__label--link" href="#">Политика конфиденциальности</a>)</span></label>
-              </div>
-            </fieldset>
           </div>
-        </form>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="modal" id="popup-sign-in-onsale">
-    <div class="modal__content sign-up">
-      <div class="modal__button-close sign-up__button-close"></div>
-      <div class="sign-up__content">
-        <div class="form__title sign-up__sale">
-          <span class="colorfull">-40%</span>
-        </div>
-        <form form="POST" class="sign-up__feedback feedback">
-          <div class="sign-up__feedback-wrapper feedback__wrapper">
-            <h4 class="sign-up__feedback-title--onsale feedback__title colorfull">
-              Получите скидку -
+    <div class="modal" id="popup-message-sign-in--onsale">
+      <div class="modal__content popup-message">
+        <div class="modal__button-close popup-message__button-close"></div>
+        <div class="popup-message__content">
+          <div class="popup-message__content-wrapper">
+            <h4 class="popup-message__feedback-title feedback__title colorfull">
+              Спасибо за Ваше обращение
             </h4>
-            <p class="sign-up__feedback-text--onsale feedback__text">
-              Оставьте свои данные для записи на процедуру.
+            <p class="popup-message__feedback-text feedback__text">
+              Наш мастер свяжется с Вами в ближайшее время.
             </p>
-            <fieldset class="sign-up__feedback-fields feedback__fields">
-              <div class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input">
-                <input type="text" name="name" class="colorfull-input__element feedback__input sign-up__feedback-input"
-                  id="feedback__name" required />
-                <span class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder">Ваше
-                  имя<span class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red">*</span></span>
-              </div>
-              <div class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input">
-                <input type="tel" name="phone" class="colorfull-input__element feedback__input sign-up__feedback-input"
-                  id="feedback__phone" required />
-                <span class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder">+7 (---)
-                  ---_--_--<span
-                    class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red">*</span></span>
-              </div>
-              <select id="popup-onsale-filials" name="filial">
-                <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                  Жулебино Жулебинский бульвар 25
-                </option>
-                <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                  Жулебино Жулебинский бульвар 25
-                </option>
-                <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                  Жулебино Жулебинский бульвар 25
-                </option>
-                <option class="filial" value="1" data-filial="Жулебино" data-address="Жулебинский бульвар 25">
-                  Жулебино Жулебинский бульвар 25
-                </option>
-              </select>
-              <textarea class="feedback__textarea colorfull-input__element sign-up__feedback-textarea"
-                placeholder="Желаемое время и дата"></textarea>
-              <button type="submit" class="button feedback__button sign-up__feedback-button">
-                Отправить
-              </button>
-              <div class="checkbox feedback__checkbox sign-up__feedback-checkbox">
-                <input class="checkbox__input" type="checkbox" checked name="agree" id="popup-checkbox-input" />
-                <label for="popup-checkbox-input" class="checkbox__label"><span>Даю согласие на обработку своих
-                    персональных данных (
-                    <a class="checkbox__label--link" href="#">Политика конфиденциальности</a>)</span></label>
-              </div>
-            </fieldset>
           </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="popup-message-sign-in">
-    <div class="modal__content popup-message">
-      <div class="modal__button-close popup-message__button-close"></div>
-      <div class="popup-message__content">
-        <div class="popup-message__content-wrapper">
-          <h4 class="popup-message__feedback-title feedback__title colorfull">
-            Ваша заявка отправлена
-          </h4>
-          <p class="popup-message__feedback-text feedback__text">
-            В ближайшее время наш специалист свяжется с Вами для записи на процедуру.
-          </p>
         </div>
       </div>
     </div>
-  </div>
-  <div class="modal" id="popup-message-sign-in--onsale">
-    <div class="modal__content popup-message">
-      <div class="modal__button-close popup-message__button-close"></div>
-      <div class="popup-message__content">
-        <div class="popup-message__content-wrapper">
-          <h4 class="popup-message__feedback-title feedback__title colorfull">
-            Спасибо за Ваше обращение
-          </h4>
-          <p class="popup-message__feedback-text feedback__text">
-            Наш мастер свяжется с Вами в ближайшее время.
-          </p>
+    <div class="modal" id="popup-filials-list">
+      <div class="modal__content popup-filials">
+        <div class="modal__button-close popup-filials__button-close"></div>
+        <div class="popup-filials__content">
+          <h4 class="popup-filials__title">Адреса медцентров</h4>
+          <ul class="popup-filials__list">
+            <li class="filial popup-filials__item">
+              <div class="filial__name">Жулебино</div>
+              <div class="filial__address">Жулебинский бульвар 25</div>
+            </li>
+            <li class="filial popup-filials__item">
+              <div class="filial__name">Жулебино</div>
+              <div class="filial__address">Жулебинский бульвар 25</div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-  <div class="modal" id="popup-filials-list">
-    <div class="modal__content popup-filials">
-      <div class="modal__button-close popup-filials__button-close"></div>
-      <div class="popup-filials__content">
-        <h4 class="popup-filials__title">
-          Адреса медцентров
-        </h4>
-        <ul class="popup-filials__list">
-          <li class="filial popup-filials__item">
-            <div class="filial__name">Жулебино</div>
-            <div class="filial__address">Жулебинский бульвар 25</div>
-          </li>
-          <li class="filial popup-filials__item">
-            <div class="filial__name">Жулебино</div>
-            <div class="filial__address">Жулебинский бульвар 25</div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  </div>
+    <script>
+      function loadStyle(href) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        document.body.appendChild(link);
+      }
+      loadStyle("css/lib.css");
+      loadStyle("css/style.css");
+    </script>
 
-
-  <script src="js/lib.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="js/lib.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

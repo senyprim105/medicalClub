@@ -173,11 +173,11 @@ const style = () => {
     //     },
     //   })
     // )
-    .pipe(sourcemaps.init()) //То же самое что и с js
+    //.pipe(sourcemaps.init()) //То же самое что и с js
     .pipe(sass()) //Скомпилируем
     .pipe(prefixer()) //Добавим вендорные префиксы
     .pipe(cssmin()) //Сожмем
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.css)); //И в build
 };
 exports.style = style;
