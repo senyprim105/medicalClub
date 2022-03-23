@@ -297,7 +297,12 @@ const jsWebpack= () => {
                           presets: ['@babel/preset-env']
                       }
                   }
-              }]
+              }],
+             
+
+          },
+          optimization:{
+            minimize: false
           },
           plugins: [
               new CircularDependencyPlugin(),

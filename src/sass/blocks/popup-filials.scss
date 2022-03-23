@@ -1,0 +1,51 @@
+.popup-filials {
+  max-width: 290px;
+  width: 100%;
+  &__button-close {
+    top: 18px;
+    right: 13px;
+    width: 10px;
+    height: 10px;
+    z-index: 100;
+    @media (max-width:575px) {
+    }
+  }
+  &__content {
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  &__title {
+    padding: 16px 25px 16px 40px;
+    background: linear-gradient(90deg, #e86aad 0%, #5cbafe 100%);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 12px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 16px;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../../img/icon-pick-white.svg) no-repeat center/contain;
+    }
+  }
+  &__list {
+    background: #ffffff;
+    box-shadow: 0px 6px 20px rgba(78, 127, 222, 0.2);
+    border-radius: 0px 0px 6px 6px;
+    padding: 16px 28px 30px;
+  }
+  &__item {
+    & + & {
+      margin-top: 20px;
+    }
+  }
+}
