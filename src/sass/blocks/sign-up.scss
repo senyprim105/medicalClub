@@ -1,10 +1,19 @@
 .sign-up {
   max-width: 890px;
   width: 100%;
-  padding-right: 31px;
-  @media (max-width: 575px) {
-    padding: 25px 15px;
+  padding-right: 31px + 15px;//Чтобы не прилипала к стенке
+  padding-left: 15px;//Чтобы не прилипала к стенке
+  @media (max-width:768px) {
+    padding-top:25px; 
+    padding-right:15px;
+    width:fit-content;
+    margin: 0 auto;
+    
   }
+  &__button-close{
+    right:15px;//Компенсируем падинг
+  }
+ 
   &__content {
     padding: 10px 0px 10px 10px;
     border-radius: 6px;
@@ -15,9 +24,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
-    @media (max-width: 575px) {
+    @media (max-width: 768px) {
       background: none;
       padding: 0;
+      width: auto;
     }
   }
   &__sale {
@@ -33,7 +43,7 @@
   &__feedback {
     max-width: 450px;
     width: 100%;
-    @media (max-width: 575px) {
+    @media (max-width: 768px) {
       margin: 0 auto;
     }
   }

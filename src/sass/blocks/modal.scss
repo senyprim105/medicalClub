@@ -25,7 +25,7 @@
         position:absolute;
         width:20px;
         height:20px;
-        right:0;
+        right:0px;//Уравниваем падинг
         top: 0;
         z-index: inherit;
         cursor: pointer;
@@ -49,11 +49,9 @@
             transform:rotate(45deg);
             background-color: rgba(255, 255, 255, 0.5);
         }
-        @media (max-width:575px) {
+        @media (max-width:768px) {
             width:16px;
             height:16px;
-            right:15px;
-
         }
     }
 

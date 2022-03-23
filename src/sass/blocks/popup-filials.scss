@@ -1,14 +1,14 @@
 .popup-filials {
   max-width: 290px;
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   &__button-close {
     top: 18px;
-    right: 13px;
+    right: 13px + 15px;//Компенсируем падинг
     width: 10px;
     height: 10px;
     z-index: 100;
-    @media (max-width:575px) {
-    }
   }
   &__content {
     width: 100%;
