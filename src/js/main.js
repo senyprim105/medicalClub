@@ -89,12 +89,16 @@ import showModal from "./showModal";
   //#endregion
 
   document.addEventListener("DOMContentLoaded", (event) => {
-    const showSignInModal=(idPopup,classCloseButton,showClass)=>(evt)=>{
-      evt.preventDefault();
-      showModal(idPopup);
-      console.log('Показать модальное окно');
+    const showSignInModal=(idPopup,handler=()=>{},classCloseButton,showClass)=>(evt)=>{
+      if (evt) evt.preventDefault();
+      showModal(idPopup,handler);
     }
-    console.log("load");
+    const showSignInModalThenMessage=(idPopup)=>{
+      return showSignInModal(idPopup,()=>showModal("popup-message-sign-in"));
+    };
+    const showSignInModalThenSaleMessage=(idPopup)=>{
+      return showSignInModal(idPopup,()=>showModal("popup-message-sign-in--onsale"));
+    }
     menu();
     benefits();
     zones();
@@ -112,17 +116,25 @@ import showModal from "./showModal";
     const popupOnSaleSelect=initSelectFilials("popup-onsale-filials");
 
     const headerButton= document.querySelector(`.main-nav__contact-button`);
-    if (headerButton) headerButton.addEventListener('click',showSignInModal("popup-sign-in"));
+    if (headerButton) headerButton.addEventListener('click',showSignInModalThenMessage("popup-sign-in"));
     
+    const saleButton= document.querySelector(`.banner__button`);
+    if (saleButton) saleButton.addEventListener('click',showSignInModalThenSaleMessage("popup-sign-in-onsale"));
+
     const equipmentButton = document.querySelector(`.equipment__button-wrapper`);
-    if (equipmentButton) equipmentButton.addEventListener('click',showSignInModal("popup-sign-in"));
+    if (equipmentButton) equipmentButton.addEventListener('click',showSignInModalThenMessage("popup-sign-in"));
     
     const examplesButton = document.querySelector(`.examples__button`);
-    if (examplesButton) examplesButton.addEventListener('click',showSignInModal("popup-sign-in"));
-
-
-    const saleButton= document.querySelector(`.banner__button`);
-    if (saleButton) saleButton.addEventListener('click',showSignInModal("popup-sign-in-onsale"));
+    if (examplesButton) examplesButton.addEventListener('click',showSignInModalThenMessage("popup-sign-in"));
     
+    const sales = document.querySelectorAll(`.sale-item__button`);
+    if (sales){
+      sales.forEach(item=>item.addEventListener('click',showSignInModalThenMessage("popup-sign-in")));
+    }
+
+    const addressButton = document.querySelector(`.main-nav__filials-link`);
+    if (addressButton) addressButton.addEventListener('click',showSignInModal("popup-filials-list"));
+
+
   });
 })();

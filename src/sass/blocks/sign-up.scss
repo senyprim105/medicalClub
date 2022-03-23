@@ -2,6 +2,9 @@
   max-width: 890px;
   width: 100%;
   padding-right: 31px;
+  @media (max-width: 575px) {
+    padding: 25px 15px;
+  }
   &__content {
     padding: 10px 0px 10px 10px;
     border-radius: 6px;
@@ -12,26 +15,43 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
+    @media (max-width: 575px) {
+      background: none;
+      padding: 0;
+    }
   }
   &__sale {
     display: flex;
     top: 10px; //Равен падингу __content
     left: 414px;
+    @media (max-width:768px) {
+      left:50%;
+      transform:translateY(-50%);
+    }
   }
 
   &__feedback {
     max-width: 450px;
     width: 100%;
+    @media (max-width: 575px) {
+      margin: 0 auto;
+    }
   }
-  &__feedback-title----onsale {
+  &__feedback-title--onsale {
     line-height: 28px;
+    @media (max-width:768px) {
+      font-size: 15px;      
+    }
+
+    
   }
   &__feedback-text--onsale {
-
     font-size: 18px;
     line-height: 26px;
-
     text-transform: uppercase;
     color: #293951;
+    @media (max-width:768px) {
+      font-size: 15px;      
+    }
   }
 }
