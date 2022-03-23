@@ -34,7 +34,12 @@
         box-shadow: 0px 2px 0px #AB539C;
       }
       &::after{
-        background: url(../../img/icon-check-white.png) no-repeat center/cover;
+        @supports not (background-image: url(../../img/icon-check-white.webp)){
+          background: url(../../img/icon-check-white.png) no-repeat center/cover;
+        }
+        @supports (background-image: url(../../img/icon-check-white.webp)){
+          background: url(../../img/icon-check-white.webp) no-repeat center/cover;
+        }
       } 
   }
   &--small{
@@ -47,7 +52,12 @@
       &::after{
           width: 13px;
           height: 10px;
-          background: url(../../img/icon-check-white.png) no-repeat center/cover;
+          @supports not (background-image: url(../../img/icon-check-white.webp)){
+            background: url(../../img/icon-check-white.png) no-repeat center/cover;
+          }
+          @supports  (background-image: url(../../img/icon-check-white.webp)){
+            background: url(../../img/icon-check-white.webp) no-repeat center/cover;
+          }
       }
   }
 }

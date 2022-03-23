@@ -1,3 +1,4 @@
+
 .benefits {
   text-align: center;
   color: #293951;
@@ -12,7 +13,12 @@
     height: 116px;
     bottom: -50px;
     left: 50%;
-    background-image: url(../../img/bg-banner-bottom.png);
+    @supports not (background-image: url(../../img/bg-banner-bottom.webp)){
+      background-image: url(../../img/bg-banner-bottom.png);
+    }
+    @supports (background-image: url(../../img/bg-banner-bottom.webp)){
+      background-image: url(../../img/bg-banner-bottom.webp);
+    }
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateX(-50%);
@@ -70,7 +76,12 @@
     width: 100%;
     padding: 212px 5px 5px;
     position: relative;
-    background-image: url(../../img/bg-examples-bottom.png);
+    @supports not (background-image: url(../../img/bg-examples-bottom.webp)){
+      background-image: url(../../img/bg-examples-bottom.png);
+    }
+    @supports (background-image: url(../../img/bg-examples-bottom.webp)){
+      background-image: url(../../img/bg-examples-bottom.webp);
+    }
     background-repeat: no-repeat;
     background-position: top 12px left 60px;
     background-size: 238px 204px;

@@ -11,7 +11,13 @@
     top: -130px;
     width: 267px;
     height: 364px;
-    background: url(../../img/bg-zones-left.png) no-repeat center;
+    @supports not (background-image: url(../../img/bg-zones-left.webp)){
+      background: url(../../img/bg-zones-left.png) no-repeat center;
+    }
+    @supports (background-image: url(../../img/bg-zones-left.webp)){
+      background: url(../../img/bg-zones-left.webp) no-repeat center;
+    }
+    
     z-index: 0;
   }
   &::before {
@@ -21,7 +27,13 @@
     right: 0px;
     width: 567px;
     height: 447px;
-    background: url(../../img/bg-zones-right.png) no-repeat center;
+    @supports not (background-image: url(../../img/bg-zones-right.webp)){
+      background: url(../../img/bg-zones-right.png) no-repeat center;
+    }
+    @supports (background-image: url(../../img/bg-zones-right.webp)){
+      background: url(../../img/bg-zones-right.webp) no-repeat center;
+    }
+    
   }
   background: linear-gradient(
       277.33deg,

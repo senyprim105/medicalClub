@@ -3,7 +3,14 @@
   padding-bottom: 80px;
   line-height: 26px;
   text-align: center;
-  background: url(../../img/bg-for-whom.png) no-repeat bottom -52px center;
+
+  @supports not (background-image: url(../../img/bg-for-whom.webp)){
+    background: url(../../img/bg-for-whom.png) no-repeat bottom -52px center;
+  }
+  @supports (background-image: url(../../img/bg-for-whom.webp)){
+    background: url(../../img/bg-for-whom.webp) no-repeat bottom -52px center;
+  }
+  
   @media (max-width: 1200px) {
     background: none;
     padding-bottom: 50px;

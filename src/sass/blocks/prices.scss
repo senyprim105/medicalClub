@@ -22,7 +22,13 @@
       height: 134px;
       left: -70px;
       bottom: 0;
-      background: url(../../img/landing-image-flowers-2.png) no-repeat center;
+      @supports not (background-image: url(../../img/landing-image-flowers-2.webp)){
+        background: url(../../img/landing-image-flowers-2.png) no-repeat center;
+      }
+      @supports (background-image: url(../../img/landing-image-flowers-2.webp)){
+        background: url(../../img/landing-image-flowers-2.webp) no-repeat center;
+      }
+      
     }
     &::after {
       content: "";
@@ -32,8 +38,13 @@
       right: -150px;
 
       bottom: 0;
-
-      background: url(../../img/landing-image-flowers-1.png) no-repeat center/cover;
+      @supports not (background-image: url(../../img/landing-image-flowers-1.webp)){
+        background: url(../../img/landing-image-flowers-1.png) no-repeat center/cover;
+      }
+      @supports (background-image: url(../../img/landing-image-flowers-1.webp)){
+        background: url(../../img/landing-image-flowers-1.webp) no-repeat center/cover;
+      }
+      
     }
     @media (max-width:1200px) {
       &::before{
@@ -45,7 +56,14 @@
         bottom: -70px;
         right:50%;
         transform: translateX(50%);
+        @supports not (background-image: url(../../img/bg-prices-bottom-mobile.webp)){
         background: url(../../img/bg-prices-bottom-mobile.png) no-repeat center/cover;
+         
+        }
+        @supports (background-image: url(../../img/bg-prices-bottom-mobile.webp)){
+        background: url(../../img/bg-prices-bottom-mobile.webp) no-repeat center/cover;
+         
+        }
       }
       
     }

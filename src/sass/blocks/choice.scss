@@ -2,9 +2,17 @@
   background-color: #f8fafd;
   padding-bottom: 78px;
 
-  background-image: url(../../img/bg-choice-elipse.svg),
+  @supports not (background-image: url(../../img/bg-choice-left.webp)){
+    background-image: url(../../img/bg-choice-elipse.svg),
     url(../../img/bg-choice-left.png), url(../../img/bg-choice-right.png),
     linear-gradient(277.33deg, #f0fcfc 2.56%, rgba(255, 255, 255, 0) 67.14%);
+  }
+  @supports (background-image: url(../../img/bg-choice-left.webp)){
+    background-image: url(../../img/bg-choice-elipse.svg),
+    url(../../img/bg-choice-left.webp), url(../../img/bg-choice-right.webp),
+    linear-gradient(277.33deg, #f0fcfc 2.56%, rgba(255, 255, 255, 0) 67.14%);
+  }
+  
   background-repeat: no-repeat;
   background-position: top -40px center, left top, right bottom, center;
   overflow: hidden;

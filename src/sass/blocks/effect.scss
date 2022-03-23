@@ -3,17 +3,14 @@
   &__wrapper {
     @include container;
     margin-bottom: 75px;
-    background: url(../../img/bg-effect-2.png) no-repeat bottom center/ contain;
+    @supports not (background-image: url(../../img/bg-effect-2.webp)){
+      background: url(../../img/bg-effect-2.png) no-repeat bottom center/ contain;
+    }
+    @supports (background-image: url(../../img/bg-effect-2.webp)){
+      background: url(../../img/bg-effect-2.webp) no-repeat bottom center/ contain;
+    }
     position: relative;
 
-    // &::before{
-    //   content: "";
-    //   position: absolute;
-    //   left: 0;
-    //   right: 0;
-    //   bottom: 0;
-
-    // }
 
     @media (max-width: 1200px) {
       padding-bottom: 55%;

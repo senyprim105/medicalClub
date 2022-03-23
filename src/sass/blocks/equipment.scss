@@ -54,11 +54,19 @@
     justify-content: justify-content;
     align-items: flex-start;
     padding-bottom: 204px;
-    background-image: url(../../img/bg-benefits-item.png),
+    @supports not (background-image: url(../../img/bg-benefits-item.webp)){
+      background-image: url(../../img/bg-benefits-item.png),
       url(../../img/bg-benefits-item.png);
+    }
+    @supports (background-image: url(../../img/bg-benefits-item.webp)){
+      background-image: url(../../img/bg-benefits-item.webp),
+      url(../../img/bg-benefits-item.webp);
+    }
+   
     background-repeat: no-repeat;
     background-position: bottom right, bottom right 260px;
     @media (max-width: 1200px) {
+
       background-image: url(../../img//bg-equipment-bottom-mobile.svg);
       background-position: bottom center;
       padding-bottom: 350px;
@@ -93,14 +101,24 @@
       top: 0;
       left: 18px;
       transform: translateY(-50%);
-      background: url(../../img/bg-equipment__difference.png) no-repeat center;
+      @supports not (background-image: url(../../img/bg-equipment__difference.webp)){
+        background: url(../../img/bg-equipment__difference.png) no-repeat center;
+      }
+      @supports (background-image: url(../../img/bg-equipment__difference.webp)){
+        background: url(../../img/bg-equipment__difference.webp) no-repeat center;
+      }
     }
     &::before {
       content: "";
       position: absolute;
       width: 534px;
       height: 492px;
-      background: url(../../img/img-equipment.png) no-repeat center / contain;
+      @supports not (background-image: url(../../img/img-equipment.webp)){
+        background: url(../../img/img-equipment.png) no-repeat center / contain;
+      }
+      @supports (background-image: url(../../img/img-equipment.webp)){
+        background: url(../../img/img-equipment.webp) no-repeat center / contain;
+      }
       bottom: -200px;
       left: 91px;
     }

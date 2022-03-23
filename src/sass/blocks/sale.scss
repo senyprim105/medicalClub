@@ -1,7 +1,16 @@
 .sale {
-  background-image: url(../../img/bg-sale-center.png),
+  @supports not (background-image: url(../../img/bg-sale-center.webp)){
+    background-image: url(../../img/bg-sale-center.png),
     url(../../img/bg-zones-left.png), url(../../img/bg-zones-right.png),
     linear-gradient(277.33deg, #f0fcfc 2.56%, rgba(255, 255, 255, 0) 67.14%);
+  }
+  @supports (background-image: url(../../img/bg-sale-center.webp)){
+    background-image: url(../../img/bg-sale-center.webp),
+    url(../../img/bg-zones-left.webp), url(../../img/bg-zones-right.webp),
+    linear-gradient(277.33deg, #f0fcfc 2.56%, rgba(255, 255, 255, 0) 67.14%);
+  }
+
+  
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: right 200px bottom, left top -100px, right -200px bottom,
     center;
@@ -98,9 +107,17 @@
       right -200px bottom, center;
   }
   @media (max-width: 1200px) {
-    background-image: url(../../img/bg-zones-left.png),
+    @supports not (background-image: url(../../img/bg-zones-left.webp)){
+      background-image: url(../../img/bg-zones-left.png),
       url(../../img/bg-zones-right.png),
       linear-gradient(277.33deg, #f0fcfc 2.56%, rgba(255, 255, 255, 0) 67.14%);
+    }
+    @supports (background-image: url(../../img/bg-zones-left.webp)){
+      background-image: url(../../img/bg-zones-left.webp),
+      url(../../img/bg-zones-right.webp),
+      linear-gradient(277.33deg, #f0fcfc 2.56%, rgba(255, 255, 255, 0) 67.14%);
+    }
+   
     background-repeat: no-repeat;
     background-position: left top -100px, right -200px bottom, center;
     &__wrapper {

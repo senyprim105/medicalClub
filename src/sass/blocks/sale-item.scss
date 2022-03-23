@@ -48,8 +48,15 @@
 
     width: 100%;
     height: 100%;
-    background-image: url(../../img/bg-sale-left.png),
+    @supports not (background-image: url(../../img/bg-sale-left.webp)){
+      background-image: url(../../img/bg-sale-left.png),
       url(../../img/bg-sale-right.png);
+    }
+    @supports (background-image: url(../../img/bg-sale-left.webp)){
+      background-image: url(../../img/bg-sale-left.webp),
+      url(../../img/bg-sale-right.webp);
+    }
+    
     background-repeat: no-repeat;
     background-color: #fff;
     background-position: left -20px top -20px, right -20px bottom -20px;

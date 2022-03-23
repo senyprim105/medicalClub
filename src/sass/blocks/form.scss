@@ -1,9 +1,18 @@
 .form {
   position: relative;
   padding: 90px 0 45px;
-  background-image: url(../../img/bg-banner-center.png),
+
+  @supports not (background-image: url(../../img/bg-banner-center.webp)){
+    background-image: url(../../img/bg-banner-center.png),
     url(../../img/bg-form-right.png),
     linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
+  }
+  @supports (background-image: url(../../img/bg-banner-center.webp)){
+    background-image: url(../../img/bg-banner-center.webp),
+    url(../../img/bg-form-right.webp),
+    linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
+  }
+  
   background-color: #faf8f8;
   background-repeat: no-repeat;
   background-position: center top 60px, right 67px bottom 60px;
@@ -11,7 +20,13 @@
   &::before {
     content: "";
     position: absolute;
-    background: url(../../img//bg-action-left.png) no-repeat center;
+    @supports not (background-image: url(../../img//bg-action-left.webp)){
+      background: url(../../img//bg-action-left.png) no-repeat center;
+    }
+    @supports (background-image: url(../../img//bg-action-left.webp)){
+      background: url(../../img//bg-action-left.webp) no-repeat center;
+    }
+    
     width: 276px;
     height: 372px;
     left: 0;
@@ -181,7 +196,12 @@
       height: 512px;
       bottom: 0px;
       left: -275px;
-      background: url(../../img/bg-action-center.png) no-repeat center/contain;
+      @supports not (background-image: url(../../img/bg-action-center.webp)){
+        background: url(../../img/bg-action-center.png) no-repeat center/contain;
+      }
+      @supports (background-image: url(../../img/bg-action-center.webp)){
+        background: url(../../img/bg-action-center.webp) no-repeat center/contain;
+      }
     }
     @media (max-width: 1200px) {
       &::before {

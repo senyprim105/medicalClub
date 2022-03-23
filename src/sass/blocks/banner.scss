@@ -1,3 +1,100 @@
+@supports not (
+  background-image: url(../../img/bg-banner-left.webp)
+) {
+  .banner {
+    background-image: url(../../img/bg-banner-left.png),
+      url(../../img/bg-banner-left-2.png), url(../../img/bg-banner-right.png),
+      url(../../img/bg-banner-center.png),
+      linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
+      &::before{
+        background-image: url(../../img/bg-banner-bottom.png);
+      }
+      &__equipment-flag{
+        &::before{
+          background: url(../../img/icon-german-flag.png) no-repeat center/contain;
+        }
+      }
+    @media (max-width: 1600px) {
+      background: url(../../img/bg-banner-left-2.png),
+        url(../../img/bg-banner-right.png), url(../../img/bg-banner-center.png),
+        linear-gradient(
+          269.78deg,
+          #f9f9fb 10.18%,
+          rgba(255, 255, 255, 0) 99.74%
+        );
+    }
+    @media (max-width: 1200px) {
+      background: url(../../img/bg-banner-left-2.png),
+        url(../../img/bg-banner-center.png),
+        linear-gradient(
+          269.78deg,
+          #f9f9fb 10.18%,
+          rgba(255, 255, 255, 0) 99.74%
+        );
+    }
+    @media (max-width: 768px) {
+      background: url(../../img/bg-banner-left-mobile.png),
+        url(../../img/bg-banner-center.png),
+        linear-gradient(
+          269.78deg,
+          #f9f9fb 10.18%,
+          rgba(255, 255, 255, 0) 99.74%
+        );
+        &::before{
+          background-image: url(../../img/bg-banner-right-mobile.png);
+        }
+    }
+  }
+}
+@supports (
+  background-image: url(../../img/bg-banner-left.webp)
+) {
+  .banner {
+    background-image: url(../../img/bg-banner-left.webp),
+      url(../../img/bg-banner-left-2.webp), url(../../img/bg-banner-right.webp),
+      url(../../img/bg-banner-center.webp),
+      linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
+      &::before{
+        background-image: url(../../img/bg-banner-bottom.webp);
+      }
+      &__equipment-flag{
+        &::before{
+          background: url(../../img/icon-german-flag.webp) no-repeat center/contain;
+        }
+      }
+    @media (max-width: 1600px) {
+      background: url(../../img/bg-banner-left-2.webp),
+        url(../../img/bg-banner-right.webp),
+        url(../../img/bg-banner-center.webp),
+        linear-gradient(
+          269.78deg,
+          #f9f9fb 10.18%,
+          rgba(255, 255, 255, 0) 99.74%
+        );
+    }
+    @media (max-width: 1200px) {
+      background: url(../../img/bg-banner-left-2.webp),
+        url(../../img/bg-banner-center.webp),
+        linear-gradient(
+          269.78deg,
+          #f9f9fb 10.18%,
+          rgba(255, 255, 255, 0) 99.74%
+        );
+    }
+    @media (max-width: 768px) {
+      background: url(../../img/bg-banner-left-mobile.webp),
+        url(../../img/bg-banner-center.webp),
+        linear-gradient(
+          269.78deg,
+          #f9f9fb 10.18%,
+          rgba(255, 255, 255, 0) 99.74%
+        );
+        &::before{
+          background-image: url(../../img/bg-banner-right-mobile.webp);
+        }
+    }
+  }
+}
 .banner {
   color: #425674;
   position: relative;
@@ -5,10 +102,6 @@
   margin-bottom: 75px;
   min-height: 595px;
   background-color: #faf8f8;
-  background: url(../../img/bg-banner-left.png),
-    url(../../img/bg-banner-left-2.png), url(../../img/bg-banner-right.png),
-    url(../../img/bg-banner-center.png),
-    linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
   background-repeat: no-repeat;
   background-position: left -67px, left 23px, right bottom, center bottom,
     center center;
@@ -21,29 +114,19 @@
     left: 50%;
     position: absolute;
     background-repeat: no-repeat;
-    background-image: url(../../img/bg-banner-bottom.png);
   }
 
   @media (max-width: 1600px) {
-    background: url(../../img/bg-banner-left-2.png),
-      url(../../img/bg-banner-right.png), url(../../img/bg-banner-center.png),
-      linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
     background-repeat: no-repeat;
     background-position: left 23px, right bottom, center bottom, center center;
     background-size: auto, auto, auto, auto;
   }
   @media (max-width: 1200px) {
-    background: url(../../img/bg-banner-left-2.png),
-      url(../../img/bg-banner-center.png),
-      linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
     background-repeat: no-repeat;
     background-position: left 23px, center bottom, center center;
   }
   @media (max-width: 768px) {
     padding: 0;
-    background: url(../../img/bg-banner-left-mobile.png),
-      url(../../img/bg-banner-center.png),
-      linear-gradient(269.78deg, #f9f9fb 10.18%, rgba(255, 255, 255, 0) 99.74%);
     background-repeat: no-repeat;
     background-position: left top -30px, right 0px bottom 0px, center center;
     background-size: auto, 270px 190px;
@@ -54,12 +137,12 @@
       right: 0px;
       left: auto;
       background-size: contain;
-      background-image: url(../../img/bg-banner-right-mobile.png);
+      
       background-position: bottom right;
       background-size: cover;
     }
   }
-  &__wrapper{
+  &__wrapper {
     @include container;
     @media (max-width: 768px) {
       padding: 77px 15px 40px 15px;
@@ -106,17 +189,14 @@
       right: 10px;
       width: 31px;
       height: 23px;
-      background: url(../../img/icon-german-flag.png) no-repeat center/contain;
+     
     }
     @media (max-width: 575px) {
       width: 23px;
       height: 26px;
       &::before {
-        top: 0;
-        right: 10px;
         width: 23px;
         height: 15px;
-        background: url(../../img/icon-german-flag.png) no-repeat center/contain;
       }
     }
   }

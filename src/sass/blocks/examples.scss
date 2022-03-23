@@ -134,8 +134,14 @@
       left: -72px;
       top: 50%;
       transform: translateY(-50%);
-      background: url(../../img/bg-examples-button-left.png) no-repeat
+      @supports not (background-image: url(../../img/bg-examples-button-left.webp)){
+        background: url(../../img/bg-examples-button-left.png) no-repeat
         center/contain;
+      }
+      @supports (background-image: url(../../img/bg-examples-button-left.webp)){
+        background: url(../../img/bg-examples-button-left.webp) no-repeat
+        center/contain;
+      }
       z-index: -1;
     }
     &::after {
@@ -145,8 +151,15 @@
       height: 163px;
       right: -94px;
       top: -40px;
-      background: url(../../img/bg-examples-button-right.png) no-repeat
+      @supports not (background-image: url(../../img/bg-examples-button-right.webp)){
+        background: url(../../img/bg-examples-button-right.png) no-repeat
         center/contain;
+      }
+      @supports (background-image: url(../../img/bg-examples-button-right.webp)){
+        background: url(../../img/bg-examples-button-right.webp) no-repeat
+        center/contain;
+      }
+
       z-index: -1;
     }
     @media (max-width: 575px) {

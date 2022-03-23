@@ -303,7 +303,12 @@
       position: absolute;
       width: 157px;
       height: 132px;
-      background: url(../../img/bg-questions-form-left.png) no-repeat left center/cover;
+      @supports not (background-image: url(../../img/bg-questions-form-left.webp)){
+        background: url(../../img/bg-questions-form-left.png) no-repeat left center/cover;
+      }
+      @supports (background-image: url(../../img/bg-questions-form-left.webp)){
+        background: url(../../img/bg-questions-form-left.webp) no-repeat left center/cover;
+      }
       left: -65px;
       bottom: -35px;
     }
@@ -312,7 +317,14 @@
       position: absolute;
       width: 95px;
       height: 83px;
-      background: url(../../img/bg-questions-form-right.png) no-repeat center/contain;
+      @supports not (background-image: url(../../img/bg-questions-form-right.webp)){
+        background: url(../../img/bg-questions-form-right.png) no-repeat center/contain;
+
+      }
+      @supports (background-image: url(../../img/bg-questions-form-right.webp)){
+        background: url(../../img/bg-questions-form-right.webp) no-repeat center/contain;
+
+      }
       right: -40px;
       bottom: -20px;
       z-index: -1;
@@ -347,7 +359,13 @@
       position: absolute;
       width: 328px;
       height: 328px;
-      background-image: url(../../img/img-question.png);
+      @supports not (background-image: url(../../img/img-question.webp)){
+        background-image: url(../../img/img-question.png);
+      }
+      @supports (background-image: url(../../img/img-question.webp)){
+        background-image: url(../../img/img-question.webp);
+      }
+      
       background-repeat: no-repeat;
       background-size: contain;
       bottom: 0px;
