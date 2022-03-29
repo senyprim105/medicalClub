@@ -5,53 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>МЕДИКАЛ КЛАБ</title>
-
-    <!-- <link rel="stylesheet" href="./css/lib.css" />
-  <link rel="stylesheet" href="./css/style.css" /> -->
+    <link as="font" crossorigin="" href="fonts/Inter-Bold.woff2" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="fonts/Inter-Regular.woff2" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="fonts/Inter-SemiBold.woff2" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="fonts/Rouble.woff2" rel="preload" type="font/woff2">
+    <script src="./js/critical.js"></script>
   </head>
 
   <body>
-    <!-- SVG-спрайт -->
+    
     <svg class="visually-hidden">
-      <clipPath id="clip-path-sale-item" clipPathUnits="objectBoundingBox">
-        <path
-          d="M0,0.015 C0,0.007,0.01,0,0.022,0 H0.978 C0.99,0,1,0.007,1,0.015
+      <clipPath clipPathUnits="objectBoundingBox" id="clip-path-sale-item">
+        <path d="M0,0.015 C0,0.007,0.01,0,0.022,0 H0.978 C0.99,0,1,0.007,1,0.015
           V0.557 C0.972,0.567,0.952,0.587,0.952,0.61
           C0.952,0.634,0.972,0.654,1,0.663 V0.985 C1,0.993,0.99,1,0.978,1 H0.022
           C0.01,1,0,0.993,0,0.985 V0.663 C0.028,0.654,0.048,0.634,0.048,0.61
-          C0.048,0.587,0.028,0.567,0,0.557 V0.015"
-        ></path>
+          C0.048,0.587,0.028,0.567,0,0.557 V0.015"></path>
       </clipPath>
     </svg>
 
     <div style="display: none">
-      <!-- <include src="build/img/inline.svg"></include> -->
+      
     </div>
     <div class="container-fluid">
       <div class="header">
         <div class="header__wrapper">
-          <nav class="main-nav main-nav--no-js">
+          <nav class="main-nav">
             <div class="main-nav__inner">
-              <button class="main-nav__toggle">
+              <button aria-label="Кнопка меню" class="main-nav__toggle">
                 <span></span>
               </button>
               <div class="main-nav__top-block">
                 <div class="main-nav__logo-inner">
-                  <a href="#" class="main-nav__logo">
+                  <a class="main-nav__logo" href="#">
                     <picture class="main-nav__logo-image">
-                      <source srcset="./img/logo.webp" type="image/webp" />
-                      <img
-                        src="./img/logo.png"
-                        width="175"
-                        height="45"
-                        alt="Логотип: Медико"
-                      />
+                      <source srcset="./img/logo.webp" type="image/webp">
+                      <img alt="Логотип: Медико" src="./img/logo.png" height="45" width="175">
                     </picture>
                   </a>
                 </div>
                 <div class="main-nav__filials-block">
                   <h4 class="main-nav__filials-title">
-                    <a href="" class="main-nav__filials-link">Адреса</a>
+                    <a class="main-nav__filials-link" href="">Адреса</a>
                   </h4>
                   <ul class="main-nav__filials-list">
                     <li class="filial main-nav__filial">
@@ -69,41 +64,34 @@
                 <div class="main-nav__contact-block">
                   <div class="contact main-nav__contact">
                     <p class="contact__text">
-                      Есть вопросы?<a href="tel:84951268925" class="red"
-                        >Звоните!</a
-                      >
+                      Есть вопросы?<a class="red" href="tel:84951268925">Звоните!</a>
                     </p>
-                    <a href="tel:84951268925" class="contact__phone"
-                      >8 495 126-89-25</a
-                    >
+                    <a class="contact__phone" href="tel:84951268925">8 495 126-89-25</a>
                   </div>
-                  <a href="" class="button main-nav__contact-button">
-                    <span> Записаться на эпиляцию</span></a
-                  >
+                  <a class="button main-nav__contact-button" href="">
+                    <span> Записаться на эпиляцию</span></a>
                 </div>
                 <ul class="main-nav__menu main-nav__menu--no-js">
                   <li class="main-nav__item">
-                    <a href="" class="main-nav__link">НАШИ ФИЛИАЛЫ</a>
+                    <a class="main-nav__link" href="">НАШИ ФИЛИАЛЫ</a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="" class="main-nav__link">ЗОНЫ ЭПИЛЯЦИИ</a>
+                    <a class="main-nav__link" href="">ЗОНЫ ЭПИЛЯЦИИ</a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="" class="main-nav__link">НАШИ ЦЕНЫ</a>
+                    <a class="main-nav__link" href="">НАШИ ЦЕНЫ</a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="" class="main-nav__link"
-                      >О ЛАЗЕРЕ MeDioStar NeXT PRO</a
-                    >
+                    <a class="main-nav__link" href="">О ЛАЗЕРЕ MeDioStar NeXT PRO</a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="" class="main-nav__link">РЕЗУЛЬТАТЫ</a>
+                    <a class="main-nav__link" href="">РЕЗУЛЬТАТЫ</a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="" class="main-nav__link">ОТЗЫВЫ</a>
+                    <a class="main-nav__link" href="">ОТЗЫВЫ</a>
                   </li>
                   <li class="main-nav__item main-nav__item--active">
-                    <a href="" class="main-nav__link">На сайт клиники</a>
+                    <a class="main-nav__link" href="">На сайт клиники</a>
                   </li>
                 </ul>
               </div>
@@ -117,35 +105,32 @@
           <div class="banner__wrapper">
             <ul class="banner__breadcrumbs breadcrubs">
               <li class="breadcrubs__item">
-                <a href="" class="breadcrubs__link">МедикалКлаб</a>
+                <a class="breadcrubs__link" href="">МедикалКлаб</a>
               </li>
               <li class="breadcrubs__item">
-                <a href="" class="breadcrubs__link">Отделения</a>
+                <a class="breadcrubs__link" href="">Отделения</a>
               </li>
               <li class="breadcrubs__item">
-                <a href="" class="breadcrubs__link">Косметология</a>
+                <a class="breadcrubs__link" href="">Косметология</a>
               </li>
               <li class="breadcrubs__item">
-                <a href="" class="breadcrubs__link">Лазерная эпиляция</a>
+                <a class="breadcrubs__link" href="">Лазерная эпиляция</a>
               </li>
             </ul>
             <div class="banner__content">
               <h1 class="banner__title">
                 Эпиляция диодным лазером
-                <span class="banner__equipment red"
-                  >MeDioStar NeXT PRO
+                <span class="red banner__equipment">MeDioStar NeXT PRO
                   <span class="banner__equipment-flag"></span>
                 </span>
               </h1>
-              <p class="baner__sub-title">
+              <p class="banner__sub-title">
                 Избавим от волос надолго на самом современном оборудовании!
               </p>
               <div class="banner__price">
-                <p class="banner__price-title red">Стоимость сеанса:</p>
-                <span class="banner__price-text"
-                  >от
-                  <span class="banner__price-text--money"
-                    >1 200
+                <p class="red banner__price-title">Стоимость сеанса:</p>
+                <span class="banner__price-text">от
+                  <span class="banner__price-text--money">1 200
                     <span class="rouble banner__price-text--rouble">е</span>
                   </span>
                 </span>
@@ -153,7 +138,7 @@
               <div class="banner__text">
                 Запишись к нам сегодня и получи скидку!
               </div>
-              <a href="" class="button banner__button">
+              <a class="button banner__button" href="">
                 <span> Получить скидку! </span>
               </a>
             </div>
@@ -161,14 +146,10 @@
               <li class="banner__block-list-item banner__block-list-item--time">
                 Длительность сеанса:<span>5-10 минут</span>
               </li>
-              <li
-                class="banner__block-list-item banner__block-list-item--course"
-              >
+              <li class="banner__block-list-item banner__block-list-item--course">
                 Курс процедур:<span>6-8 / за 6 месяцев</span>
               </li>
-              <li
-                class="banner__block-list-item banner__block-list-item--weekend"
-              >
+              <li class="banner__block-list-item banner__block-list-item--weekend">
                 Работаем<span>без выходных</span>
               </li>
             </ul>
@@ -193,30 +174,30 @@
             <h3 class="epilation__title-about">
               ЧТО ТАКОЕ АППАРАТНАЯ ЭПИЛЯЦИЯ
             </h3>
-            <div class="epilation__flash red">
+            <div class="red epilation__flash">
               ВСПЫШКА АППАРАТА MeDioStar NeXT PRO
             </div>
             <div class="epilation__images-container">
               <ul class="epilation__images">
                 <li class="epilation__item">
                   <picture>
-                    <source srcset="./img/img-epic-1.webp" type="image/webp" />
-                    <img src="./img/img-epic-1.png" alt="" />
+                    <source srcset="./img/img-epic-1.webp" type="image/webp">
+                    <img alt="" src="./img/img-epic-1.png" loading="lazy">
                   </picture>
                   Вспышка света с определенной длиной волны на фолликул волоса
                 </li>
                 <li class="epilation__item">
                   <picture>
-                    <source srcset="./img/img-epic-2.webp" type="image/webp" />
-                    <img src="./img/img-epic-2.png" alt="" />
+                    <source srcset="./img/img-epic-2.webp" type="image/webp">
+                    <img alt="" src="./img/img-epic-2.png" loading="lazy">
                   </picture>
                   Меланин (кожный пигмент) поглощает красный свет диодного
                   лазере MeDioStar NeXT PRO и нагревается
                 </li>
                 <li class="epilation__item">
                   <picture>
-                    <source srcset="./img/img-epic-3.webp" type="image/webp" />
-                    <img src="./img/img-epic-3.png" alt="" />
+                    <source srcset="./img/img-epic-3.webp" type="image/webp">
+                    <img alt="" src="./img/img-epic-3.png" loading="lazy">
                   </picture>
                   Фолликулы волос в активной стадии роста сгорают изнутри,
                   прекращают рост и выпадают через 2 недели
@@ -280,14 +261,10 @@
                 </li>
               </ul>
               <div class="benefits__controls">
-                <span
-                  class="round-button round-button--left benefits__button--prev benefits__button"
-                >
+                <span class="round-button round-button--left benefits__button benefits__button--prev">
                   <span class="round-button__content"></span>
                 </span>
-                <span
-                  class="round-button round-button--right benefits__button--next benefits__button"
-                >
+                <span class="round-button round-button--right benefits__button benefits__button--next">
                   <span class="round-button__content"></span>
                 </span>
               </div>
@@ -298,85 +275,62 @@
         <section class="zones">
           <div class="zones__container">
             <h3 class="zones__title">Зоны диодной лазерной эпиляции</h3>
-            <div class="zones__slider slider">
+            <div class="slider zones__slider">
               <div class="zones__images-wrapper">
                 <ul class="zones__images">
                   <li class="zones__item">
                     <div class="zones__text">Лицо</div>
                     <picture>
-                      <source
-                        srcset="./img/img-zone-1.webp"
-                        type="image/webp"
-                      />
-                      <img src="./img/img-zone-1.png" alt="" />
+                      <source srcset="./img/img-zone-1.webp" type="image/webp">
+                      <img alt="" src="./img/img-zone-1.png" loading="lazy">
                     </picture>
                   </li>
                   <li class="zones__item">
                     <div class="zones__text">Живот</div>
                     <picture>
-                      <source
-                        srcset="./img/img-zone-2.webp"
-                        type="image/webp"
-                      />
-                      <img src="./img/img-zone-2.png" alt="" />
+                      <source srcset="./img/img-zone-2.webp" type="image/webp">
+                      <img alt="" src="./img/img-zone-2.png" loading="lazy">
                     </picture>
                   </li>
                   <li class="zones__item">
                     <div class="zones__text">Подмышечные впадины</div>
                     <picture>
-                      <source
-                        srcset="./img/img-zone-3.webp"
-                        type="image/webp"
-                      />
-                      <img src="./img/img-zone-3.png" alt="" />
+                      <source srcset="./img/img-zone-3.webp" type="image/webp">
+                      <img alt="" src="./img/img-zone-3.png" loading="lazy">
                     </picture>
                   </li>
                   <li class="zones__item">
                     <div class="zones__text">Спина</div>
                     <picture>
-                      <source
-                        srcset="./img/img-zone-4.webp"
-                        type="image/webp"
-                      />
-                      <img src="./img/img-zone-4.png" alt="" />
+                      <source srcset="./img/img-zone-4.webp" type="image/webp">
+                      <img alt="" src="./img/img-zone-4.png" loading="lazy">
                     </picture>
                   </li>
                   <li class="zones__item">
                     <div class="zones__text">Бикини</div>
                     <picture>
-                      <source
-                        srcset="./img/img-zone-5.webp"
-                        type="image/webp"
-                      />
-                      <img src="./img/img-zone-5.png" alt="" />
+                      <source srcset="./img/img-zone-5.webp" type="image/webp">
+                      <img alt="" src="./img/img-zone-5.png" loading="lazy">
                     </picture>
                   </li>
                   <li class="zones__item">
                     <div class="zones__text">Грудь</div>
                     <picture>
-                      <source
-                        srcset="./img/img-zone-6.webp"
-                        type="image/webp"
-                      />
-                      <img src="./img/img-zone-6.png" alt="" />
+                      <source srcset="./img/img-zone-6.webp" type="image/webp">
+                      <img alt="" src="./img/img-zone-6.png" loading="lazy">
                     </picture>
                   </li>
                   <li class="zones__item">
                     <div class="zones__text">Ноги</div>
                     <picture>
-                      <source
-                        srcset="./img/img-zone-7.webp"
-                        type="image/webp"
-                      />
-                      <img src="./img/img-zone-7.png" alt="" />
+                      <source srcset="./img/img-zone-7.webp" type="image/webp">
+                      <img alt="" src="./img/img-zone-7.png" loading="lazy">
                     </picture>
                   </li>
                 </ul>
               </div>
               <div class="slider__controls zones__slider-controls">
-                <div
-                  class="round-button round-button--left round-button--small zones__slider-prev"
-                >
+                <div class="round-button round-button--left round-button--small zones__slider-prev">
                   <span class="round-button__content"></span>
                 </div>
                 <div class="zones__slider-pagination">
@@ -384,9 +338,7 @@
                   /
                   <span class="zones__slider-pagination--total"></span>
                 </div>
-                <div
-                  class="round-button round-button--right round-button--small zones__slider-next"
-                >
+                <div class="round-button round-button--right round-button--small zones__slider-next">
                   <span class="round-button__content"></span>
                 </div>
               </div>
@@ -407,19 +359,9 @@
               и безболезненность процесса.
             </div>
             <div class="for-whom__block">
-              <div class="for-whom__indication accordion">
-                <input
-                  class="accordion__input for-whom__indication-input"
-                  id="indication"
-                  type="radio"
-                  name="indication"
-                  checked
-                />
-                <label
-                  class="accordion__label for-whom__indication-label"
-                  for="indication"
-                  >Показания:</label
-                >
+              <div class="accordion for-whom__indication">
+                <input class="accordion__input for-whom__indication-input" name="indication" type="radio" id="indication" checked="">
+                <label class="accordion__label for-whom__indication-label" for="indication">Показания:</label>
                 <div class="accordion__content for-whom__indication-wrapper">
                   <ul class="for-whom__indication-list">
                     <li class="for-whom__indication-item">Длительном кашле</li>
@@ -434,20 +376,9 @@
                   </ul>
                 </div>
               </div>
-              <div
-                class="for-whom__indication for-whom__indication--contra accordion"
-              >
-                <input
-                  class="accordion__input for-whom__indication-input"
-                  id="un-indication"
-                  type="radio"
-                  name="indication"
-                />
-                <label
-                  class="accordion__label for-whom__indication-label"
-                  for="un-indication"
-                  >Противопоказания:</label
-                >
+              <div class="accordion for-whom__indication for-whom__indication--contra">
+                <input class="accordion__input for-whom__indication-input" name="indication" type="radio" id="un-indication">
+                <label class="accordion__label for-whom__indication-label" for="un-indication">Противопоказания:</label>
                 <div class="accordion__content for-whom__indication-wrapper">
                   <ul class="for-whom__indication-list">
                     <li class="for-whom__indication-item">
@@ -477,7 +408,7 @@
               <div class="prices__filials">
                 <p class="prices__notice">
                   Цены отличаются в зависимости от филиала, пожалуйста, выберите
-                  нужный<br />
+                  нужный<br>
                   Вам филиал:
                 </p>
                 <select class="prices__select">
@@ -496,20 +427,14 @@
                 </select>
               </div>
               <div class="prices__list">
-                <div class="prices__item--header prices__item">
-                  <div
-                    class="prices__data prices__data--name prices__data--name-header"
-                  >
+                <div class="prices__item prices__item--header">
+                  <div class="prices__data prices__data--name prices__data--name-header">
                     <span>Лазерная эпиляция</span>
                   </div>
-                  <div
-                    class="prices__data prices__data--women prices__data--women-header"
-                  >
+                  <div class="prices__data prices__data--women prices__data--women-header">
                     <span>Для женщин</span>
                   </div>
-                  <div
-                    class="prices__data prices__data--men prices__data--men-header"
-                  >
+                  <div class="prices__data prices__data--men prices__data--men-header">
                     <span>Для мужчин</span>
                   </div>
                 </div>
@@ -584,9 +509,7 @@
                   Узнать подробности и записаться на лазерную эпиляцию вы можете
                   по телефону
                 </p>
-                <a href="tel:+74956600303" class="prices__footer-contact"
-                  ><span>8 495 660-03-03</span></a
-                >
+                <a class="prices__footer-contact" href="tel:+74956600303"><span>8 495 660-03-03</span></a>
               </div>
             </div>
           </div>
@@ -622,10 +545,8 @@
                   эстетической медицины.
                 </li>
                 <li class="equipment__list-item">
-                  <span
-                    >MeDioStar NeXT PRO - это диодный лазер с двумя длинами волн
-                    - 810 нм + 940 нм</span
-                  >- которые работают одновременно.
+                  <span>MeDioStar NeXT PRO - это диодный лазер с двумя длинами волн
+                    - 810 нм + 940 нм</span>- которые работают одновременно.
                 </li>
                 <li class="equipment__list-item">
                   <span>Основная длина волны - 810 нм</span> - клинически
@@ -637,16 +558,12 @@
                 </li>
               </ul>
               <div class="equipment__play-button">
-                <a href="#" class="equipment__play-button-link">
-                  <img
-                    src="./img/icon-play-button.svg"
-                    alt=""
-                    class="equipment__play-button-img"
-                  />
+                <a class="equipment__play-button-link" href="#">
+                  <img alt="" src="./img/icon-play-button.svg" loading="lazy" class="equipment__play-button-img">
                 </a>
               </div>
               <div class="equipment__button">
-                <a href="#" class="equipment__button-wrapper button">
+                <a class="button equipment__button-wrapper" href="#">
                   <span>записаться на эпиляцию</span>
                 </a>
               </div>
@@ -662,68 +579,60 @@
             <div class="effect__slider">
               <ul class="effect__list">
                 <li class="effect__list-item effect__list-item--left">
-                  <span class="effect__list-item-check check"></span>
+                  <span class="check effect__list-item-check"></span>
                   <span class="effect__list-item-text">
                     Гладкая кожа без раздражения
                   </span>
                 </li>
                 <li class="effect__list-item effect__list-item--right">
-                  <span
-                    class="effect__list-item-check effect__list-item-check--right check"
-                  ></span>
+                  <span class="check effect__list-item-check effect__list-item-check--right"></span>
                   <span class="effect__list-item-text">
                     Больше никаких вросших волос
                   </span>
                 </li>
                 <li class="effect__list-item effect__list-item--left">
-                  <span class="effect__list-item-check check check--red"></span>
+                  <span class="check effect__list-item-check check--red"></span>
                   <span class="effect__list-item-text">
                     Максимально длительный эффект на 3-5 лет
                   </span>
                 </li>
                 <li class="effect__list-item effect__list-item--right">
-                  <span
-                    class="effect__list-item-check effect__list-item-check--right check check--red"
-                  ></span>
+                  <span class="check effect__list-item-check check--red effect__list-item-check--right"></span>
                   <span class="effect__list-item-text">
                     Ante egestas ac adipiscing facilisi.
                   </span>
                 </li>
 
                 <li class="effect__list-item effect__list-item--left">
-                  <span class="effect__list-item-check check"></span>
+                  <span class="check effect__list-item-check"></span>
                   <span class="effect__list-item-text">
                     Уход без использования бритвы!
                   </span>
                 </li>
 
                 <li class="effect__list-item effect__list-item--right">
-                  <span
-                    class="effect__list-item-check effect__list-item-check--right check"
-                  ></span>
+                  <span class="check effect__list-item-check effect__list-item-check--right"></span>
                   <span class="effect__list-item-text">
                     Ante egestas ac adipiscing facilisi.
                   </span>
                 </li>
                 <li class="effect__list-item effect__list-item--left">
-                  <span class="effect__list-item-check check check--red"></span>
+                  <span class="check effect__list-item-check check--red"></span>
                   <span class="effect__list-item-text">
                     Кожа мягкая и бархатистая
                   </span>
                 </li>
                 <li class="effect__list-item effect__list-item--right">
-                  <span
-                    class="effect__list-item-check effect__list-item-check--right check check--red"
-                  ></span>
+                  <span class="check effect__list-item-check check--red effect__list-item-check--right"></span>
                   <span class="effect__list-item-text">
                     Ante egestas ac adipiscing facilisi.
                   </span>
                 </li>
               </ul>
               <div class="slider__controls effect__slider-controls">
-                <div class="slider__prev effect__slider-prev"></div>
+                <div class="effect__slider-prev slider__prev"></div>
                 <div class="effect__slider-scrollbar"></div>
-                <div class="slider__next effect__slider-next"></div>
+                <div class="effect__slider-next slider__next"></div>
               </div>
             </div>
           </div>
@@ -733,79 +642,45 @@
           <div class="examples__wrapper">
             <h3 class="examples__title">Примеры наших работ</h3>
             <div class="examples__content">
-              <div class="examples__slider slider swiper-container">
-                <div class="examples__slider-list swiper-wrapper">
-                  <div class="examples__slider-item slider__item swiper-slide">
+              <div class="slider examples__slider swiper-container">
+                <div class="swiper-wrapper examples__slider-list">
+                  <div class="slider__item examples__slider-item swiper-slide">
                     <picture>
-                      <source
-                        srcset="./img/img-examples-slider-1.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="./img/img-examples-slider-1.jpg"
-                        alt=""
-                        class="slider__img"
-                      />
+                      <source srcset="./img/img-examples-slider-1.webp" type="image/webp">
+                      <img alt="" src="./img/img-examples-slider-1.jpg" loading="lazy" class="slider__img">
                     </picture>
                   </div>
-                  <div class="examples__slider-item slider__item swiper-slide">
+                  <div class="slider__item examples__slider-item swiper-slide">
                     <picture>
-                      <source
-                        srcset="./img/img-examples-slider-1.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="./img/img-examples-slider-1.jpg"
-                        alt=""
-                        class="slider__img"
-                      />
+                      <source srcset="./img/img-examples-slider-1.webp" type="image/webp">
+                      <img alt="" src="./img/img-examples-slider-1.jpg" loading="lazy" class="slider__img">
                     </picture>
                   </div>
-                  <div class="examples__slider-item slider__item swiper-slide">
+                  <div class="slider__item examples__slider-item swiper-slide">
                     <picture>
-                      <source
-                        srcset="./img/img-examples-slider-1.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="./img/img-examples-slider-1.jpg"
-                        alt=""
-                        class="slider__img"
-                      />
+                      <source srcset="./img/img-examples-slider-1.webp" type="image/webp">
+                      <img alt="" src="./img/img-examples-slider-1.jpg" loading="lazy" class="slider__img">
                     </picture>
                   </div>
-                  <div class="examples__slider-item slider__item swiper-slide">
+                  <div class="slider__item examples__slider-item swiper-slide">
                     <picture>
-                      <source
-                        srcset="./img/img-examples-slider-1.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="./img/img-examples-slider-1.jpg"
-                        alt=""
-                        class="slider__img"
-                      />
+                      <source srcset="./img/img-examples-slider-1.webp" type="image/webp">
+                      <img alt="" src="./img/img-examples-slider-1.jpg" loading="lazy" class="slider__img">
                     </picture>
                   </div>
                 </div>
               </div>
               <div class="slider__controls examples__slider-controls">
-                <button
-                  class="examples__slider-button examples__slider-button--prev round-button round-button--left"
-                >
+                <button aria-label="Показать/Скрыть меню" class="round-button round-button--left examples__slider-button examples__slider-button--prev">
                   <span class="round-button__content"></span>
                 </button>
-                <div
-                  class="examples__slider-button--next examples__slider-button round-button round-button--right"
-                >
+                <div class="round-button round-button--right examples__slider-button examples__slider-button--next">
                   <span class="round-button__content"></span>
                 </div>
                 <div class="examples__slider-pagination"></div>
               </div>
             </div>
-            <a href="" class="button examples__button"
-              >Записаться на эпиляцию</a
-            >
+            <a class="button examples__button" href="">Записаться на эпиляцию</a>
           </div>
         </section>
 
@@ -818,33 +693,25 @@
             </h3>
             <div class="choice__slider">
               <ul class="choice__slider-wrapper">
-                <li
-                  class="slider__item choice__slider-item choice__slider-item--heart"
-                >
+                <li class="slider__item choice__slider-item choice__slider-item--heart">
                   <div class="choice__slider-item-text">
                     Официальный медицинский центр
                     <span class="red">Работаем более 20 лет</span>
                   </div>
                 </li>
-                <li
-                  class="slider__item choice__slider-item choice__slider-item--time"
-                >
+                <li class="slider__item choice__slider-item choice__slider-item--time">
                   <div class="choice__slider-item-text">
                     <span class="red">Комфортные условия</span> у нас нет
                     очередей
                   </div>
                 </li>
-                <li
-                  class="slider__item choice__slider-item choice__slider-item--education"
-                >
+                <li class="slider__item choice__slider-item choice__slider-item--education">
                   <div class="choice__slider-item-text">
                     Все спецалисты
                     <span class="red"> с медицинским образованием</span>
                   </div>
                 </li>
-                <li
-                  class="slider__item choice__slider-item choice__slider-item--award"
-                >
+                <li class="slider__item choice__slider-item choice__slider-item--award">
                   <div class="choice__slider-item-text">
                     <span class="red">Сертифицированное оборудование</span> с
                     регистрацией в РФ
@@ -868,18 +735,8 @@
               </h3>
               <ol class="accordion questions__list">
                 <li class="accordion__item questions__item">
-                  <input
-                    class="accordion__input questions__checked"
-                    id="accordion1"
-                    type="radio"
-                    name="number"
-                    checked
-                  />
-                  <label
-                    class="accordion__title questions__item-title"
-                    for="accordion1"
-                    >Какой у вас аппарат?</label
-                  >
+                  <input class="accordion__input questions__checked" name="number" type="radio" id="accordion1" checked="">
+                  <label class="accordion__title questions__item-title" for="accordion1">Какой у вас аппарат?</label>
                   <div class="accordion__content">
                     <p class="questions__item-content">
                       Диодная лазерная эпиляция, которую мы используем в салонах
@@ -893,17 +750,8 @@
                   </div>
                 </li>
                 <li class="accordion__item questions__item">
-                  <input
-                    class="accordion__input questions__checked"
-                    id="accordion2"
-                    type="radio"
-                    name="number"
-                  />
-                  <label
-                    class="accordion__title questions__item-title"
-                    for="accordion2"
-                    >В чем преимущества диодной лазерной эпиляции?</label
-                  >
+                  <input class="accordion__input questions__checked" name="number" type="radio" id="accordion2">
+                  <label class="accordion__title questions__item-title" for="accordion2">В чем преимущества диодной лазерной эпиляции?</label>
                   <div class="accordion__content">
                     <p class="questions__item-content">
                       Диодная лазерная эпиляция, которую мы используем в салонах
@@ -917,17 +765,8 @@
                   </div>
                 </li>
                 <li class="accordion__item questions__item">
-                  <input
-                    class="accordion__input questions__checked"
-                    id="accordion3"
-                    type="radio"
-                    name="number"
-                  />
-                  <label
-                    class="accordion__title questions__item-title"
-                    for="accordion3"
-                    >В чем преимущества диодной лазерной эпиляции?</label
-                  >
+                  <input class="accordion__input questions__checked" name="number" type="radio" id="accordion3">
+                  <label class="accordion__title questions__item-title" for="accordion3">В чем преимущества диодной лазерной эпиляции?</label>
                   <div class="accordion__content">
                     <p class="questions__item-content">
                       Диодная лазерная эпиляция, которую мы используем в салонах
@@ -944,70 +783,38 @@
             </div>
             <div class="questions__license">
               <h3 class="questions__license-title">Наши лицензии</h3>
-              <div class="questions__license-slider slider">
-                <div class="questions__license-wrapper swiper-wrapper">
+              <div class="slider questions__license-slider">
+                <div class="swiper-wrapper questions__license-wrapper">
                   <div class="questions__license-item">
                     <picture>
-                      <source
-                        srcset="./img/img-license-1.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="./img/img-license-1.jpg"
-                        alt=""
-                        class="license__image"
-                      />
+                      <source srcset="./img/img-license-1.webp" type="image/webp">
+                      <img alt="" src="./img/img-license-1.jpg" loading="lazy" class="license__image">
                     </picture>
                   </div>
                   <div class="questions__license-item">
                     <picture>
-                      <source
-                        srcset="./img/img-license-1.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="./img/img-license-1.jpg"
-                        alt=""
-                        class="license__image"
-                      />
+                      <source srcset="./img/img-license-1.webp" type="image/webp">
+                      <img alt="" src="./img/img-license-1.jpg" loading="lazy" class="license__image">
                     </picture>
                   </div>
                   <div class="questions__license-item">
                     <picture>
-                      <source
-                        srcset="./img/img-license-1.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="./img/img-license-1.jpg"
-                        alt=""
-                        class="license__image"
-                      />
+                      <source srcset="./img/img-license-1.webp" type="image/webp">
+                      <img alt="" src="./img/img-license-1.jpg" loading="lazy" class="license__image">
                     </picture>
                   </div>
                   <div class="questions__license-item">
                     <picture>
-                      <source
-                        srcset="./img/img-license-1.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="./img/img-license-1.jpg"
-                        alt=""
-                        class="license__image"
-                      />
+                      <source srcset="./img/img-license-1.webp" type="image/webp">
+                      <img alt="" src="./img/img-license-1.jpg" loading="lazy" class="license__image">
                     </picture>
                   </div>
                 </div>
                 <div class="questions__license-controls">
-                  <div
-                    class="questions__license-button questions__license-button--prev round-button round-button--left"
-                  >
+                  <div class="round-button round-button--left questions__license-button questions__license-button--prev">
                     <span class="round-button__content"></span>
                   </div>
-                  <div
-                    class="questions__license-button questions__license-button--next round-button round-button--right"
-                  >
+                  <div class="round-button round-button--right questions__license-button questions__license-button--next">
                     <span class="round-button__content"></span>
                   </div>
                   <div class="questions__license-pagination"></div>
@@ -1025,54 +832,25 @@
                     </div>
                   </div>
                 </div>
-                <form action="post" class="questions__form-block">
+                <form class="questions__form-block" action="post">
                   <div class="questions__form-block-wrapper">
                     <h3 class="questions__form-title">
                       Задайте вопрос квалифицированному специалисту
                     </h3>
-                    <input
-                      type="text"
-                      class="questions__form-input colorfull-input__element"
-                      placeholder="Ваш вопрос"
-                      name="question"
-                    />
+                    <input class="colorfull-input__element questions__form-input" name="question" type="text" placeholder="Ваш вопрос">
                     <div class="colorfull-input questions__input-block">
-                      <input
-                        type="tel"
-                        id="questions__form-input--phone"
-                        class="questions__form-input questions__form-input--phone colorfull-input__element"
-                        name="phone"
-                        required
-                      />
-                      <span
-                        class="colorfull-input__placeholder questions__form-input-placeholder"
-                      >
-                        +7(___) ---_--_--<span
-                          class="colorfull-input__placeholder-red"
-                          >*</span
-                        >
-                      </span>
+                      <input class="colorfull-input__element questions__form-input questions__form-input--phone" name="phone" type="tel" id="questions__form-input--phone" required="">
+                      <label class="colorfull-input__placeholder questions__form-input-placeholder" for="questions__form-input--phone">
+                        +7(___) ---_--_--<span class="colorfull-input__placeholder-red">*</span>
+                      </label>
                     </div>
-                    <button class="questions__form-submit button" type="submit">
+                    <button aria-label="Задать вопрос" class="button questions__form-submit" type="submit">
                       Задать вопрос
                     </button>
-                    <div class="questions__form-checkbox checkbox">
-                      <input
-                        class="checkbox__input"
-                        type="checkbox"
-                        checked
-                        name="agree"
-                        id="questions-form-checkbox-input"
-                      />
-                      <label
-                        for="questions-form-checkbox-input"
-                        class="checkbox__label questions__form-checkbox-label"
-                        ><span
-                          >Даю согласие на обработку своих персональных данных (
-                          <a class="checkbox__label--link" href="#"
-                            >Политика конфиденциальности</a
-                          >)</span
-                        >
+                    <div class="checkbox questions__form-checkbox">
+                      <input class="checkbox__input" name="agree" type="checkbox" id="questions-form-checkbox-input" checked="">
+                      <label class="checkbox__label questions__form-checkbox-label" for="questions-form-checkbox-input"><span>Даю согласие на обработку своих персональных данных (
+                          <a class="checkbox__label--link" href="#">Политика конфиденциальности</a>)</span>
                       </label>
                     </div>
                   </div>
@@ -1086,8 +864,8 @@
           <div class="reviews__wrapper">
             <h3 class="reviews__title">Отзывы наших клиентов</h3>
             <div class="reviews__slider">
-              <div class="reviews__slider-wrapper swiper-wrapper">
-                <div class="reviews__slider-item review">
+              <div class="swiper-wrapper reviews__slider-wrapper">
+                <div class="review reviews__slider-item">
                   <div class="review__wrapper reviews__slider-item-wrapper">
                     <div class="review__name">Анна</div>
                     <div class="review__data">03/09/2020</div>
@@ -1107,11 +885,11 @@
                     </div>
                     <div class="review__source">
                       источник:
-                      <a href="" class="review__link">prodoctorov.ru</a>
+                      <a class="review__link" href="">prodoctorov.ru</a>
                     </div>
                   </div>
                 </div>
-                <div class="reviews__slider-item review">
+                <div class="review reviews__slider-item">
                   <div class="review__wrapper reviews__slider-item-wrapper">
                     <div class="review__name">Анна</div>
                     <div class="review__data">03/09/2020</div>
@@ -1131,11 +909,11 @@
                     </div>
                     <div class="review__source">
                       источник:
-                      <a href="" class="review__link">prodoctorov.ru</a>
+                      <a class="review__link" href="">prodoctorov.ru</a>
                     </div>
                   </div>
                 </div>
-                <div class="reviews__slider-item review">
+                <div class="review reviews__slider-item">
                   <div class="review__wrapper reviews__slider-item-wrapper">
                     <div class="review__name">Анна</div>
                     <div class="review__data">03/09/2020</div>
@@ -1155,11 +933,11 @@
                     </div>
                     <div class="review__source">
                       источник:
-                      <a href="" class="review__link">prodoctorov.ru</a>
+                      <a class="review__link" href="">prodoctorov.ru</a>
                     </div>
                   </div>
                 </div>
-                <div class="reviews__slider-item review">
+                <div class="review reviews__slider-item">
                   <div class="review__wrapper reviews__slider-item-wrapper">
                     <div class="review__name">Анна</div>
                     <div class="review__data">03/09/2020</div>
@@ -1179,20 +957,16 @@
                     </div>
                     <div class="review__source">
                       источник:
-                      <a href="" class="review__link">prodoctorov.ru</a>
+                      <a class="review__link" href="">prodoctorov.ru</a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="reviews__slider-controls">
-                <div
-                  class="reviews__slider-button reviews__slider-button--prev round-button round-button--left"
-                >
+                <div class="round-button round-button--left reviews__slider-button reviews__slider-button--prev">
                   <span class="round-button__content"></span>
                 </div>
-                <div
-                  class="reviews__slider-button reviews__slider-button--next round-button round-button--right"
-                >
+                <div class="round-button round-button--right reviews__slider-button reviews__slider-button--next">
                   <span class="round-button__content"></span>
                 </div>
               </div>
@@ -1204,155 +978,115 @@
           <div class="sale__wrapper">
             <h3 class="sale__title">АКЦИИ и скидки</h3>
             <h4 class="sale__slider-title">Выгодные предложения</h4>
-            <a href="" class="sale__slider-all-links">Смотреть все цены</a>
+            <a class="sale__slider-all-links" href="">Смотреть все цены</a>
 
             <div class="sale__slider-block">
               <div class="sale__slider">
                 <div class="swiper-wrapper">
-                  <div class="sale__slider-item sale-item">
+                  <div class="sale-item sale__slider-item">
                     <div class="sale-item__shadow">
                       <div class="sale-item__wrapper">
                         <div class="sale-item__top-block">
                           <h5 class="sale-item__title">«Супер Лето»</h5>
                           <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                          <span
-                            class="sale-item__condition sale-item__condition--big"
-                            >Подмышки</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
                           <span class="sale-item__condition-plus">+</span>
-                          <span
-                            class="sale-item__condition sale-item__condition--small"
-                            >Бикини</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--small">Бикини</span>
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
                             2 999
                             <span class="rouble sale-item__currency">:</span>
                           </div>
-                          <button
-                            class="sale-item__button button button--small"
-                          >
+                          <button aria-label="Записаться" class="button button--small sale-item__button">
                             <span>Записаться</span>
                           </button>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="sale__slider-item sale-item">
+                  <div class="sale-item sale__slider-item">
                     <div class="sale-item__shadow">
                       <div class="sale-item__wrapper">
                         <div class="sale-item__top-block">
                           <h5 class="sale-item__title">«Супер Лето»</h5>
                           <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                          <span
-                            class="sale-item__condition sale-item__condition--big"
-                            >Подмышки</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
                           <span class="sale-item__condition-plus">+</span>
-                          <span
-                            class="sale-item__condition sale-item__condition--small"
-                            >Бикини</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--small">Бикини</span>
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
                             2 990
                             <span class="rouble sale-item__currency">:</span>
                           </div>
-                          <button
-                            class="sale-item__button button button--small"
-                          >
+                          <button aria-label="Записаться" class="button button--small sale-item__button">
                             <span>Записаться</span>
                           </button>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="sale__slider-item sale-item">
+                  <div class="sale-item sale__slider-item">
                     <div class="sale-item__shadow">
                       <div class="sale-item__wrapper">
                         <div class="sale-item__top-block">
                           <h5 class="sale-item__title">«Супер Лето»</h5>
                           <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                          <span
-                            class="sale-item__condition sale-item__condition--big"
-                            >Подмышки</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
                           <span class="sale-item__condition-plus">+</span>
-                          <span
-                            class="sale-item__condition sale-item__condition--small"
-                            >Бикини</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--small">Бикини</span>
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
                             2 990
                             <span class="rouble sale-item__currency">:</span>
                           </div>
-                          <button
-                            class="sale-item__button button button--small"
-                          >
+                          <button aria-label="Записаться" class="button button--small sale-item__button">
                             <span>Записаться</span>
                           </button>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="sale__slider-item sale-item">
+                  <div class="sale-item sale__slider-item">
                     <div class="sale-item__shadow">
                       <div class="sale-item__wrapper">
                         <div class="sale-item__top-block">
                           <h5 class="sale-item__title">«Супер Лето»</h5>
                           <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                          <span
-                            class="sale-item__condition sale-item__condition--big"
-                            >Подмышки</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
                           <span class="sale-item__condition-plus">+</span>
-                          <span
-                            class="sale-item__condition sale-item__condition--small"
-                            >Бикини</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--small">Бикини</span>
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
                             2 990
                             <span class="rouble sale-item__currency">:</span>
                           </div>
-                          <button
-                            class="sale-item__button button button--small"
-                          >
+                          <button aria-label="Записаться" class="button button--small sale-item__button">
                             <span>Записаться</span>
                           </button>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="sale__slider-item sale-item">
+                  <div class="sale-item sale__slider-item">
                     <div class="sale-item__shadow">
                       <div class="sale-item__wrapper">
                         <div class="sale-item__top-block">
                           <h5 class="sale-item__title">«Супер Лето»</h5>
                           <div class="sale-item__subtitle">КОМПЛЕКС</div>
-                          <span
-                            class="sale-item__condition sale-item__condition--big"
-                            >Подмышки</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--big">Подмышки</span>
                           <span class="sale-item__condition-plus">+</span>
-                          <span
-                            class="sale-item__condition sale-item__condition--small"
-                            >Бикини</span
-                          >
+                          <span class="sale-item__condition sale-item__condition--small">Бикини</span>
                         </div>
                         <div class="sale-item__bottom-block">
                           <div class="sale-item__price">
                             2 990
                             <span class="rouble sale-item__currency">:</span>
                           </div>
-                          <button
-                            class="sale-item__button button button--small"
-                          >
+                          <button aria-label="Записаться" class="button button--small sale-item__button">
                             <span>Записаться</span>
                           </button>
                         </div>
@@ -1362,14 +1096,10 @@
                 </div>
               </div>
               <div class="sale__slider-controls">
-                <button
-                  class="sale__slider-button sale__slider-button--next round-button round-button--right"
-                >
+                <button aria-label="Следующий слайд" class="round-button round-button--right sale__slider-button sale__slider-button--next">
                   <span class="round-button__content"></span>
                 </button>
-                <button
-                  class="sale__slider-button sale__slider-button--prev round-button round-button--left"
-                >
+                <button aria-label="Предыдущий слайд" class="round-button round-button--left sale__slider-button sale__slider-button--prev">
                   <span class="round-button__content"></span>
                 </button>
               </div>
@@ -1387,15 +1117,8 @@
                     <div class="worker__wrapper">
                       <div class="worker__image-block">
                         <picture>
-                          <source
-                            srcset="./img/img-worker-1.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="./img/img-worker-1.png"
-                            alt=""
-                            class="worker__image"
-                          />
+                          <source srcset="./img/img-worker-1.webp" type="image/webp">
+                          <img alt="" src="./img/img-worker-1.png" loading="lazy" class="worker__image">
                         </picture>
                       </div>
                       <div class="worker__data-block">
@@ -1405,14 +1128,14 @@
                           <div class="worker__experience">
                             Опыт работы - 7 лет
                           </div>
-                          <div class="worker__filial filial filial--active">
+                          <div class="filial filial--active worker__filial">
                             <div class="filial__name">Домодедовская</div>
                             <div class="filial__address">
                               пос. Володарского, ул. Центральная, д. 30А
                             </div>
                           </div>
                         </div>
-                        <button class="button worker__button">
+                        <button aria-label="Информация о враче" class="button worker__button">
                           Подробнее о враче
                         </button>
                       </div>
@@ -1424,15 +1147,8 @@
                     <div class="worker__wrapper">
                       <div class="worker__image-block">
                         <picture>
-                          <source
-                            srcset="./img/img-worker-2.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="./img/img-worker-2.png"
-                            alt=""
-                            class="worker__image"
-                          />
+                          <source srcset="./img/img-worker-2.webp" type="image/webp">
+                          <img alt="" src="./img/img-worker-2.png" loading="lazy" class="worker__image">
                         </picture>
                       </div>
                       <div class="worker__data-block">
@@ -1442,14 +1158,14 @@
                           <div class="worker__experience">
                             Опыт работы - 7 лет
                           </div>
-                          <div class="worker__filial filial filial--active">
+                          <div class="filial filial--active worker__filial">
                             <div class="filial__name">Жулебино</div>
                             <div class="filial__address">
                               Жулебинский бульвар 25
                             </div>
                           </div>
                         </div>
-                        <button class="button worker__button">
+                        <button aria-label="Информация о враче" class="button worker__button">
                           Подробнее о враче
                         </button>
                       </div>
@@ -1462,15 +1178,8 @@
                     <div class="worker__wrapper">
                       <div class="worker__image-block">
                         <picture>
-                          <source
-                            srcset="./img/img-worker-1.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="./img/img-worker-1.png"
-                            alt=""
-                            class="worker__image"
-                          />
+                          <source srcset="./img/img-worker-1.webp" type="image/webp">
+                          <img alt="" src="./img/img-worker-1.png" loading="lazy" class="worker__image">
                         </picture>
                       </div>
                       <div class="worker__data-block">
@@ -1480,14 +1189,14 @@
                           <div class="worker__experience">
                             Опыт работы - 7 лет
                           </div>
-                          <div class="worker__filial filial filial--active">
+                          <div class="filial filial--active worker__filial">
                             <div class="filial__name">Домодедовская</div>
                             <div class="filial__address">
                               пос. Володарского, ул. Центральная, д. 30А
                             </div>
                           </div>
                         </div>
-                        <button class="button worker__button">
+                        <button aria-label="Информация о враче" class="button worker__button">
                           Подробнее о враче
                         </button>
                       </div>
@@ -1499,15 +1208,8 @@
                     <div class="worker__wrapper">
                       <div class="worker__image-block">
                         <picture>
-                          <source
-                            srcset="./img/img-worker-2.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="./img/img-worker-2.png"
-                            alt=""
-                            class="worker__image"
-                          />
+                          <source srcset="./img/img-worker-2.webp" type="image/webp">
+                          <img alt="" src="./img/img-worker-2.png" loading="lazy" class="worker__image">
                         </picture>
                       </div>
                       <div class="worker__data-block">
@@ -1517,14 +1219,14 @@
                           <div class="worker__experience">
                             Опыт работы - 7 лет
                           </div>
-                          <div class="worker__filial filial filial--active">
+                          <div class="filial filial--active worker__filial">
                             <div class="filial__name">Жулебино</div>
                             <div class="filial__address">
                               Жулебинский бульвар 25
                             </div>
                           </div>
                         </div>
-                        <button class="button worker__button">
+                        <button aria-label="Информация о враче" class="button worker__button">
                           Подробнее о враче
                         </button>
                       </div>
@@ -1537,15 +1239,8 @@
                     <div class="worker__wrapper">
                       <div class="worker__image-block">
                         <picture>
-                          <source
-                            srcset="./img/img-worker-1.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="./img/img-worker-1.png"
-                            alt=""
-                            class="worker__image"
-                          />
+                          <source srcset="./img/img-worker-1.webp" type="image/webp">
+                          <img alt="" src="./img/img-worker-1.png" loading="lazy" class="worker__image">
                         </picture>
                       </div>
                       <div class="worker__data-block">
@@ -1555,14 +1250,14 @@
                           <div class="worker__experience">
                             Опыт работы - 7 лет
                           </div>
-                          <div class="worker__filial filial filial--active">
+                          <div class="filial filial--active worker__filial">
                             <div class="filial__name">Домодедовская</div>
                             <div class="filial__address">
                               пос. Володарского, ул. Центральная, д. 30А
                             </div>
                           </div>
                         </div>
-                        <button class="button worker__button">
+                        <button aria-label="Информация о враче" class="button worker__button">
                           Подробнее о враче
                         </button>
                       </div>
@@ -1574,15 +1269,8 @@
                     <div class="worker__wrapper">
                       <div class="worker__image-block">
                         <picture>
-                          <source
-                            srcset="./img/img-worker-2.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="./img/img-worker-2.png"
-                            alt=""
-                            class="worker__image"
-                          />
+                          <source srcset="./img/img-worker-2.webp" type="image/webp">
+                          <img alt="" src="./img/img-worker-2.png" loading="lazy" class="worker__image">
                         </picture>
                       </div>
                       <div class="worker__data-block">
@@ -1592,14 +1280,14 @@
                           <div class="worker__experience">
                             Опыт работы - 7 лет
                           </div>
-                          <div class="worker__filial filial filial--active">
+                          <div class="filial filial--active worker__filial">
                             <div class="filial__name">Жулебино</div>
                             <div class="filial__address">
                               Жулебинский бульвар 25
                             </div>
                           </div>
                         </div>
-                        <button class="button worker__button">
+                        <button aria-label="Информация о враче" class="button worker__button">
                           Подробнее о враче
                         </button>
                       </div>
@@ -1608,14 +1296,10 @@
                 </div>
               </div>
               <div class="staff__controls">
-                <div
-                  class="staff__button staff__button--prev round-button round-button--left round-button--small"
-                >
+                <div class="round-button round-button--left round-button--small staff__button staff__button--prev">
                   <span class="round-button__content"></span>
                 </div>
-                <div
-                  class="staff__button staff__button--next round-button round-button--right round-button--small"
-                >
+                <div class="round-button round-button--right round-button--small staff__button staff__button--next">
                   <span class="round-button__content"></span>
                 </div>
               </div>
@@ -1675,7 +1359,7 @@
             </div>
             <div class="form__right-block">
               <div class="form__title"><span class="colorfull">-40%</span></div>
-              <form method="POST" class="form__feedback feedback">
+              <form class="feedback form__feedback" method="POST">
                 <div class="feedback__wrapper">
                   <h4 class="feedback__title">Оставьте заявку</h4>
                   <p class="feedback__text">
@@ -1686,98 +1370,36 @@
                   </p>
                   <fieldset class="feedback__fields">
                     <div class="colorfull-input feedback__colorfull-input">
-                      <input
-                        type="text"
-                        name="name"
-                        class="colorfull-input__element feedback__input"
-                        id="feedback__name"
-                        required
-                      />
-                      <span
-                        class="colorfull-input__placeholder feedback__placeholder"
-                        >Ваше имя<span class="colorfull-input__placeholder-red"
-                          >*</span
-                        ></span
-                      >
+                      <input class="colorfull-input__element feedback__input" name="name" type="text" id="feedback__name" required="">
+                      <label class="colorfull-input__placeholder feedback__placeholder" for="feedback__name">Ваше имя<span class="colorfull-input__placeholder-red">*</span></label>
                     </div>
                     <div class="colorfull-input feedback__colorfull-input">
-                      <input
-                        type="tel"
-                        name="phone"
-                        class="colorfull-input__element feedback__input"
-                        id="feedback__phone"
-                        required
-                      />
-                      <span
-                        class="colorfull-input__placeholder feedback__placeholder"
-                        >+7 (---) ---_--_--<span
-                          class="colorfull-input__placeholder-red"
-                          >*</span
-                        ></span
-                      >
+                      <input class="colorfull-input__element feedback__input" name="phone" type="tel" id="feedback__phone" required="">
+                      <label class="colorfull-input__placeholder feedback__placeholder" for="feedback__phone">+7 (---) ---_--_--<span class="colorfull-input__placeholder-red">*</span></label>
                     </div>
-                    <input
-                      type="text"
-                      name="email"
-                      class="colorfull-input__element feedback__input feedback__email"
-                      id="feedback__email"
-                      placeholder="Email"
-                    />
+                    <input class="colorfull-input__element feedback__input feedback__email" name="email" type="text" id="feedback__email" placeholder="Email">
+                    <label class="visually-hidden" for="feedback__email"></label>
                     <select id="form-filials" name="filial">
-                      <option
-                        class="filial"
-                        value="1"
-                        data-filial="Жулебино"
-                        data-address="Жулебинский бульвар 25"
-                      >
+                      <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                         Жулебино Жулебинский бульвар 25
                       </option>
-                      <option
-                        class="filial"
-                        value="1"
-                        data-filial="Жулебино"
-                        data-address="Жулебинский бульвар 25"
-                      >
+                      <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                         Жулебино Жулебинский бульвар 25
                       </option>
-                      <option
-                        class="filial"
-                        value="1"
-                        data-filial="Жулебино"
-                        data-address="Жулебинский бульвар 25"
-                      >
+                      <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                         Жулебино Жулебинский бульвар 25
                       </option>
-                      <option
-                        class="filial"
-                        value="1"
-                        data-filial="Жулебино"
-                        data-address="Жулебинский бульвар 25"
-                      >
+                      <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                         Жулебино Жулебинский бульвар 25
                       </option>
                     </select>
-                    <button class="button feedback__button">
+                    <button aria-label="Информация о враче" class="button feedback__button">
                       Получить скидку!
                     </button>
                     <div class="checkbox feedback__checkbox">
-                      <input
-                        class="checkbox__input"
-                        type="checkbox"
-                        checked
-                        name="agree"
-                        id="feedback-checkbox-input"
-                      />
-                      <label
-                        for="feedback-checkbox-input"
-                        class="checkbox__label"
-                        ><span
-                          >Даю согласие на обработку своих персональных данных (
-                          <a class="checkbox__label--link" href="#"
-                            >Политика конфиденциальности</a
-                          >)</span
-                        ></label
-                      >
+                      <input class="checkbox__input" name="agree" type="checkbox" id="feedback-checkbox-input" checked="">
+                      <label class="checkbox__label" for="feedback-checkbox-input"><span>Даю согласие на обработку своих персональных данных (
+                          <a class="checkbox__label--link" href="#">Политика конфиденциальности</a>)</span></label>
                     </div>
                   </fieldset>
                 </div>
@@ -1791,27 +1413,19 @@
           <div class="footer__top-wrapper">
             <div class="footer__logo">
               <picture>
-                <source srcset="./img/logo.webp" type="image/webp" />
-                <img src="./img/logo.png" alt="" />
+                <source srcset="./img/logo.webp" type="image/webp">
+                <img alt="" src="./img/logo.png" loading="lazy">
               </picture>
             </div>
             <div class="footer__contact">
               <div class="contact footer__main-contact">
-                <a
-                  href="mailto:info@medicalclub.ru"
-                  class="contact__text footer__contact-text"
-                  >info@medicalclub.ru</a
-                >
-                <a
-                  href="tel:84951268925"
-                  class="footer__contact-phone contact__phone"
-                  >8 495 126-89-25</a
-                >
+                <a class="contact__text footer__contact-text" href="mailto:info@medicalclub.ru">info@medicalclub.ru</a>
+                <a class="contact__phone footer__contact-phone" href="tel:84951268925">8 495 126-89-25</a>
               </div>
               <div class="footer__social-links social__links">
-                <a href="" class="social__link social__link--vk"></a>
-                <a href="" class="social__link social__link--inst"></a>
-                <a href="" class="social__link social__link--fb"></a>
+                <a class="social__link social__link--vk" href=""></a>
+                <a class="social__link social__link--inst" href=""></a>
+                <a class="social__link social__link--fb" href=""></a>
               </div>
             </div>
           </div>
@@ -1826,15 +1440,8 @@
             </div>
             <div class="footer__trademark-sign">
               <picture>
-                <source
-                  srcset="./img/img-footer-trademark.webp"
-                  type="image/webp"
-                />
-                <img
-                  src="./img/img-footer-trademark.png"
-                  alt=""
-                  class="footer__tradmark-image"
-                />
+                <source srcset="./img/img-footer-trademark.webp" type="image/webp">
+                <img alt="" src="./img/img-footer-trademark.png" loading="lazy" class="footer__tradmark-image">
               </picture>
             </div>
           </div>
@@ -1845,115 +1452,45 @@
       <div class="modal__content sign-up">
         <div class="modal__button-close sign-up__button-close"></div>
         <div class="sign-up__content">
-          <form method="POST" class="sign-up__feedback feedback">
-            <div class="sign-up__feedback-wrapper feedback__wrapper">
-              <h4 class="sign-up__feedback-title feedback__title">
+          <form class="feedback sign-up__feedback" method="POST">
+            <div class="feedback__wrapper sign-up__feedback-wrapper">
+              <h4 class="feedback__title sign-up__feedback-title">
                 Записаться на эпиляцию
               </h4>
-              <p class="sign-up__feedback-text feedback__text">
+              <p class="feedback__text sign-up__feedback-text">
                 Оставьте свои данные для записи на процедуру.
               </p>
-              <fieldset class="sign-up__feedback-fields feedback__fields">
-                <div
-                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
-                >
-                  <input
-                    type="text"
-                    name="name"
-                    class="colorfull-input__element feedback__input sign-up__feedback-input"
-                    id="popup-sign-in-name"
-                    required
-                  />
-                  <span
-                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
-                    >Ваше имя<span
-                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
-                      >*</span
-                    ></span
-                  >
+              <fieldset class="feedback__fields sign-up__feedback-fields">
+                <div class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input">
+                  <input class="colorfull-input__element feedback__input sign-up__feedback-input" name="name" type="text" id="popup-sign-in-name" required="">
+                  <label class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder" for="popup-sign-in-name">Ваше имя<span class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red">*</span></label>
                 </div>
-                <div
-                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
-                >
-                  <input
-                    type="tel"
-                    name="phone"
-                    class="colorfull-input__element feedback__input sign-up__feedback-input"
-                    id="popup-sign-in-phone"
-                    required
-                  />
-                  <span
-                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
-                    >+7 (---) ---_--_--<span
-                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
-                      >*</span
-                    ></span
-                  >
+                <div class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input">
+                  <input class="colorfull-input__element feedback__input sign-up__feedback-input" name="phone" type="tel" id="popup-sign-in-phone" required="">
+                  <label class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder" for="popup-sign-in-phone">+7 (---) ---_--_--<span class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red">*</span></label>
                 </div>
                 <select id="popup-filials" name="filial">
-                  <option
-                    class="filial"
-                    value="1"
-                    data-filial="Жулебино"
-                    data-address="Жулебинский бульвар 25"
-                  >
+                  <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                     Жулебино Жулебинский бульвар 25
                   </option>
-                  <option
-                    class="filial"
-                    value="1"
-                    data-filial="Жулебино"
-                    data-address="Жулебинский бульвар 25"
-                  >
+                  <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                     Жулебино Жулебинский бульвар 25
                   </option>
-                  <option
-                    class="filial"
-                    value="1"
-                    data-filial="Жулебино"
-                    data-address="Жулебинский бульвар 25"
-                  >
+                  <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                     Жулебино Жулебинский бульвар 25
                   </option>
-                  <option
-                    class="filial"
-                    value="1"
-                    data-filial="Жулебино"
-                    data-address="Жулебинский бульвар 25"
-                  >
+                  <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                     Жулебино Жулебинский бульвар 25
                   </option>
                 </select>
-                <textarea
-                  class="feedback__textarea colorfull-input__element sign-up__feedback-textarea"
-                  placeholder="Желаемое время и дата"
-                ></textarea>
-                <button
-                  type="submit"
-                  class="button feedback__button sign-up__feedback-button"
-                >
+                <textarea class="colorfull-input__element feedback__textarea sign-up__feedback-textarea" placeholder="Желаемое время и дата"></textarea>
+                <button aria-label="Отправить" class="button feedback__button sign-up__feedback-button" type="submit">
                   Отправить
                 </button>
-                <div
-                  class="checkbox feedback__checkbox sign-up__feedback-checkbox"
-                >
-                  <input
-                    class="checkbox__input"
-                    type="checkbox"
-                    checked
-                    name="agree"
-                    id="popup-sign-in-checkbox-input"
-                  />
-                  <label
-                    for="popup-sign-in-checkbox-input"
-                    class="checkbox__label"
-                    ><span
-                      >Даю согласие на обработку своих персональных данных (
-                      <a class="checkbox__label--link" href="#"
-                        >Политика конфиденциальности</a
-                      >)</span
-                    ></label
-                  >
+                <div class="checkbox feedback__checkbox sign-up__feedback-checkbox">
+                  <input class="checkbox__input" name="agree" type="checkbox" id="popup-sign-in-checkbox-input" checked="">
+                  <label class="checkbox__label" for="popup-sign-in-checkbox-input"><span>Даю согласие на обработку своих персональных данных (
+                      <a class="checkbox__label--link" href="#">Политика конфиденциальности</a>)</span></label>
                 </div>
               </fieldset>
             </div>
@@ -1968,117 +1505,45 @@
           <div class="form__title sign-up__sale">
             <span class="colorfull">-40%</span>
           </div>
-          <form method="POST" class="sign-up__feedback feedback">
-            <div class="sign-up__feedback-wrapper feedback__wrapper">
-              <h4
-                class="sign-up__feedback-title--onsale feedback__title colorfull"
-              >
+          <form class="feedback sign-up__feedback" method="POST">
+            <div class="feedback__wrapper sign-up__feedback-wrapper">
+              <h4 class="colorfull feedback__title sign-up__feedback-title--onsale">
                 Получите скидку -
               </h4>
-              <p class="sign-up__feedback-text--onsale feedback__text">
+              <p class="feedback__text sign-up__feedback-text--onsale">
                 Оставьте свои данные для записи на процедуру.
               </p>
-              <fieldset class="sign-up__feedback-fields feedback__fields">
-                <div
-                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
-                >
-                  <input
-                    type="text"
-                    name="name"
-                    class="colorfull-input__element feedback__input sign-up__feedback-input"
-                    id="popup-sign-in-onsale-name"
-                    required
-                  />
-                  <span
-                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
-                    >Ваше имя<span
-                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
-                      >*</span
-                    ></span
-                  >
+              <fieldset class="feedback__fields sign-up__feedback-fields">
+                <div class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input">
+                  <input class="colorfull-input__element feedback__input sign-up__feedback-input" name="name" type="text" id="popup-sign-in-onsale-name" required="">
+                  <span class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder">Ваше имя<span class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red">*</span></span>
                 </div>
-                <div
-                  class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input"
-                >
-                  <input
-                    type="tel"
-                    name="phone"
-                    class="colorfull-input__element feedback__input sign-up__feedback-input"
-                    id="popup-sign-in-onsale-phone"
-                    required
-                  />
-                  <span
-                    class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder"
-                    >+7 (---) ---_--_--<span
-                      class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red"
-                      >*</span
-                    ></span
-                  >
+                <div class="colorfull-input feedback__colorfull-input sign-up__feedback-colorfull-input">
+                  <input class="colorfull-input__element feedback__input sign-up__feedback-input" name="phone" type="tel" id="popup-sign-in-onsale-phone" required="">
+                  <span class="colorfull-input__placeholder feedback__placeholder sign-up__feedback-placeholder">+7 (---) ---_--_--<span class="colorfull-input__placeholder-red sign-up__feedback-placeholder-red">*</span></span>
                 </div>
                 <select id="popup-onsale-filials" name="filial">
-                  <option
-                    class="filial"
-                    value="1"
-                    data-filial="Жулебино"
-                    data-address="Жулебинский бульвар 25"
-                  >
+                  <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                     Жулебино Жулебинский бульвар 25
                   </option>
-                  <option
-                    class="filial"
-                    value="1"
-                    data-filial="Жулебино"
-                    data-address="Жулебинский бульвар 25"
-                  >
+                  <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                     Жулебино Жулебинский бульвар 25
                   </option>
-                  <option
-                    class="filial"
-                    value="1"
-                    data-filial="Жулебино"
-                    data-address="Жулебинский бульвар 25"
-                  >
+                  <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                     Жулебино Жулебинский бульвар 25
                   </option>
-                  <option
-                    class="filial"
-                    value="1"
-                    data-filial="Жулебино"
-                    data-address="Жулебинский бульвар 25"
-                  >
+                  <option class="filial" value="1" data-address="Жулебинский бульвар 25" data-filial="Жулебино">
                     Жулебино Жулебинский бульвар 25
                   </option>
                 </select>
-                <textarea
-                  class="feedback__textarea colorfull-input__element sign-up__feedback-textarea"
-                  placeholder="Желаемое время и дата"
-                ></textarea>
-                <button
-                  type="submit"
-                  class="button feedback__button sign-up__feedback-button"
-                >
+                <textarea class="colorfull-input__element feedback__textarea sign-up__feedback-textarea" placeholder="Желаемое время и дата"></textarea>
+                <button aria-label="Отправить" class="button feedback__button sign-up__feedback-button" type="submit">
                   Отправить
                 </button>
-                <div
-                  class="checkbox feedback__checkbox sign-up__feedback-checkbox"
-                >
-                  <input
-                    class="checkbox__input"
-                    type="checkbox"
-                    checked
-                    name="agree"
-                    id="popup-sign-in-onsale-checkbox-input"
-                  />
-                  <label
-                    for="popup-sign-in-onsale-checkbox-input"
-                    class="checkbox__label"
-                    ><span
-                      >Даю согласие на обработку своих персональных данных (
-                      <a class="checkbox__label--link" href="#"
-                        >Политика конфиденциальности</a
-                      >)</span
-                    ></label
-                  >
+                <div class="checkbox feedback__checkbox sign-up__feedback-checkbox">
+                  <input class="checkbox__input" name="agree" type="checkbox" id="popup-sign-in-onsale-checkbox-input" checked="">
+                  <label class="checkbox__label" for="popup-sign-in-onsale-checkbox-input"><span>Даю согласие на обработку своих персональных данных (
+                      <a class="checkbox__label--link" href="#">Политика конфиденциальности</a>)</span></label>
                 </div>
               </fieldset>
             </div>
@@ -2091,10 +1556,10 @@
         <div class="modal__button-close popup-message__button-close"></div>
         <div class="popup-message__content">
           <div class="popup-message__content-wrapper">
-            <h4 class="popup-message__feedback-title feedback__title colorfull">
+            <h4 class="colorfull feedback__title popup-message__feedback-title">
               Ваша заявка отправлена
             </h4>
-            <p class="popup-message__feedback-text feedback__text">
+            <p class="feedback__text popup-message__feedback-text">
               В ближайшее время наш специалист свяжется с Вами для записи на
               процедуру.
             </p>
@@ -2107,10 +1572,10 @@
         <div class="modal__button-close popup-message__button-close"></div>
         <div class="popup-message__content">
           <div class="popup-message__content-wrapper">
-            <h4 class="popup-message__feedback-title feedback__title colorfull">
+            <h4 class="colorfull feedback__title popup-message__feedback-title">
               Спасибо за Ваше обращение
             </h4>
-            <p class="popup-message__feedback-text feedback__text">
+            <p class="feedback__text popup-message__feedback-text">
               Наш мастер свяжется с Вами в ближайшее время.
             </p>
           </div>
@@ -2134,7 +1599,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
     <script>
       function loadStyle(href) {
         const link = document.createElement("link");
@@ -2142,11 +1607,10 @@
         link.href = href;
         document.body.appendChild(link);
       }
+      
       loadStyle("css/lib.css");
-      loadStyle("css/style.css");
+      loadStyle("css/async.css");
     </script>
-
-    <script src="js/lib.js"></script>
-    <script src="js/main.js"></script>
+ 
   </body>
 </html>
