@@ -61,6 +61,7 @@ const path = {
     img: "src/img/**/", //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
     img_min: "src/img-min/", //Каталог минифицированных изображений - чтобы не надобыло минифицировать постоянно
     fonts: "src/fonts/",
+    criticalJs:"src/js/critical.js",
   },
   watch: {
     //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
@@ -321,6 +322,18 @@ const jsLib=()=> {
       .pipe(gulp.dest(path.build.js)); //Выплюнем готовый файл в build //И перезагрузим сервер
 };
 
+const jsCritical = () =>{
+  return gulp
+    .src(pathDir.join(pathDir.dirname(path.src.js),'critical.js'))
+    .pipe(uglify()) //Сожмем наш js
+    .pipe(gulp.dest(path.build.js)); //Выплюнем готовый файл в build //И перезагрузим сервер
+};
+const jsNotCritical = () =>{
+  return gulp
+  .src(pathDir.join(pathDir.dirname(path.src.js),'not-critical.js'))
+  .pipe(uglify()) //Сожмем наш js
+  .pipe(gulp.dest(path.build.js)); //Выплюнем готовый файл в build //И перезагрузим сервер
+};
 /* #endregion */
 
 
@@ -347,7 +360,9 @@ const build = gulp.series(
     svgImage,
     createWebp,
     jsWebpack,
-    jsLib
+    jsLib,
+    jsCritical,
+    jsNotCritical,
   )
 );
 

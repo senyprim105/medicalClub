@@ -25,6 +25,9 @@
     display: flex;
     width: 100%;
   }
+  &__button--prev{
+    z-index: 1;//Иначе недоступен
+  }
   &__item {
     // padding: 16px 8px 32px;
     height: auto; //Элементы становятся по самому высокому
